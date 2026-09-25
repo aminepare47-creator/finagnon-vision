@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Finagnon Vision — Opticien à Ouagadougou (Gounghin) • Montures, Verres & Expédition Partout</title>
   <meta name="description" content="Finagnon Vision, votre opticienne de confiance à Gounghin, Ouagadougou : examen de vue, montures, verres correcteurs et solaires. Expédition partout au Burkina Faso. Devis rapide sur WhatsApp." />
+
+  <!-- Aperçu du lien partagé (WhatsApp, Facebook…) — bannière avec le logo -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Finagnon Vision — Opticien à Ouagadougou" />
+  <meta property="og:description" content="Montures, verres correcteurs et solaires — expédition partout au Burkina Faso. Commandez sur WhatsApp." />
+  <meta property="og:image" content="https://aminepare47-creator.github.io/finagnon-vision/images/og-banner.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#dc2626" />
 
   <!-- Anti-cache strict pour garantir les mises à jour immédiates -->
@@ -530,9 +539,27 @@
 
     .frames-grid, .cat-grid {
       display: grid;
-      gap: 1rem;
-      grid-template-columns: 1fr;
-      margin-top: 1rem;
+      gap: 0.7rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 colonnes, même sur mobile */
+      margin-top: 0.85rem;
+    }
+    /* Cartes compactes sur petits écrans */
+    @media (max-width: 599px) {
+      .frame-card__body { padding: 0.7rem 0.6rem; gap: 0.28rem; }
+      .frame-card__name { font-size: 0.86rem; }
+      .frame-card__desc {
+        font-size: 0.72rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .card__shipping { font-size: 0.64rem; }
+      .price-promo { font-size: 0.95rem; }
+      .frame-card__btns { gap: 0.35rem; margin-top: 0.45rem; }
+      .frame-card__btns .btn { padding: 0.45rem 0.3rem; font-size: 0.72rem; }
+      .frame-card__badge-promo { top: 0.45rem; left: 0.45rem; font-size: 0.58rem; padding: 0.2rem 0.42rem; }
+      .frame-card__badge-type { top: 0.45rem; right: 0.45rem; font-size: 0.6rem; padding: 0.26rem 0.5rem; }
     }
 
     /* Carte Monture — Résolution du problème "double cadre" */
@@ -638,10 +665,30 @@
       align-items: baseline;
       gap: 0.45rem;
     }
-    .price-old {
-      font-size: 0.84rem;
-      color: var(--muted-soft);
-      text-decoration: line-through;
+    /* Bouton Partager sur la photo du produit */
+    .frame-card__share {
+      position: absolute;
+      bottom: 0.55rem;
+      right: 0.55rem;
+      z-index: 4;
+      width: 1.9rem;
+      height: 1.9rem;
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line-strong);
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: all 0.16s ease;
+      touch-action: manipulation;
+    }
+    .frame-card__share .icon { font-size: 1rem; }
+    .frame-card__share:hover { background: var(--carbon); color: #fff; border-color: var(--carbon); }
+    @media (max-width: 599px) {
+      .frame-card__share { width: 1.65rem; height: 1.65rem; bottom: 0.45rem; right: 0.45rem; }
     }
     .price-promo {
       font-size: 1.18rem;
@@ -1112,6 +1159,52 @@
       justify-content: center;
     }
     .modal__price { font-size: 1.4rem; font-weight: 800; color: var(--promo); }
+
+    /* Fiche Produit détaillée (modale) */
+    .product-sheet__head { display: flex; flex-direction: column; gap: 0.3rem; }
+    #qv-title { font-size: 1.3rem; }
+    .product-sheet__price { font-size: 1.45rem; font-weight: 800; color: var(--promo); line-height: 1.1; }
+    .product-sheet__chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.4rem; }
+    .product-sheet__chip {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.28rem 0.6rem;
+      border-radius: var(--r-pill);
+      background: var(--surface);
+      color: var(--muted);
+      border: 1px solid var(--line);
+    }
+    .product-sheet__desc { color: var(--muted); font-size: 0.92rem; }
+    .product-sheet__features {
+      list-style: none;
+      display: grid;
+      gap: 0.55rem;
+      background: var(--blue-soft);
+      border: 1px solid var(--blue-line);
+      border-radius: var(--r);
+      padding: 0.9rem 1rem;
+    }
+    .product-sheet__features li { display: flex; align-items: center; gap: 0.6rem; font-size: 0.86rem; font-weight: 600; }
+    .product-sheet__features .icon { color: var(--blue); font-size: 1.15rem; }
+    .product-sheet__row { display: grid; grid-auto-flow: column; grid-auto-columns: 7.2rem; gap: 0.6rem; overflow-x: auto; padding-bottom: 0.35rem; }
+    .product-sheet__similar {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      border: 1px solid var(--line);
+      border-radius: var(--r-sm);
+      overflow: hidden;
+      background: var(--white);
+      cursor: pointer;
+      text-align: left;
+      transition: border-color 0.16s ease, transform 0.16s ease;
+    }
+    .product-sheet__similar:hover { border-color: var(--promo); transform: translateY(-2px); }
+    .product-sheet__similar img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; background: var(--white); padding: 0.35rem; }
+    .product-sheet__similar b { font-size: 0.72rem; line-height: 1.2; padding: 0 0.5rem; color: var(--ink); }
+    .product-sheet__similar span { font-size: 0.74rem; font-weight: 800; color: var(--promo); padding: 0 0.5rem 0.5rem; }
 
     /* Pied de page */
     .site-footer {
@@ -2055,36 +2148,44 @@
     </a>
   </nav>
 
-  <!-- ================= Modale Aperçu Monture ================= -->
+  <!-- ================= Fiche Produit détaillée ================= -->
   <div class="modal hidden" id="quickview-modal" role="dialog" aria-modal="true" aria-labelledby="qv-title">
     <div class="modal__panel">
-      <div style="display:flex; justify-content:space-between; align-items:center;">
-        <span class="badge badge--promo">🔥 PROMO</span>
+      <div style="display:flex; justify-content:flex-end;">
         <button class="modal__close" id="qv-close" type="button" aria-label="Fermer">
           <span class="icon material-symbols-outlined">close</span>
         </button>
       </div>
-      <div class="modal__media">
+      <div class="modal__media" style="position:relative;">
         <img id="qv-img" src="images/logo.png" alt="" />
+        <span class="frame-card__badge-promo" id="qv-badge" style="top:0.75rem; left:0.75rem;">🔥 PROMO</span>
       </div>
-      <div>
-        <h3 id="qv-title" style="font-size:1.25rem;">Modèle Finagnon</h3>
-        <div style="display:flex; align-items:baseline; gap:0.5rem; margin-top:0.25rem;">
-          <span class="price-old" id="qv-old-price">25 000 FCFA</span>
-          <span class="modal__price" id="qv-price">16 000 FCFA</span>
-        </div>
+      <div class="product-sheet__head">
+        <h3 id="qv-title">Modèle Finagnon</h3>
+        <span class="product-sheet__price" id="qv-price">16 000 FCFA</span>
+        <div class="product-sheet__chips" id="qv-chips"></div>
       </div>
-      <div class="card__shipping" style="font-size:0.85rem;">
-        <span class="icon material-symbols-outlined">local_shipping</span> Expédition rapide disponible partout au Burkina Faso
-      </div>
-      <p style="color:var(--muted); font-size:0.9rem;" id="qv-desc"></p>
+      <p class="product-sheet__desc" id="qv-desc"></p>
+      <ul class="product-sheet__features">
+        <li><span class="icon material-symbols-outlined">verified</span> Ajustement personnalisé par l'opticienne</li>
+        <li><span class="icon material-symbols-outlined">visibility</span> Examen de vue possible sur rendez-vous</li>
+        <li><span class="icon material-symbols-outlined">local_shipping</span> Expédition rapide partout au Burkina Faso</li>
+        <li><span class="icon material-symbols-outlined">storefront</span> Essai possible en boutique à Gounghin</li>
+      </ul>
       <div style="display:flex; flex-direction:column; gap:0.5rem;">
         <a class="btn btn--promo btn--block" id="qv-whatsapp-link" href="#" target="_blank" rel="noopener">
           <span class="icon material-symbols-outlined">chat</span> Commander sur WhatsApp
         </a>
-        <button class="btn btn--outline btn--block" type="button" data-close-modal="quickview-modal">
+        <button class="btn btn--outline btn--block" id="qv-share" type="button">
+          <span class="icon material-symbols-outlined">share</span> Partager ce modèle (avec photo)
+        </button>
+        <button class="btn btn--dark btn--block" type="button" data-close-modal="quickview-modal">
           Fermer
         </button>
+      </div>
+      <div>
+        <h4 style="font-size:0.92rem; margin-bottom:0.5rem;">Vous aimerez aussi</h4>
+        <div class="product-sheet__row" id="qv-similar"></div>
       </div>
     </div>
   </div>
@@ -2229,11 +2330,11 @@
     /* 3. Catalogue avec affichage Plein Cadre et Badges Lisibles */
     const TLBL = { vue: 'Optique', bluelight: 'Lumière bleue', solaire: 'Solaire' };
     const catOf = m => (m.type === 'solaire' ? 'solaire' : ((m.prix > 0 || m.badge) ? 'luxe' : 'vue'));
+    let ALL_ITEMS = [];
 
     function cardHTML(m) {
       const img = m.image_url || 'images/logo.png';
       const prix = m.prix > 0 ? m.prix : 16000;
-      const ancienPrix = m.ancien_prix && m.ancien_prix > prix ? m.ancien_prix : 25000;
       const isPromo = m.en_promo !== false;
       // Le montant n'apparaît plus dans le badge : c'est le rôle du bandeau et du popup promo
       const rawBadge = String(m.badge || '').replace(/16[\s.,]*000(\s*(FCFA|F))?/gi, '').replace(/\s{2,}/g, ' ').trim();
@@ -2244,10 +2345,13 @@
         'Bonjour Finagnon Vision, je souhaite commander la monture : ' + m.nom + '. Est-elle disponible ?'
       );
 
-      return `<article class="frame-card" data-category="${catOf(m)}" data-genre="${esc(m.genre || 'mixte')}" data-type="${esc(m.type || 'vue')}" data-forme="${esc(m.forme || '')}" data-txt="${esc(((m.nom || '') + ' ' + (m.description || '')).toLowerCase())}" data-title="${esc(m.nom)}" data-price="${esc(Number(prix).toLocaleString('fr-FR') + ' FCFA')}" data-old-price="${esc(Number(ancienPrix).toLocaleString('fr-FR') + ' FCFA')}" data-desc="${esc(m.description || '')}" data-img="${esc(img)}">
+      return `<article class="frame-card" data-id="${esc(m.id || '')}" data-category="${catOf(m)}" data-genre="${esc(m.genre || 'mixte')}" data-type="${esc(m.type || 'vue')}" data-forme="${esc(m.forme || '')}" data-txt="${esc(((m.nom || '') + ' ' + (m.description || '')).toLowerCase())}" data-title="${esc(m.nom)}" data-price="${esc(Number(prix).toLocaleString('fr-FR') + ' FCFA')}" data-desc="${esc(m.description || '')}" data-img="${esc(img)}">
           <div class="frame-card__media">
             ${badgePromo ? `<span class="frame-card__badge-promo">🔥 ${esc(badgePromo)}</span>` : ''}
             <span class="frame-card__badge-type">${esc(typeLabel)}</span>
+            <button class="frame-card__share" type="button" data-share aria-label="Partager ce modèle">
+              <span class="icon material-symbols-outlined">share</span>
+            </button>
             <img src="${esc(img)}" alt="${esc(m.nom)}" loading="lazy" />
           </div>
           <div class="frame-card__body">
@@ -2258,7 +2362,6 @@
             </div>
             <div class="frame-card__price-row">
               <div class="price-wrap">
-                <span class="price-old">${Number(ancienPrix).toLocaleString('fr-FR')} FCFA</span>
                 <b class="price-promo">${Number(prix).toLocaleString('fr-FR')} FCFA</b>
               </div>
             </div>
@@ -2341,32 +2444,116 @@
       if ($$('.modal:not(.hidden)').length === 0) document.body.style.overflow = '';
     }
 
-    function openQuickView(title, price, oldPrice, desc, img) {
-      if (!qvModal) return;
-      $('#qv-title').textContent = title || 'Modèle Finagnon';
-      $('#qv-price').textContent = price || '16 000 FCFA';
-      const op = $('#qv-old-price');
-      if (op) op.textContent = oldPrice || '25 000 FCFA';
-      $('#qv-desc').textContent = desc || 'Monture en promotion disponible à Gounghin ou en expédition rapide partout au Burkina Faso.';
+    /* Partage d'un produit : la photo part avec le message quand le téléphone le permet */
+    async function shareProduct(p) {
+      const nom = (p && (p.nom || p.title)) || 'Modèle Finagnon';
+      const photo = (p && (p.image_url || p.img)) || '';
+      const data = {
+        title: 'Finagnon Vision',
+        text: 'Regardez cette monture : ' + nom + ' — Finagnon Vision • Opticien à Gounghin, Ouagadougou',
+        url: location.origin + location.pathname
+      };
+      // 1) Partage AVEC la photo du produit (mobile compatible)
+      if (photo) {
+        try {
+          const res = await fetch(photo);
+          if (res && res.ok) {
+            const blob = await res.blob();
+            if (blob && blob.size && blob.type && blob.type.indexOf('image/') === 0) {
+              const ext = (blob.type.split('/')[1] || 'jpeg').replace(/[^a-z0-9]/gi, '') || 'jpeg';
+              const file = new File([blob], 'finagnon-monture.' + ext, { type: blob.type });
+              if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                await navigator.share({ title: data.title, text: data.text, url: data.url, files: [file] });
+                return;
+              }
+            }
+          }
+        } catch (err) { /* partage sans la photo */ }
+      }
+      // 2) Partage simple (texte + lien)
+      if (navigator.share) {
+        try { await navigator.share(data); return; }
+        catch (err) { if (err && err.name === 'AbortError') return; }
+      }
+      // 3) Repli : copier le lien
+      try {
+        await navigator.clipboard.writeText(data.text + '\n' + data.url);
+        alert('Lien copié ! Collez-le dans WhatsApp, Facebook, etc. pour le partager.');
+      } catch (err) {
+        alert('Partagez ce lien :\n' + data.url);
+      }
+    }
+
+    let qvCurrent = null;
+    const FORMES = { ronde: 'Ronde', panto: 'Panto', rect: 'Rectangulaire', aviateur: 'Aviateur', papillon: 'Papillon', carree: 'Carrée' };
+
+    function openQuickView(m) {
+      if (!qvModal || !m) return;
+      const title = m.nom || 'Modèle Finagnon';
+      const prix = m.prix > 0 ? m.prix : 16000;
+      const img = m.image_url || 'images/logo.png';
+      qvCurrent = m;
+      $('#qv-title').textContent = title;
+      $('#qv-price').textContent = Number(prix).toLocaleString('fr-FR') + ' FCFA';
+      $('#qv-desc').textContent = m.description || 'Monture disponible à la boutique de Gounghin ou en expédition rapide partout au Burkina Faso.';
       const qvi = $('#qv-img');
-      if (qvi) { qvi.src = img || 'images/logo.png'; qvi.alt = title || ''; }
+      if (qvi) { qvi.src = img; qvi.alt = title; }
+      const qvBadge = $('#qv-badge');
+      if (qvBadge) qvBadge.textContent = (m.en_promo !== false) ? '🔥 PROMO' : '✨ Modèle';
+      const chips = [];
+      if (m.type && TLBL[m.type]) chips.push(TLBL[m.type]);
+      if (m.genre) chips.push(m.genre === 'femme' ? 'Femme' : m.genre === 'homme' ? 'Homme' : 'Mixte');
+      if (m.forme && FORMES[m.forme]) chips.push(FORMES[m.forme]);
+      const chipsEl = $('#qv-chips');
+      if (chipsEl) chipsEl.innerHTML = chips.map(c => '<span class="product-sheet__chip">' + esc(c) + '</span>').join('');
       const link = $('#qv-whatsapp-link');
       if (link) {
         link.setAttribute('href', 'https://wa.me/' + C.WHATSAPP + '?text=' + encodeURIComponent(
-          'Bonjour Finagnon Vision, je souhaite commander la monture : ' + (title || 'Modèle Finagnon') + '. Est-elle disponible ?'
+          'Bonjour Finagnon Vision, je souhaite commander la monture : ' + title + '. Est-elle disponible ?'
         ));
+      }
+      // Vous aimerez aussi
+      const sim = $('#qv-similar');
+      if (sim) {
+        const others = ALL_ITEMS.filter(x => x.disponible !== false && String(x.id) !== String(m.id)).slice(0, 8);
+        sim.innerHTML = others.map(o =>
+          '<button type="button" class="product-sheet__similar" data-sim="' + esc(o.id || '') + '">' +
+            '<img src="' + esc(o.image_url || 'images/logo.png') + '" alt="' + esc(o.nom || '') + '" loading="lazy" />' +
+            '<b>' + esc(o.nom || 'Modèle') + '</b>' +
+            '<span>' + Number(o.prix > 0 ? o.prix : 16000).toLocaleString('fr-FR') + ' FCFA</span>' +
+          '</button>'
+        ).join('');
       }
       openModal(qvModal);
     }
 
+    function findModel(id) { return ALL_ITEMS.find(x => String(x.id) === String(id)); }
+
     $$('#frames-container, #cat-grid').forEach(root => {
       root.addEventListener('click', e => {
+        const shareBtn = e.target.closest('[data-share]');
+        if (shareBtn) {
+          const card = shareBtn.closest('.frame-card');
+          if (card) shareProduct({ nom: card.dataset.title, image_url: card.dataset.img });
+          return;
+        }
         if (e.target.closest('a')) return;
         const card = e.target.closest('.frame-card');
         if (!card) return;
-        openQuickView(card.dataset.title, card.dataset.price, card.dataset.oldPrice, card.dataset.desc, card.dataset.img);
+        openQuickView(findModel(card.dataset.id) || { nom: card.dataset.title, description: card.dataset.desc, image_url: card.dataset.img });
       });
     });
+
+    const simRow = $('#qv-similar');
+    if (simRow) simRow.addEventListener('click', e => {
+      const b = e.target.closest('[data-sim]');
+      if (!b) return;
+      const m = findModel(b.dataset.sim);
+      if (m) openQuickView(m);
+    });
+
+    const qvShareBtn = $('#qv-share');
+    if (qvShareBtn) qvShareBtn.addEventListener('click', () => { if (qvCurrent) shareProduct(qvCurrent); });
 
     $$('[data-close-modal]').forEach(b => b.addEventListener('click', () => closeModal(document.getElementById(b.dataset.closeModal))));
     $$('.modal').forEach(m => m.addEventListener('click', e => { if (e.target === m) closeModal(m); }));
@@ -2564,6 +2751,7 @@
       let items = [];
       try { items = await Store.list('lunettes'); } catch (e) {}
       if (!items || !items.length) items = window.FV_SEED || [];
+      ALL_ITEMS = items;
       renderHome(items);
       renderCat(items);
     })();

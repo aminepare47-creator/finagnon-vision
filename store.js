@@ -128,7 +128,6 @@
         } catch (err) {
           // Si les colonnes promotionnelles optionnelles ne sont pas encore créées dans Neon
           if (/column.*does not exist/i.test(err.message || '')) {
-            delete b.ancien_prix;
             delete b.en_promo;
             ok(item.id ? await sb().from(t).update(b).eq('id', item.id) : await sb().from(t).insert(b));
             return;
@@ -192,7 +191,6 @@
       nom: x[0],
       description: x[1],
       prix: 16000,
-      ancien_prix: 25000,
       en_promo: true,
       genre: x[2],
       type: 'bluelight',

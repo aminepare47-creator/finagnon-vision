@@ -305,11 +305,8 @@
                 <label class="field" for="l-prix">Prix de vente PROMO (FCFA) *
                   <input class="input" id="l-prix" type="number" min="0" step="500" value="16000" required />
                 </label>
-                <label class="field" for="l-ancien-prix">Ancien prix barré (FCFA)
-                  <input class="input" id="l-ancien-prix" type="number" min="0" step="500" value="25000" placeholder="Ex : 25000" />
-                </label>
               </div>
-              <p class="hint">Si "En promotion" est coché, l'ancien prix sera barré et le prix promo sera affiché en rouge sur le site.</p>
+              <p class="hint">Si "En promotion" est coché, le prix sera mis en avant en rouge sur le site (aucun prix barré n'est affiché).</p>
             </div>
 
             <label class="field" for="l-badge">Badge personnalisé
@@ -459,7 +456,6 @@
     // Raccourci Promo 16 000 FCFA dans le formulaire
     $('#btn-quick-16k').addEventListener('click', () => {
       $('#l-prix').value = 16000;
-      $('#l-ancien-prix').value = 25000;
       $('#l-promo').checked = true;
       $('#l-badge').value = 'PROMO';
       say('Valeurs Promo 16 000 FCFA appliquées au formulaire !', true);
@@ -473,7 +469,6 @@
           await Store.save('lunettes', {
             id: m.id,
             prix: 16000,
-            ancien_prix: m.prix > 16000 ? m.prix : 25000,
             en_promo: true,
             badge: 'PROMO'
           });
@@ -500,7 +495,6 @@
             <b>${esc(m.nom)} ${isPromo ? '<span class="badge-promo">🔥 PROMO</span>' : ''}</b>
             <span class="item__meta">
               <strong style="color:var(--promo-red);">${m.prix > 0 ? Number(m.prix).toLocaleString('fr-FR') + ' FCFA' : 'Prix sur demande'}</strong>
-              ${m.ancien_prix > m.prix ? '<s style="color:var(--muted);">' + Number(m.ancien_prix).toLocaleString('fr-FR') + ' FCFA</s>' : ''}
               · ${esc(m.genre)} · ${esc(m.forme)}${m.disponible === false ? ' · masquée' : ''}
             </span>
           </div>
@@ -517,7 +511,6 @@
       $('#f-lun').reset();
       $('#l-id').value = '';
       $('#l-prix').value = 16000;
-      $('#l-ancien-prix').value = 25000;
       $('#l-promo').checked = true;
       $('#l-badge').value = 'PROMO';
       $('#lt').textContent = 'Ajouter une monture';
@@ -542,7 +535,6 @@
         $('#l-nom').value = m.nom || '';
         $('#l-desc').value = m.description || '';
         $('#l-prix').value = m.prix || 16000;
-        $('#l-ancien-prix').value = m.ancien_prix || 25000;
         $('#l-promo').checked = m.en_promo !== false;
         $('#l-badge').value = m.badge || 'PROMO';
         $('#l-genre').value = m.genre || 'mixte';
@@ -569,7 +561,6 @@
           nom: $('#l-nom').value.trim(),
           description: $('#l-desc').value.trim(),
           prix: +$('#l-prix').value || 16000,
-          ancien_prix: +$('#l-ancien-prix').value || 0,
           en_promo: $('#l-promo').checked,
           badge: $('#l-badge').value.trim(),
           genre: $('#l-genre').value,
