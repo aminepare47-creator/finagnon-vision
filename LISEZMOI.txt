@@ -1,8 +1,12 @@
 Finagnon Vision - site vitrine (base Neon, mise en ligne GitHub + Vercel)
-Fichiers : index.html (site), admin.html (administration), config.js (adresses Neon),
-neon.bundle.js (client Neon), neon/schema.sql (base de données), images/.
-Le slogan « Votre partenaire optique de confiance » s'affiche en haut de la page d'accueil
-(bandeau) : il se change dans admin.html > Le site > « Slogan ».
+Fichiers : index.html (site, nouvelle maquette), admin.html (administration), config.js (adresses Neon),
+neon.bundle.js (client Neon), neon/schema.sql (base de données), maquette.html (maquette d'origine, référence), images/.
+Le site a 4 écrans : Accueil, Catalogue, Rendez-vous, Devis (navigation en bas de page).
+Le slogan « Votre partenaire optique de confiance » s'affiche dans le bandeau du haut de la page
+d'accueil : il se change dans admin.html > Le site > « Slogan » (ainsi que le titre, le texte,
+les horaires et les créneaux de rendez-vous).
+Note : la nouvelle maquette n'a pas de rubrique blog sur le site public ; l'onglet Blog de
+l'administration est donc masqué (les publications existantes restent dans la base).
 
 1. BASE DE DONNEES (Neon, projet déjà existant)
    1.1 neon.com > projet du site > SQL Editor : coller TOUT neon/schema.sql > Run.

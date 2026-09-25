@@ -22,7 +22,7 @@
  <div class="flex gap-2"><button id="act-retry" class="h-11 px-5 rounded-xl bg-teal text-white font-semibold">Vérifier à nouveau</button><button id="act-out" class="h-11 px-5 rounded-xl bg-sky font-semibold">Déconnexion</button></div></div>
 
 <div id="panel" class="hidden flex flex-col gap-5">
- <nav class="grid grid-cols-3 gap-2"><button data-t="lun" class="tab on h-11 rounded-xl bg-white shadow-sm font-semibold text-sm">Lunettes</button><button data-t="blog" class="tab h-11 rounded-xl bg-white shadow-sm font-semibold text-sm">Blog</button><button data-t="site" class="tab h-11 rounded-xl bg-white shadow-sm font-semibold text-sm">Le site</button></nav>
+ <nav class="grid grid-cols-2 gap-2"><button data-t="lun" class="tab on h-11 rounded-xl bg-white shadow-sm font-semibold text-sm">Lunettes</button><button data-t="blog" class="tab hidden h-11 rounded-xl bg-white shadow-sm font-semibold text-sm">Blog</button><button data-t="site" class="tab h-11 rounded-xl bg-white shadow-sm font-semibold text-sm">Le site</button></nav>
  <p id="msg" class="text-sm font-semibold min-h-[1.25rem]"></p>
 
  <section id="t-lun" class="flex flex-col gap-5">
@@ -68,7 +68,7 @@ const ok=r=>{if(r&&r.error)throw new Error(r.error.message||"Erreur avec la base
 const shrink=(f,max=1000)=>new Promise((res,rej)=>{const im=new Image();im.onload=()=>{const k=Math.min(1,max/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=im.width*k;c.height=im.height*k;c.getContext("2d").drawImage(im,0,0,c.width,c.height);c.toBlob(res,"image/jpeg",.84)};im.onerror=()=>rej(new Error("Image illisible"));im.src=URL.createObjectURL(f)});
 const dataURL=b=>new Promise(r=>{const f=new FileReader();f.onload=()=>r(f.result);f.readAsDataURL(b)});
 window.Store={remote:R,
- defaults:{QUARTIER:"Ouagadougou • Gounghin",PHONE_DISPLAY:"+226 65 16 43 94",WHATSAPP:"22665164394",HOURS:"Lun - Sam : 08h00 - 18h30",FACEBOOK:"https://www.facebook.com/share/1Bs8J24fV6/",TIKTOK:"https://www.tiktok.com/@finagnonvision",SLOGAN:"Votre partenaire optique de confiance",HERO_TITLE:"Visez plus net, toujours plus loin.",HERO_TEXT:"Montures tendances, verres protecteurs et verres correcteurs à Gounghin, Ouagadougou.",HERO_IMAGE:"images/clinique.jpg",LENS_IMAGE:"images/verres-progressifs.jpg",LENS_CAPTION:"Verres progressifs : une seule paire pour voir de loin, à l'écran et de près.",SLOTS_MORNING:"08h30, 09h30, 11h00",SLOTS_AFTERNOON:"15h30, 16h30, 18h00"},
+ defaults:{QUARTIER:"Ouagadougou • Gounghin",PHONE_DISPLAY:"+226 65 16 43 94",WHATSAPP:"22665164394",HOURS:"Lun - Sam : 08h30 - 19h00",FACEBOOK:"https://www.facebook.com/share/1Bs8J24fV6/",TIKTOK:"https://www.tiktok.com/@finagnonvision",SLOGAN:"Votre partenaire optique de confiance",HERO_TITLE:"Votre vue mérite l'excellence à Ouagadougou",HERO_TEXT:"Optique de haute précision & montures de créateurs à Gounghin. L'alliance d'un examen médical pointu et du style contemporain.",SLOTS_MORNING:"08h30, 09h30, 11h00",SLOTS_AFTERNOON:"15h30, 16h30, 18h00"},
  async authed(){if(!R)return true;try{const{data}=await sb().auth.getSession();return!!(data&&data.session)}catch{return false}},
  async login(email,password){if(!R)return;const{error}=await sb().auth.signInWithPassword({email,password});if(error)throw new Error(/invalid|password/i.test(error.message||"")?"Email ou mot de passe incorrect.":error.message||"Connexion impossible.")},
  async signup(email,password){const{error}=await sb().auth.signUp({email,password});if(error)throw new Error(error.message||"Création du compte impossible.")},
@@ -182,7 +182,7 @@ $("#f-blog").onsubmit=e=>{e.preventDefault();const id=$("#b-id").value,file=$("#
 
 // ---------- réglages du site
 const FIELDS=[["h","Contact"],["QUARTIER","Quartier / ville affichés"],["PHONE_DISPLAY","Téléphone affiché"],["WHATSAPP","Numéro WhatsApp (format international sans +, ex : 22665164394)"],["HOURS","Horaires d'ouverture"],["FACEBOOK","Lien Facebook"],["TIKTOK","Lien TikTok"],
- ["h","Page d'accueil"],["SLOGAN","Slogan (bandeau au-dessus du titre)"],["HERO_TITLE","Titre principal"],["HERO_TEXT","Texte sous le titre","area"],["HERO_IMAGE","Photo à gauche du haut de page","img"],["LENS_IMAGE","Photo de la section verres","img"],["LENS_CAPTION","Légende de cette photo"],
+ ["h","Page d'accueil"],["SLOGAN","Slogan (bandeau au-dessus du titre)"],["HERO_TITLE","Titre principal"],["HERO_TEXT","Texte sous le titre","area"],
  ["h","Rendez-vous"],["SLOTS_MORNING","Créneaux du matin (séparés par des virgules)"],["SLOTS_AFTERNOON","Créneaux de l'après-midi"]];
 function siteForm(){$("#s-fields").innerHTML=FIELDS.map(([k,l,t])=>k=="h"?`<h3 class="font-bold pt-2 border-t border-slate-100">${l}</h3>`:t=="img"?
  `<div class="flex items-center gap-3"><img id="p-${k}" src="${esc(S[k])}" class="w-20 h-20 rounded-lg object-cover bg-sky" alt=""/><label class="text-xs font-semibold flex flex-col gap-1 flex-1">${l}<input type="file" accept="image/*" data-img="${k}" class="text-sm font-normal"/></label></div>`:
