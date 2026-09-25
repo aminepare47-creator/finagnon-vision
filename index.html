@@ -1144,14 +1144,82 @@
       box-shadow: var(--shadow-lg);
     }
     .modal__media {
+      position: relative;
       width: 100%;
-      aspect-ratio: 1 / 1;
+      height: clamp(250px, 44vh, 360px); /* hauteur garantie : la photo est TOUJOURS visible, quel que soit le navigateur */
       border-radius: var(--r);
       overflow: hidden;
       background: #ffffff;
       border: 1px solid var(--line);
     }
-    .modal__media img { width: 100%; height: 100%; object-fit: contain; padding: 0.5rem; }
+    .modal__media img { width: 100%; height: 100%; object-fit: contain; padding: 0.5rem; cursor: zoom-in; }
+
+    /* Bouton Loupe sur la photo de la fiche */
+    .qv-zoom {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      z-index: 5;
+      width: 2.1rem;
+      height: 2.1rem;
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line-strong);
+      box-shadow: var(--shadow-sm);
+      cursor: zoom-in;
+      transition: all 0.16s ease;
+      touch-action: manipulation;
+    }
+    .qv-zoom:hover { background: var(--carbon); color: #fff; border-color: var(--carbon); }
+
+    /* Visionneuse photo plein écran (la lunette seule, en grand) */
+    .img-viewer {
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(5, 8, 15, 0.97);
+      padding: 1.25rem;
+      padding-top: 3.75rem;
+      cursor: zoom-out;
+      animation: promoFadeIn 0.2s ease;
+    }
+    .img-viewer img {
+      max-width: 100%;
+      max-height: calc(100vh - 5rem);
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      background: var(--white);
+      border-radius: var(--r);
+      padding: 0.75rem;
+      box-shadow: var(--shadow-lg);
+    }
+    .img-viewer__close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 2;
+      width: 2.6rem;
+      height: 2.6rem;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.16s ease;
+    }
+    .img-viewer__close:hover { background: rgba(255, 255, 255, 0.3); }
+    .img-viewer__close .icon { font-size: 1.4rem; }
     .modal__close {
       width: 2.2rem;
       height: 2.2rem;
@@ -2160,9 +2228,12 @@
           <span class="icon material-symbols-outlined">close</span>
         </button>
       </div>
-      <div class="modal__media" style="position:relative;">
-        <img id="qv-img" src="images/logo.png" alt="" />
+      <div class="modal__media">
+        <img id="qv-img" src="images/logo.png" alt="Photo du modèle" />
         <span class="frame-card__badge-promo" id="qv-badge" style="top:0.75rem; left:0.75rem;">🔥 PROMO</span>
+        <button class="qv-zoom" type="button" id="qv-zoom" aria-label="Voir la photo en grand">
+          <span class="icon material-symbols-outlined">zoom_in</span>
+        </button>
       </div>
       <div class="product-sheet__head">
         <h3 id="qv-title">Modèle Finagnon</h3>
@@ -2192,6 +2263,14 @@
         <div class="product-sheet__row" id="qv-similar"></div>
       </div>
     </div>
+  </div>
+
+  <!-- ================= Visionneuse Photo plein écran ================= -->
+  <div class="img-viewer hidden" id="img-viewer" role="dialog" aria-modal="true" aria-label="Photo en plein écran">
+    <button class="img-viewer__close" id="img-viewer-close" type="button" aria-label="Fermer">
+      <span class="icon material-symbols-outlined">close</span>
+    </button>
+    <img id="img-viewer-src" src="" alt="Photo du modèle en grand" />
   </div>
 
   <!-- ================= Popup Promo Overlay ================= -->
@@ -2559,9 +2638,33 @@
     const qvShareBtn = $('#qv-share');
     if (qvShareBtn) qvShareBtn.addEventListener('click', () => { if (qvCurrent) shareProduct(qvCurrent); });
 
+    /* Visionneuse : voir la lunette SEULE, en GRAND, plein écran */
+    const imgViewer = $('#img-viewer');
+    const viewerImg = $('#img-viewer-src');
+    function openImgViewer(src, alt) {
+      if (!imgViewer || !viewerImg || !src) return;
+      viewerImg.src = src;
+      viewerImg.alt = alt || 'Photo du modèle';
+      imgViewer.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeImgViewer() {
+      if (imgViewer) imgViewer.classList.add('hidden');
+      document.body.style.overflow = $$('.modal:not(.hidden)').length ? 'hidden' : '';
+    }
+    const qvImgEl = $('#qv-img');
+    if (qvImgEl) qvImgEl.addEventListener('click', () => openImgViewer(qvImgEl.src, qvImgEl.alt));
+    const qvZoomBtn = $('#qv-zoom');
+    if (qvZoomBtn) qvZoomBtn.addEventListener('click', () => { if (qvImgEl) openImgViewer(qvImgEl.src, qvImgEl.alt); });
+    if (imgViewer) {
+      imgViewer.addEventListener('click', e => { if (e.target === imgViewer) closeImgViewer(); });
+      const ivClose = $('#img-viewer-close');
+      if (ivClose) ivClose.addEventListener('click', closeImgViewer);
+    }
+
     $$('[data-close-modal]').forEach(b => b.addEventListener('click', () => closeModal(document.getElementById(b.dataset.closeModal))));
     $$('.modal').forEach(m => m.addEventListener('click', e => { if (e.target === m) closeModal(m); }));
-    addEventListener('keydown', e => { if (e.key === 'Escape') $$('.modal').forEach(closeModal); });
+    addEventListener('keydown', e => { if (e.key === 'Escape') { $$('.modal').forEach(closeModal); closeImgViewer(); } });
     const qvClose = $('#qv-close');
     if (qvClose) qvClose.addEventListener('click', () => closeModal(qvModal));
 
