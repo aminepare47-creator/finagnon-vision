@@ -309,11 +309,11 @@
                   <input class="input" id="l-ancien-prix" type="number" min="0" step="500" value="25000" placeholder="Ex : 25000" />
                 </label>
               </div>
-              <p class="hint">Si "En promotion" est coché, l'ancien prix sera barré et le prix promo (16 000 FCFA) sera affiché en rouge sur le site.</p>
+              <p class="hint">Si "En promotion" est coché, l'ancien prix sera barré et le prix promo sera affiché en rouge sur le site.</p>
             </div>
 
             <label class="field" for="l-badge">Badge personnalisé
-              <input class="input" id="l-badge" value="PROMO 16 000 F" placeholder="Ex : PROMO 16 000 F, NOUVEAU…" />
+              <input class="input" id="l-badge" value="PROMO" placeholder="Ex : PROMO, NOUVEAU…" />
             </label>
             <label class="field" for="l-genre">Public
               <select class="input" id="l-genre">
@@ -382,7 +382,7 @@
   <p class="foot">Finagnon Vision — Espace de gestion</p>
 
   <script src="neon.bundle.js"></script>
-  <script src="store.js?v=20260925b"></script>
+  <script src="store.js?v=20260925d"></script>
   <script>
   (function () {
     const $ = s => document.querySelector(s);
@@ -461,7 +461,7 @@
       $('#l-prix').value = 16000;
       $('#l-ancien-prix').value = 25000;
       $('#l-promo').checked = true;
-      $('#l-badge').value = 'PROMO 16 000 F';
+      $('#l-badge').value = 'PROMO';
       say('Valeurs Promo 16 000 FCFA appliquées au formulaire !', true);
     });
 
@@ -475,7 +475,7 @@
             prix: 16000,
             ancien_prix: m.prix > 16000 ? m.prix : 25000,
             en_promo: true,
-            badge: 'PROMO 16 000 F'
+            badge: 'PROMO'
           });
         }
         await refreshL();
@@ -519,7 +519,7 @@
       $('#l-prix').value = 16000;
       $('#l-ancien-prix').value = 25000;
       $('#l-promo').checked = true;
-      $('#l-badge').value = 'PROMO 16 000 F';
+      $('#l-badge').value = 'PROMO';
       $('#lt').textContent = 'Ajouter une monture';
       $('#l-cancel').classList.add('hidden');
     };
@@ -544,7 +544,7 @@
         $('#l-prix').value = m.prix || 16000;
         $('#l-ancien-prix').value = m.ancien_prix || 25000;
         $('#l-promo').checked = m.en_promo !== false;
-        $('#l-badge').value = m.badge || 'PROMO 16 000 F';
+        $('#l-badge').value = m.badge || 'PROMO';
         $('#l-genre').value = m.genre || 'mixte';
         $('#l-type').value = m.type || 'vue';
         $('#l-forme').value = m.forme || 'rect';
@@ -597,10 +597,8 @@
       ['HOURS', "Horaires d'ouverture"],
       ['FACEBOOK', 'Lien Facebook'],
       ['TIKTOK', 'Lien TikTok'],
-      ['h', "Page d'Accueil"],
-      ['SLOGAN', 'Slogan'],
-      ['HERO_TITLE', 'Titre principal'],
-      ['HERO_TEXT', 'Texte sous le titre', 'area'],
+      ['h', 'Pied de page'],
+      ['SLOGAN', 'Slogan affiché dans le pied de page'],
       ['h', 'Créneaux Rendez-vous'],
       ['SLOTS_MORNING', 'Créneaux matin (séparés par virgules)'],
       ['SLOTS_AFTERNOON', "Créneaux après-midi"]

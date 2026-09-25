@@ -52,9 +52,10 @@
       HOURS: 'Lun - Sam : 08h30 - 19h00',
       FACEBOOK: 'https://www.facebook.com/share/1Bs8J24fV6/',
       TIKTOK: 'https://www.tiktok.com/@finagnonvision',
-      SLOGAN: '🔥 OFFRE SPÉCIALE • TOUT À 16 000 FCFA',
-      HERO_TITLE: "Toutes nos montures à 16 000 FCFA",
-      HERO_TEXT: "Grande promotion exceptionnelle : montures de qualité à 16 000 FCFA seulement. Expédition rapide partout à Ouagadougou et en province !",
+      SLOGAN: '🔥 OFFRE SPÉCIALE SUR TOUTES NOS MONTURES',
+      // NB : la section Hero du site n'est PLUS pilotée par les réglages promo.
+      // Elle conserve son texte d'origine — la promo s'affiche uniquement via
+      // le bandeau et le popup dédiées (interfaces indépendantes).
       PROMO_BANNER: '🔥 PROMO EXCEPTIONNELLE : Toutes nos montures à 16 000 FCFA • Expédition partout !',
       PROMO_ACTIVE: 'true',
       EXPEDITION_NOTE: 'Expédition rapide partout au Burkina Faso (Ouagadougou & province)',
@@ -196,7 +197,7 @@
       genre: x[2],
       type: 'bluelight',
       forme: x[3],
-      badge: 'PROMO 16 000 F',
+      badge: 'PROMO',
       disponible: true,
       image_url: 'images/lunette-' + String(i + 1).padStart(2, '0') + '.jpg'
     }));

@@ -12,7 +12,7 @@ create table if not exists public.lunettes (
   genre text default 'mixte',
   type text default 'vue',
   forme text default 'rect',
-  badge text default 'PROMO 16 000 F',
+  badge text default 'PROMO',
   disponible boolean default true,
   image_url text,
   created_at timestamptz default now());
@@ -71,21 +71,21 @@ on conflict (id) do nothing;
 -- Les 15 modèles de départ à 16 000 FCFA
 insert into public.lunettes (nom, description, prix, ancien_prix, en_promo, genre, type, forme, badge, disponible, image_url)
 select * from (values
- ('Demi-cerclée Or & Rouge','Monture métal dorée, demi-cerclée, verres anti-lumière bleue',16000,25000,true,'femme','bluelight','papillon','PROMO 16 000 F',true,'images/lunette-01.jpg'),
- ('Rectangulaire Gris Mat','Monture légère gris mat, branches métal',16000,25000,true,'homme','bluelight','rect','PROMO 16 000 F',true,'images/lunette-02.jpg'),
- ('Écaille Noir & Ambre','Acétate noir et écaille ambrée, détails dorés',16000,25000,true,'mixte','bluelight','carree','PROMO 16 000 F',true,'images/lunette-03.jpg'),
- ('Métal Bleu Nuit','Fine monture métal bleu nuit, plaquettes confort',16000,25000,true,'homme','bluelight','rect','PROMO 16 000 F',true,'images/lunette-04.jpg'),
- ('Sans cadre Argent','Monture sans cadre, branches argentées',16000,25000,true,'homme','bluelight','rect','PROMO 16 000 F',true,'images/lunette-05.jpg'),
- ('Demi-cerclée Argent & Noir','Style browline argent et noir',16000,25000,true,'mixte','bluelight','rect','PROMO 16 000 F',true,'images/lunette-06.jpg'),
- ('Acétate Écaille Dorée','Acétate écaille, finitions dorées sur les branches',16000,25000,true,'mixte','bluelight','carree','PROMO 16 000 F',true,'images/lunette-07.jpg'),
- ('Browline Noir & Or','Arcade noire, cerclage or',16000,25000,true,'mixte','bluelight','carree','PROMO 16 000 F',true,'images/lunette-08.jpg'),
- ('Ronde Noire & Orange','Ronde noire, embouts orange',16000,25000,true,'mixte','bluelight','ronde','PROMO 16 000 F',true,'images/lunette-09.jpg'),
- ('Rectangulaire Noir & Bleu','Noir texturé, branches bleu marine',16000,25000,true,'homme','bluelight','rect','PROMO 16 000 F',true,'images/lunette-10.jpg'),
- ('Sans cadre Argent Bianco','Monture sans cadre, argent et noir',16000,25000,true,'homme','bluelight','rect','PROMO 16 000 F',true,'images/lunette-11.jpg'),
- ('Carrée Noire Cloutée','Acétate noir brillant, clous décoratifs',16000,25000,true,'mixte','bluelight','carree','PROMO 16 000 F',true,'images/lunette-12.jpg'),
- ('Fine Noire & Argent','Monture fine noire, branches argentées',16000,25000,true,'mixte','bluelight','rect','PROMO 16 000 F',true,'images/lunette-13.jpg'),
- ('Noir & Cristal','Bicolore noir et cristal transparent',16000,25000,true,'homme','bluelight','carree','PROMO 16 000 F',true,'images/lunette-14.jpg'),
- ('Carrée Gris Transparent','Acétate gris transparent, style oversize',16000,25000,true,'mixte','bluelight','carree','PROMO 16 000 F',true,'images/lunette-15.jpg')
+ ('Demi-cerclée Or & Rouge','Monture métal dorée, demi-cerclée, verres anti-lumière bleue',16000,25000,true,'femme','bluelight','papillon','PROMO',true,'images/lunette-01.jpg'),
+ ('Rectangulaire Gris Mat','Monture légère gris mat, branches métal',16000,25000,true,'homme','bluelight','rect','PROMO',true,'images/lunette-02.jpg'),
+ ('Écaille Noir & Ambre','Acétate noir et écaille ambrée, détails dorés',16000,25000,true,'mixte','bluelight','carree','PROMO',true,'images/lunette-03.jpg'),
+ ('Métal Bleu Nuit','Fine monture métal bleu nuit, plaquettes confort',16000,25000,true,'homme','bluelight','rect','PROMO',true,'images/lunette-04.jpg'),
+ ('Sans cadre Argent','Monture sans cadre, branches argentées',16000,25000,true,'homme','bluelight','rect','PROMO',true,'images/lunette-05.jpg'),
+ ('Demi-cerclée Argent & Noir','Style browline argent et noir',16000,25000,true,'mixte','bluelight','rect','PROMO',true,'images/lunette-06.jpg'),
+ ('Acétate Écaille Dorée','Acétate écaille, finitions dorées sur les branches',16000,25000,true,'mixte','bluelight','carree','PROMO',true,'images/lunette-07.jpg'),
+ ('Browline Noir & Or','Arcade noire, cerclage or',16000,25000,true,'mixte','bluelight','carree','PROMO',true,'images/lunette-08.jpg'),
+ ('Ronde Noire & Orange','Ronde noire, embouts orange',16000,25000,true,'mixte','bluelight','ronde','PROMO',true,'images/lunette-09.jpg'),
+ ('Rectangulaire Noir & Bleu','Noir texturé, branches bleu marine',16000,25000,true,'homme','bluelight','rect','PROMO',true,'images/lunette-10.jpg'),
+ ('Sans cadre Argent Bianco','Monture sans cadre, argent et noir',16000,25000,true,'homme','bluelight','rect','PROMO',true,'images/lunette-11.jpg'),
+ ('Carrée Noire Cloutée','Acétate noir brillant, clous décoratifs',16000,25000,true,'mixte','bluelight','carree','PROMO',true,'images/lunette-12.jpg'),
+ ('Fine Noire & Argent','Monture fine noire, branches argentées',16000,25000,true,'mixte','bluelight','rect','PROMO',true,'images/lunette-13.jpg'),
+ ('Noir & Cristal','Bicolore noir et cristal transparent',16000,25000,true,'homme','bluelight','carree','PROMO',true,'images/lunette-14.jpg'),
+ ('Carrée Gris Transparent','Acétate gris transparent, style oversize',16000,25000,true,'mixte','bluelight','carree','PROMO',true,'images/lunette-15.jpg')
 ) as v(nom, description, prix, ancien_prix, en_promo, genre, type, forme, badge, disponible, image_url)
 where not exists (select 1 from public.lunettes);
 

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Finagnon Vision — Montures à 16 000 FCFA • Expédition Partout • Ouagadougou</title>
-  <meta name="description" content="Grande Promo Finagnon Vision : Toutes nos montures à 16 000 FCFA seulement. Expédition partout au Burkina Faso et en sous-région. Devis rapide sur WhatsApp." />
+  <title>Finagnon Vision — Opticien à Ouagadougou (Gounghin) • Montures, Verres & Expédition Partout</title>
+  <meta name="description" content="Finagnon Vision, votre opticienne de confiance à Gounghin, Ouagadougou : examen de vue, montures, verres correcteurs et solaires. Expédition partout au Burkina Faso. Devis rapide sur WhatsApp." />
   <meta name="theme-color" content="#dc2626" />
 
   <!-- Anti-cache strict pour garantir les mises à jour immédiates -->
@@ -20,7 +20,7 @@
 
   <style>
     /* =====================================================================
-       Finagnon Vision — Styles intégrés, Mobile-first & Promo 16 000 FCFA
+       Finagnon Vision — Styles intégrés, Mobile-first & Promo
        ===================================================================== */
     :root {
       --blue: #0052ff;
@@ -55,7 +55,7 @@
       --shadow-lg: 0 20px 50px rgba(11, 15, 25, 0.16);
 
       --gap: clamp(1rem, 2vw, 1.75rem);
-      --section-y: clamp(2.75rem, 6vw, 5.5rem);
+      --section-y: clamp(2.5rem, 5vw, 5rem);
       --wrap: 1160px;
       --pad-x: clamp(1rem, 4vw, 2.25rem);
       --font: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -112,16 +112,16 @@
       flex-shrink: 0;
     }
 
-    /* Bandeau Promo Tout en Haut */
+    /* Bandeau Promo Tout en Haut avec Bouton Fermer */
     .promo-bar {
       background: var(--promo);
       color: #fff;
-      padding: 0.45rem var(--pad-x);
+      padding: 0.5rem var(--pad-x);
       font-size: 0.84rem;
       font-weight: 700;
-      text-align: center;
       position: relative;
       z-index: 65;
+      box-shadow: 0 2px 10px rgba(220, 38, 38, 0.25);
     }
     .promo-bar__inner {
       display: flex;
@@ -129,6 +129,8 @@
       justify-content: center;
       gap: 0.6rem;
       flex-wrap: wrap;
+      position: relative;
+      padding-right: 2.2rem; /* Espace pour le bouton fermer */
     }
     .promo-badge-top {
       background: #fff;
@@ -140,13 +142,32 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
-    .promo-bar a {
+    .promo-link {
       color: #fff;
       text-decoration: underline;
       font-weight: 800;
       margin-left: 0.35rem;
       white-space: nowrap;
     }
+    .promo-close {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.85rem;
+      height: 1.85rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.22);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background 0.16s ease;
+    }
+    .promo-close:hover { background: rgba(255, 255, 255, 0.4); }
+    .promo-close .icon { font-size: 1.15rem; }
 
     /* Sections */
     .section { padding-block: var(--section-y); width: 100%; overflow: hidden; }
@@ -356,17 +377,6 @@
       gap: 0.5rem;
       flex-shrink: 0;
     }
-    .nav-toggle {
-      display: none;
-      width: 2.6rem;
-      height: 2.6rem;
-      align-items: center;
-      justify-content: center;
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: var(--r-sm);
-      color: var(--ink);
-    }
 
     /* Hero */
     .hero { padding-block: clamp(1.25rem, 3.5vw, 2.5rem) 0; }
@@ -394,7 +404,7 @@
       font-size: clamp(1.75rem, 5.5vw, 3rem);
       line-height: 1.15;
     }
-    .hero__title span { color: #f87171; }
+    .hero__title span { color: #60a5fa; }
     .hero__text {
       color: #cbd5e1;
       font-size: clamp(0.95rem, 2vw, 1.08rem);
@@ -408,7 +418,7 @@
       font-size: 0.92rem;
     }
     .hero__points li { display: flex; align-items: center; gap: 0.5rem; }
-    .hero__points .icon { color: #f87171; }
+    .hero__points .icon { color: #60a5fa; }
     .hero__actions {
       display: flex;
       flex-wrap: wrap;
@@ -511,6 +521,8 @@
       grid-template-columns: 1fr;
       margin-top: 1rem;
     }
+
+    /* Carte Monture — Résolution du problème "double cadre" */
     .frame-card {
       display: flex;
       flex-direction: column;
@@ -519,7 +531,7 @@
       border-radius: var(--r);
       overflow: hidden;
       box-shadow: var(--shadow-sm);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
       cursor: pointer;
     }
     .frame-card:hover {
@@ -527,51 +539,76 @@
       box-shadow: var(--shadow);
       border-color: var(--promo-line);
     }
+
+    /* Zone Photo — monture ENTIÈRE visible, jamais rognée */
     .frame-card__media {
       position: relative;
-      background: var(--surface);
-      padding: 1.25rem;
+      width: 100%;
+      aspect-ratio: 1 / 1;          /* photos produits carrées 800x800 */
+      background: var(--white);     /* fond blanc uni : aucun effet de double cadre */
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      aspect-ratio: 4 / 3;
+      padding: 0.75rem;             /* marge : les lunettes ne touchent jamais les bords */
     }
     .frame-card__media img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
-      mix-blend-mode: multiply;
+      object-fit: contain;          /* TOUTE la monture visible, zéro rognage */
+      object-position: center;
+      transition: transform 0.3s ease;
     }
-    .frame-card__badge {
+    .frame-card:hover .frame-card__media img {
+      transform: scale(1.05);
+    }
+
+    /* Badge Promo en haut à gauche */
+    .frame-card__badge-promo {
       position: absolute;
       top: 0.65rem;
       left: 0.65rem;
-      padding: 0.25rem 0.6rem;
+      z-index: 4;
+      padding: 0.3rem 0.65rem;
       border-radius: var(--r-pill);
       background: var(--promo);
       color: #fff;
-      font-size: 0.68rem;
+      font-size: 0.72rem;
       font-weight: 800;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+      line-height: 1;
     }
+
+    /* Badge Type en haut à droite — Grande taille, haute lisibilité */
+    .frame-card__badge-type {
+      position: absolute;
+      top: 0.55rem;
+      right: 0.55rem;
+      z-index: 4;
+      padding: 0.42rem 0.8rem;
+      border-radius: var(--r-pill);
+      background: rgba(0, 0, 0, 0.82);
+      backdrop-filter: blur(10px);
+      color: #ffffff;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
+      line-height: 1.2;
+      border: 1.5px solid rgba(255, 255, 255, 0.4);
+    }
+
     .frame-card__body {
       display: flex;
       flex-direction: column;
       gap: 0.35rem;
       padding: 1rem;
-      border-top: 1px solid var(--line);
       flex: 1;
     }
-    .frame-card__type {
-      font-size: 0.7rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      color: var(--muted-soft);
-      letter-spacing: 0.08em;
-    }
-    .frame-card__name { font-size: 1rem; font-weight: 800; line-height: 1.2; }
+    .frame-card__name { font-size: 1.05rem; font-weight: 800; line-height: 1.25; }
     .frame-card__desc { font-size: 0.85rem; color: var(--muted); }
 
     /* Prix Promo */
@@ -589,12 +626,12 @@
       gap: 0.45rem;
     }
     .price-old {
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       color: var(--muted-soft);
       text-decoration: line-through;
     }
     .price-promo {
-      font-size: 1.15rem;
+      font-size: 1.18rem;
       font-weight: 800;
       color: var(--promo);
     }
@@ -602,11 +639,11 @@
     .card__shipping {
       display: flex;
       align-items: center;
-      gap: 0.25rem;
-      font-size: 0.74rem;
+      gap: 0.3rem;
+      font-size: 0.76rem;
       font-weight: 700;
       color: var(--ok);
-      margin-top: 0.15rem;
+      margin-top: 0.2rem;
     }
     .card__shipping .icon { font-size: 1rem; }
 
@@ -1044,13 +1081,13 @@
     }
     .modal__media {
       width: 100%;
-      aspect-ratio: 4 / 3;
+      aspect-ratio: 1 / 1;
       border-radius: var(--r);
       overflow: hidden;
-      background: var(--surface);
+      background: #ffffff;
       border: 1px solid var(--line);
     }
-    .modal__media img { width: 100%; height: 100%; object-fit: contain; }
+    .modal__media img { width: 100%; height: 100%; object-fit: contain; padding: 0.5rem; }
     .modal__close {
       width: 2.2rem;
       height: 2.2rem;
@@ -1068,7 +1105,7 @@
       background: var(--carbon);
       color: #fff;
       padding-block: 2.5rem;
-      padding-bottom: calc(2.5rem + 4.5rem);
+      padding-bottom: calc(2.5rem + 5rem); /* Espace pour le menu mobile en bas */
     }
     .footer-grid {
       display: grid;
@@ -1088,50 +1125,74 @@
       color: #64748b;
     }
 
-    /* Barre d'actions rapides Mobile (Fixe en bas) */
-    .mobile-cta {
+    /* =====================================================================
+       Menu Mobile en Bas (Bottom Navigation Bar)
+       ===================================================================== */
+    .mobile-bottom-nav {
       position: fixed;
       left: 0;
       right: 0;
       bottom: 0;
-      z-index: 70;
+      z-index: 80;
       display: flex;
       align-items: center;
-      gap: 0.4rem;
-      padding: 0.55rem var(--pad-x) calc(0.55rem + env(safe-area-inset-bottom, 0px));
+      justify-content: space-around;
       background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(14px);
+      backdrop-filter: blur(16px);
       border-top: 1px solid var(--line);
-      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+      padding: 0.4rem 0.5rem calc(0.4rem + env(safe-area-inset-bottom, 0px));
     }
-    .mobile-cta .btn {
+    .mobile-nav-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.2rem;
       flex: 1;
-      min-width: 0;
-      padding: 0.65rem 0.35rem;
-      font-size: 0.82rem;
-      gap: 0.3rem;
+      padding: 0.35rem 0.2rem;
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-align: center;
+      transition: color 0.16s ease;
+      touch-action: manipulation;
+    }
+    .mobile-nav-link .icon {
+      font-size: 1.45rem;
+      transition: transform 0.16s ease;
+    }
+    .mobile-nav-link:hover,
+    .mobile-nav-link.is-on {
+      color: var(--blue);
+    }
+    .mobile-nav-link.is-on .icon {
+      transform: translateY(-2px);
+      color: var(--blue);
+    }
+
+    /* Onglet Promo WhatsApp central mis en valeur */
+    .mobile-nav-link--highlight {
+      color: var(--promo);
+    }
+    .mobile-nav-link--highlight .icon {
+      background: var(--promo);
+      color: #fff;
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 50%;
+      box-shadow: 0 3px 10px rgba(220, 38, 38, 0.35);
+      margin-top: -0.5rem;
+    }
+    .mobile-nav-link--highlight.is-on {
+      color: var(--promo);
     }
 
     /* =====================================================================
        Responsive & Adaptations écrans
        ===================================================================== */
     @media (max-width: 860px) {
-      .site-nav {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        align-items: stretch;
-        padding: 0.5rem var(--pad-x) 1.25rem;
-        background: var(--white);
-        border-bottom: 1px solid var(--line);
-        box-shadow: var(--shadow);
-      }
-      .site-nav.is-open { display: flex; }
-      .site-nav a { padding: 0.75rem 0; border-bottom: 1px solid var(--line); font-size: 0.95rem; }
-      .nav-toggle { display: inline-flex; }
+      .site-nav { display: none !important; }
       .hide-mobile { display: none !important; }
     }
 
@@ -1154,22 +1215,149 @@
       .frames-grid, .cat-grid { grid-template-columns: repeat(4, 1fr); }
       .footer-grid { grid-template-columns: repeat(4, 1fr); }
       .footer-bottom { flex-direction: row; justify-content: space-between; }
-      .mobile-cta { display: none !important; }
+      .mobile-bottom-nav { display: none !important; }
       .site-footer { padding-bottom: 2.5rem; }
     }
+    /* =====================================================================
+       Popup Promo — Interface plein écran avec fermeture
+       ===================================================================== */
+    .promo-popup {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(11, 15, 25, 0.78);
+      backdrop-filter: blur(10px);
+      padding: 1.25rem;
+      animation: promoFadeIn 0.35s ease;
+    }
+    @keyframes promoFadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .promo-popup__card {
+      position: relative;
+      width: 100%;
+      max-width: 24rem;
+      background: var(--white);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+      animation: promoSlideUp 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes promoSlideUp {
+      from { opacity: 0; transform: translateY(40px) scale(0.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .promo-popup__top {
+      background: linear-gradient(135deg, var(--promo) 0%, #ef4444 100%);
+      color: #fff;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      position: relative;
+    }
+    .promo-popup__label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.92;
+      margin-bottom: 0.6rem;
+    }
+    .promo-popup__title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .promo-popup__price {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+    .promo-popup__old {
+      font-size: 0.88rem;
+      text-decoration: line-through;
+      opacity: 0.7;
+      margin-top: 0.2rem;
+    }
+    .promo-popup__close {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.22);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      cursor: pointer;
+      transition: background 0.16s ease;
+      z-index: 2;
+    }
+    .promo-popup__close:hover { background: rgba(255, 255, 255, 0.4); }
+    .promo-popup__body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .promo-popup__list {
+      list-style: none;
+      display: grid;
+      gap: 0.55rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .promo-popup__list li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .promo-popup__list .icon {
+      color: var(--promo);
+      font-size: 1.15rem;
+    }
+    .promo-popup__btns {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .promo-popup__skip {
+      text-align: center;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--muted);
+      cursor: pointer;
+      padding: 0.5rem;
+      border: none;
+      background: none;
+      transition: color 0.16s ease;
+    }
+    .promo-popup__skip:hover { color: var(--ink); text-decoration: underline; }
   </style>
 </head>
 <body>
-  <!-- ================= Bandeau Promo Expédition ================= -->
+  <!-- ================= Bandeau Promo Expédition avec Fermeture ================= -->
   <aside class="promo-bar" id="promo-bar">
     <div class="wrap promo-bar__inner">
       <span class="promo-badge-top">PROMO</span>
       <span data-set="PROMO_BANNER">🔥 TOUTES NOS MONTURES À 16 000 FCFA • EXPÉDITION PARTOUT !</span>
-      <a data-link="whatsapp" href="https://wa.me/22665164394" target="_blank" rel="noopener">Commander sur WhatsApp &rarr;</a>
+      <a class="promo-link" data-link="whatsapp" href="https://wa.me/22665164394" target="_blank" rel="noopener">Commander &rarr;</a>
+      <button class="promo-close" id="promo-close" type="button" aria-label="Fermer ce bandeau" title="Fermer">
+        <span class="icon material-symbols-outlined">close</span>
+      </button>
     </div>
   </aside>
 
-  <!-- ================= En-tête ================= -->
+  <!-- ================= En-tête Desktop ================= -->
   <header class="site-header">
     <div class="wrap header__inner">
       <a class="brand" href="#accueil" aria-label="Finagnon Vision — accueil">
@@ -1182,7 +1370,7 @@
 
       <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
         <a href="#accueil" class="is-on">Accueil</a>
-        <a href="#catalogue">Catalogue (16 000 F)</a>
+        <a href="#catalogue">Catalogue</a>
         <a href="#verres">Verres</a>
         <a href="#rendez-vous">Rendez-vous</a>
         <a href="#devis">Devis</a>
@@ -1191,12 +1379,9 @@
 
       <div class="header__actions">
         <a class="btn btn--promo btn__small hide-mobile" data-link="whatsapp" href="https://wa.me/22665164394" target="_blank" rel="noopener">
-          <span class="icon material-symbols-outlined">chat</span> Commander 16k
+          <span class="icon material-symbols-outlined">chat</span> WhatsApp
         </a>
         <a class="btn btn--primary btn__small hide-mobile" href="#rendez-vous">Rendez-vous</a>
-        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu">
-          <span class="icon material-symbols-outlined">menu</span>
-        </button>
       </div>
     </div>
   </header>
@@ -1207,22 +1392,22 @@
       <div class="wrap">
         <div class="hero__panel">
           <div class="hero__copy">
-            <span class="eyebrow eyebrow--promo" data-set="SLOGAN">🔥 OFFRE SPÉCIALE • TOUT À 16 000 FCFA</span>
-            <h1 class="hero__title" data-set="HERO_TITLE">Toutes nos montures à <span>16 000 FCFA</span></h1>
-            <p class="hero__text" data-set="HERO_TEXT">
-              Grande promotion exceptionnelle : montures optiques et solaires à 16 000 FCFA seulement. Expédition rapide partout à Ouagadougou et en province !
+            <span class="eyebrow"><span class="icon material-symbols-outlined">verified</span> Opticienne diplômée d'État</span>
+            <h1 class="hero__title">Votre opticienne de confiance à <span>Gounghin</span></h1>
+            <p class="hero__text">
+              Finagnon Vision vous accompagne dans le choix de vos lunettes avec expertise et passion. Montures, verres correcteurs, solaires — tout est taillé et ajusté dans notre atelier à Ouagadougou.
             </p>
             <ul class="hero__points">
-              <li><span class="icon material-symbols-outlined">local_fire_department</span> Prix unique promo : 16 000 FCFA au lieu de 25 000 FCFA</li>
-              <li><span class="icon material-symbols-outlined">local_shipping</span> Expédition sécurisée partout (Ouaga &amp; province)</li>
-              <li><span class="icon material-symbols-outlined">verified</span> Opticienne diplômée d'État &amp; verres taillés en 48h</li>
+              <li><span class="icon material-symbols-outlined">visibility</span> Examen de vue complet et réfraction précise</li>
+              <li><span class="icon material-symbols-outlined">center_focus_strong</span> Verres taillés et montés en atelier sous 48h</li>
+              <li><span class="icon material-symbols-outlined">local_shipping</span> Expédition sécurisée partout au Burkina Faso</li>
             </ul>
             <div class="hero__actions">
-              <a class="btn btn--promo btn--lg" href="#catalogue">
-                <span class="icon material-symbols-outlined">shopping_bag</span> Voir les montures à 16 000 F
+              <a class="btn btn--primary btn--lg" href="#catalogue">
+                <span class="icon material-symbols-outlined">eyeglasses</span> Découvrir nos montures
               </a>
-              <a class="btn btn--light btn--lg" data-link="whatsapp" href="https://wa.me/22665164394" target="_blank" rel="noopener">
-                <span class="icon material-symbols-outlined">chat</span> WhatsApp Expédition
+              <a class="btn btn--light btn--lg" href="#rendez-vous">
+                <span class="icon material-symbols-outlined">calendar_month</span> Prendre rendez-vous
               </a>
             </div>
           </div>
@@ -1230,7 +1415,7 @@
           <div class="hero__media">
             <img src="images/clinique.jpg" alt="Cabinet Finagnon Vision" />
             <span class="hero__tag">
-              <span class="dot-live"></span> Promo active • Ouvert à Gounghin
+              <span class="dot-live"></span> Ouvert à Gounghin
             </span>
           </div>
         </div>
@@ -1269,7 +1454,7 @@
           <div>
             <span class="eyebrow eyebrow--promo">🔥 Offre du moment</span>
             <h2 class="section-title">Nouveautés en promotion</h2>
-            <p class="section-lead">Toutes ces montures sont à 16 000 FCFA avec possibilité d'expédition partout.</p>
+            <p class="section-lead">Toutes ces montures sont en promotion avec expédition partout.</p>
           </div>
           <a class="btn btn--outline btn__small" href="#catalogue">
             Voir tout le catalogue <span class="icon material-symbols-outlined">chevron_right</span>
@@ -1277,7 +1462,7 @@
         </div>
 
         <div class="pill-bar" id="catalog-filter-bar">
-          <button class="pill frame-filter-btn is-on" type="button" data-target="all">Toutes (16 000 F)</button>
+          <button class="pill frame-filter-btn is-on" type="button" data-target="all">Toutes</button>
           <button class="pill frame-filter-btn" type="button" data-target="vue">Optiques / Vue</button>
           <button class="pill frame-filter-btn" type="button" data-target="solaire">Solaires</button>
           <button class="pill frame-filter-btn" type="button" data-target="luxe">Créateurs</button>
@@ -1416,7 +1601,7 @@
             <span class="advice__icon icon material-symbols-outlined">psychology</span>
             <div>
               <b id="advice-title">Conseil pour visage rond</b>
-              <p id="advice-text">Privilégiez les formes angulaires ou rectangulaires pour structurer et affiner les traits.</p>
+              <p id="advice-text">Privilégiez les formes angulaires ou rectangulaires pour affiner et structurer vos traits.</p>
             </div>
           </div>
         </div>
@@ -1447,7 +1632,7 @@
       <div class="wrap">
         <div class="section-head section-head--split">
           <div>
-            <span class="eyebrow eyebrow--promo">🔥 Toutes à 16 000 FCFA</span>
+            <span class="eyebrow eyebrow--promo">🔥 Toutes en promotion</span>
             <h2 class="section-title">Catalogue des montures</h2>
             <p class="section-lead">Commandez directement sur WhatsApp avec expédition partout au Burkina Faso.</p>
           </div>
@@ -1522,10 +1707,10 @@
                     <span class="motif-card__text">Contrôle d'acuité et réfraction complète (30 min).</span>
                   </span>
                 </button>
-                <button class="motif-card" type="button" data-motif="Essayage montures Promo 16k">
+                <button class="motif-card" type="button" data-motif="Essayage de montures">
                   <span class="motif-card__icon icon material-symbols-outlined">eyeglasses</span>
                   <span class="motif-card__body">
-                    <span class="motif-card__name">Essayage montures Promo 16k</span>
+                    <span class="motif-card__name">Essayage de montures</span>
                     <span class="motif-card__text">Choix selon votre visage parmi les modèles en promo.</span>
                   </span>
                 </button>
@@ -1668,16 +1853,16 @@
               </div>
               <div class="tier-grid">
                 <label class="tier-card">
-                  <input type="radio" name="frame_tier" value="Promo 16 000 FCFA" checked />
-                  <b>Promo 16 000 F</b><span>Monture au choix</span>
+                  <input type="radio" name="frame_tier" value="Monture en promotion" checked />
+                  <b>Monture en promo</b><span>Monture au choix</span>
                 </label>
                 <label class="tier-card">
                   <input type="radio" name="frame_tier" value="J'ai ma monture" />
                   <b>Montage seul</b><span>Mes propres lunettes</span>
                 </label>
                 <label class="tier-card">
-                  <input type="radio" name="frame_tier" value="Solaires 16 000 FCFA" />
-                  <b>Solaires 16k</b><span>Polarisées UV400</span>
+                  <input type="radio" name="frame_tier" value="Solaires en promotion" />
+                  <b>Solaires</b><span>Polarisées UV400</span>
                 </label>
                 <label class="tier-card">
                   <input type="radio" name="frame_tier" value="Conseil opticienne" />
@@ -1796,7 +1981,7 @@
               <span class="brand__meta" style="color:#94a3b8;" data-set="QUARTIER">Ouagadougou • Gounghin</span>
             </span>
           </a>
-          <p style="margin-top:0.75rem; font-size:0.84rem; color:#94a3b8;" data-set="SLOGAN">🔥 Promo : Tout à 16 000 FCFA</p>
+          <p style="margin-top:0.75rem; font-size:0.84rem; color:#94a3b8;" data-set="SLOGAN">🔥 Offre spéciale en cours sur les montures</p>
           <div style="display:flex; gap:0.5rem; margin-top:0.75rem;">
             <a class="badge badge--soft" data-link="facebook" href="https://www.facebook.com/share/1Bs8J24fV6/" target="_blank" rel="noopener">Facebook</a>
             <a class="badge badge--soft" data-link="tiktok" href="https://www.tiktok.com/@finagnonvision" target="_blank" rel="noopener">TikTok</a>
@@ -1806,7 +1991,7 @@
         <div>
           <h3>Navigation</h3>
           <p><a href="#accueil">Accueil</a></p>
-          <p><a href="#catalogue">Catalogue (16 000 F)</a></p>
+          <p><a href="#catalogue">Catalogue</a></p>
           <p><a href="#verres">Verres &amp; Traitements</a></p>
           <p><a href="#rendez-vous">Rendez-vous</a></p>
         </div>
@@ -1832,24 +2017,35 @@
     </div>
   </footer>
 
-  <!-- ================= Barre Mobile Fixe (Flottante en bas) ================= -->
-  <aside class="mobile-cta" aria-label="Actions rapides">
-    <a class="btn btn--outline" data-link="tel" href="tel:+22665164394">
-      <span class="icon material-symbols-outlined">call</span> Appeler
+  <!-- ================= Navigation Mobile en Bas (Bottom Navigation) ================= -->
+  <nav class="mobile-bottom-nav" id="mobile-bottom-nav" aria-label="Menu principal">
+    <a class="mobile-nav-link is-on" href="#accueil">
+      <span class="icon material-symbols-outlined">home</span>
+      <span>Accueil</span>
     </a>
-    <a class="btn btn--promo" data-link="whatsapp" href="https://wa.me/22665164394" target="_blank" rel="noopener">
-      <span class="icon material-symbols-outlined">chat</span> 16k WhatsApp
+    <a class="mobile-nav-link" href="#catalogue">
+      <span class="icon material-symbols-outlined">eyeglasses</span>
+      <span>Catalogue</span>
     </a>
-    <a class="btn btn--primary" href="#rendez-vous">
-      <span class="icon material-symbols-outlined">event</span> Rdv
+    <a class="mobile-nav-link mobile-nav-link--highlight" data-link="whatsapp" href="https://wa.me/22665164394" target="_blank" rel="noopener">
+      <span class="icon material-symbols-outlined">chat</span>
+      <span>WhatsApp</span>
     </a>
-  </aside>
+    <a class="mobile-nav-link" href="#rendez-vous">
+      <span class="icon material-symbols-outlined">calendar_month</span>
+      <span>Rdv</span>
+    </a>
+    <a class="mobile-nav-link" href="#devis">
+      <span class="icon material-symbols-outlined">receipt_long</span>
+      <span>Devis</span>
+    </a>
+  </nav>
 
   <!-- ================= Modale Aperçu Monture ================= -->
   <div class="modal hidden" id="quickview-modal" role="dialog" aria-modal="true" aria-labelledby="qv-title">
     <div class="modal__panel">
       <div style="display:flex; justify-content:space-between; align-items:center;">
-        <span class="badge badge--promo">🔥 PROMO 16 000 FCFA</span>
+        <span class="badge badge--promo">🔥 PROMO</span>
         <button class="modal__close" id="qv-close" type="button" aria-label="Fermer">
           <span class="icon material-symbols-outlined">close</span>
         </button>
@@ -1870,7 +2066,7 @@
       <p style="color:var(--muted); font-size:0.9rem;" id="qv-desc"></p>
       <div style="display:flex; flex-direction:column; gap:0.5rem;">
         <a class="btn btn--promo btn--block" id="qv-whatsapp-link" href="#" target="_blank" rel="noopener">
-          <span class="icon material-symbols-outlined">chat</span> Commander à 16 000 FCFA sur WhatsApp
+          <span class="icon material-symbols-outlined">chat</span> Commander sur WhatsApp
         </a>
         <button class="btn btn--outline btn--block" type="button" data-close-modal="quickview-modal">
           Fermer
@@ -1879,9 +2075,40 @@
     </div>
   </div>
 
+  <!-- ================= Popup Promo Overlay ================= -->
+  <div class="promo-popup hidden" id="promo-popup" role="dialog" aria-modal="true" aria-label="Promotion en cours">
+    <div class="promo-popup__card">
+      <div class="promo-popup__top">
+        <button class="promo-popup__close" id="promo-popup-close" type="button" aria-label="Fermer la promotion">
+          <span class="icon material-symbols-outlined">close</span>
+        </button>
+        <p class="promo-popup__label">🔥 Offre Exceptionnelle</p>
+        <p class="promo-popup__title">Toutes nos montures à</p>
+        <p class="promo-popup__price">16 000 FCFA</p>
+        <p class="promo-popup__old">au lieu de 25 000 FCFA</p>
+      </div>
+      <div class="promo-popup__body">
+        <ul class="promo-popup__list">
+          <li><span class="icon material-symbols-outlined">local_fire_department</span> Prix unique sur toutes les montures</li>
+          <li><span class="icon material-symbols-outlined">local_shipping</span> Expédition partout au Burkina Faso</li>
+          <li><span class="icon material-symbols-outlined">verified</span> Montures ajustées par l'opticienne</li>
+        </ul>
+        <div class="promo-popup__btns">
+          <a class="btn btn--promo btn--lg btn--block" href="#catalogue" id="promo-popup-catalogue">
+            <span class="icon material-symbols-outlined">shopping_bag</span> Voir les montures en promo
+          </a>
+          <a class="btn btn--dark btn--block" data-link="whatsapp" href="https://wa.me/22665164394" target="_blank" rel="noopener">
+            <span class="icon material-symbols-outlined">chat</span> Commander sur WhatsApp
+          </a>
+          <button class="promo-popup__skip" id="promo-popup-skip" type="button">Continuer sans la promo →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ================= Scripts Intégrés ================= -->
   <script src="neon.bundle.js"></script>
-  <script src="store.js?v=20260925b"></script>
+  <script src="store.js?v=20260925d"></script>
   <script>
   (function () {
     const $ = s => document.querySelector(s);
@@ -1900,8 +2127,16 @@
 
       // Gestion du bandeau promo
       const pBar = $('#promo-bar');
-      if (pBar && C.PROMO_ACTIVE === 'false') {
-        pBar.classList.add('hidden');
+      if (pBar) {
+        if (C.PROMO_ACTIVE === 'false' || sessionStorage.getItem('fv_promo_dismissed') === '1') {
+          pBar.classList.add('hidden');
+        }
+      }
+      // Gestion du popup promo (cacher si promo inactive)
+      const pPopup = $('#promo-popup');
+      if (pPopup && C.PROMO_ACTIVE === 'false') {
+        pPopup.classList.add('hidden');
+        document.body.style.overflow = '';
       }
 
       $$('a[data-link="whatsapp"]').forEach(a => {
@@ -1918,27 +2153,67 @@
       if (y) y.textContent = new Date().getFullYear();
     }
 
-    /* 2. Navigation Mobile */
-    const nav = $('#site-nav');
-    const navToggle = $('#nav-toggle');
-
-    function closeNav() {
-      if (!nav) return;
-      nav.classList.remove('is-open');
-      if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
-    }
-
-    if (nav && navToggle) {
-      navToggle.addEventListener('click', () => {
-        const open = nav.classList.toggle('is-open');
-        navToggle.setAttribute('aria-expanded', String(open));
+    // Fermeture du bandeau promo
+    const promoClose = $('#promo-close');
+    if (promoClose) {
+      promoClose.addEventListener('click', () => {
+        const pBar = $('#promo-bar');
+        if (pBar) pBar.classList.add('hidden');
+        sessionStorage.setItem('fv_promo_dismissed', '1');
       });
-      nav.addEventListener('click', e => { if (e.target.closest('a')) closeNav(); });
-      addEventListener('resize', () => { if (innerWidth >= 860) closeNav(); });
     }
 
-    /* 3. Catalogue avec affichage Promo 16 000 FCFA */
-    const TLBL = { vue: 'Optique', bluelight: 'Anti-lumière bleue', solaire: 'Solaire' };
+    // Popup Promo — affichage initial et fermeture
+    const promoPopup = $('#promo-popup');
+    function dismissPromoPopup() {
+      if (promoPopup) {
+        promoPopup.classList.add('hidden');
+        sessionStorage.setItem('fv_promo_popup_seen', '1');
+        document.body.style.overflow = '';
+      }
+    }
+    if (promoPopup) {
+      if (sessionStorage.getItem('fv_promo_popup_seen') !== '1') {
+        promoPopup.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+      promoPopup.addEventListener('click', e => { if (e.target === promoPopup) dismissPromoPopup(); });
+    }
+    const ppClose = $('#promo-popup-close');
+    if (ppClose) ppClose.addEventListener('click', dismissPromoPopup);
+    const ppSkip = $('#promo-popup-skip');
+    if (ppSkip) ppSkip.addEventListener('click', dismissPromoPopup);
+    const ppCatalogue = $('#promo-popup-catalogue');
+    if (ppCatalogue) ppCatalogue.addEventListener('click', () => dismissPromoPopup());
+
+    /* 2. Navigation Mobile en Bas & Desktop */
+    const desktopNavLinks = $$('#site-nav a');
+    const mobileNavLinks = $$('.mobile-nav-link');
+
+    function markActiveNav() {
+      const sectionIds = ['accueil', 'catalogue', 'verres', 'rendez-vous', 'devis', 'contact'];
+      const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+      let current = sections[0];
+      const scrollPos = window.scrollY + 220;
+
+      sections.forEach(sec => {
+        if (sec.offsetTop <= scrollPos) current = sec;
+      });
+
+      if (current) {
+        desktopNavLinks.forEach(a => a.classList.toggle('is-on', a.getAttribute('href') === '#' + current.id));
+        mobileNavLinks.forEach(a => {
+          const href = a.getAttribute('href');
+          if (href && href.startsWith('#')) {
+            a.classList.toggle('is-on', href === '#' + current.id);
+          }
+        });
+      }
+    }
+    addEventListener('scroll', markActiveNav, { passive: true });
+
+    /* 3. Catalogue avec affichage Plein Cadre et Badges Lisibles */
+    const TLBL = { vue: 'Optique', bluelight: 'Lumière bleue', solaire: 'Solaire' };
     const catOf = m => (m.type === 'solaire' ? 'solaire' : ((m.prix > 0 || m.badge) ? 'luxe' : 'vue'));
 
     function cardHTML(m) {
@@ -1946,28 +2221,30 @@
       const prix = m.prix > 0 ? m.prix : 16000;
       const ancienPrix = m.ancien_prix && m.ancien_prix > prix ? m.ancien_prix : 25000;
       const isPromo = m.en_promo !== false;
-      const badge = m.badge || (isPromo ? 'PROMO 16 000 F' : (m.genre === 'femme' ? 'Femme' : m.genre === 'homme' ? 'Homme' : 'Mixte'));
+      // Le montant n'apparaît plus dans le badge : c'est le rôle du bandeau et du popup promo
+      const rawBadge = String(m.badge || '').replace(/16[\s.,]*000(\s*(FCFA|F))?/gi, '').replace(/\s{2,}/g, ' ').trim();
+      const badgePromo = rawBadge || (isPromo ? 'PROMO' : '');
+      const typeLabel = TLBL[m.type] || (m.genre === 'femme' ? 'Femme' : m.genre === 'homme' ? 'Homme' : 'Mixte');
 
       const waText = encodeURIComponent(
-        'Bonjour Finagnon Vision, je souhaite commander la monture en PROMO : ' + m.nom +
-        ' (' + Number(prix).toLocaleString('fr-FR') + ' FCFA) avec expédition.'
+        'Bonjour Finagnon Vision, je souhaite commander la monture : ' + m.nom + '. Est-elle disponible ?'
       );
 
       return `<article class="frame-card" data-category="${catOf(m)}" data-genre="${esc(m.genre || 'mixte')}" data-type="${esc(m.type || 'vue')}" data-forme="${esc(m.forme || '')}" data-txt="${esc(((m.nom || '') + ' ' + (m.description || '')).toLowerCase())}" data-title="${esc(m.nom)}" data-price="${esc(Number(prix).toLocaleString('fr-FR') + ' FCFA')}" data-old-price="${esc(Number(ancienPrix).toLocaleString('fr-FR') + ' FCFA')}" data-desc="${esc(m.description || '')}" data-img="${esc(img)}">
           <div class="frame-card__media">
-            <span class="frame-card__badge">${esc(badge)}</span>
+            ${badgePromo ? `<span class="frame-card__badge-promo">🔥 ${esc(badgePromo)}</span>` : ''}
+            <span class="frame-card__badge-type">${esc(typeLabel)}</span>
             <img src="${esc(img)}" alt="${esc(m.nom)}" loading="lazy" />
           </div>
           <div class="frame-card__body">
-            <span class="frame-card__type">${esc(TLBL[m.type] || 'Optique')}</span>
             <h3 class="frame-card__name">${esc(m.nom)}</h3>
             <p class="frame-card__desc">${esc(m.description || '')}</p>
             <div class="card__shipping">
-              <span class="icon material-symbols-outlined">local_shipping</span> Expédition partout
+              <span class="icon material-symbols-outlined">local_shipping</span> Expédition partout au Faso
             </div>
             <div class="frame-card__price-row">
               <div class="price-wrap">
-                ${isPromo ? `<span class="price-old">${Number(ancienPrix).toLocaleString('fr-FR')} FCFA</span>` : ''}
+                <span class="price-old">${Number(ancienPrix).toLocaleString('fr-FR')} FCFA</span>
                 <b class="price-promo">${Number(prix).toLocaleString('fr-FR')} FCFA</b>
               </div>
             </div>
@@ -2029,7 +2306,7 @@
         if (ok) n++;
       });
       const cnt = $('#cat-count');
-      if (cnt) cnt.textContent = n + ' modèle' + (n > 1 ? 's' : '') + ' à 16 000 F';
+      if (cnt) cnt.textContent = n + ' modèle' + (n > 1 ? 's' : '');
       const grid = $('#cat-grid');
       if (grid) emptyMsg(grid, n ? '' : 'Aucun modèle trouvé.');
     }
@@ -2062,8 +2339,7 @@
       const link = $('#qv-whatsapp-link');
       if (link) {
         link.setAttribute('href', 'https://wa.me/' + C.WHATSAPP + '?text=' + encodeURIComponent(
-          'Bonjour Finagnon Vision, je souhaite commander la monture en PROMO : ' + title +
-          ' (' + (price || '16 000 FCFA') + ') avec expédition.'
+          'Bonjour Finagnon Vision, je souhaite commander la monture : ' + (title || 'Modèle Finagnon') + '. Est-elle disponible ?'
         ));
       }
       openModal(qvModal);
@@ -2246,9 +2522,9 @@
         }
         const treatments = $$('input[name="treatments"]:checked').map(x => x.value).join(', ') || 'Standard';
         const tierEl = document.querySelector('input[name="frame_tier"]:checked');
-        const tier = tierEl ? tierEl.value : 'Promo 16 000 FCFA';
+        const tier = tierEl ? tierEl.value : 'Monture en promotion';
         const file = fileInput && fileInput.files[0] ? fileInput.files[0].name : '';
-        const msg = 'Bonjour Finagnon Vision, demande de devis (Monture Promo 16 000 FCFA) :\n' +
+        const msg = 'Bonjour Finagnon Vision, demande de devis :\n' +
           '• Nom : ' + name + '\n' +
           '• Numéro WhatsApp : +226 ' + phone + '\n' +
           '• Option monture : ' + tier + '\n' +
