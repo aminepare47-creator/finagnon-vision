@@ -1,0 +1,33 @@
+Finagnon Vision - site vitrine (base Neon, mise en ligne GitHub + Vercel)
+Fichiers : index.html (site), admin.html (administration), config.js (adresses Neon),
+neon.bundle.js (client Neon), neon/schema.sql (base de données), images/.
+Le slogan « Votre partenaire optique de confiance » s'affiche en haut de la page d'accueil
+(bandeau) : il se change dans admin.html > Le site > « Slogan ».
+
+1. BASE DE DONNEES (Neon, projet déjà existant)
+   1.1 neon.com > projet du site > SQL Editor : coller TOUT neon/schema.sql > Run.
+       (Le faire APRÈS avoir activé Data API + Auth : c'est cette activation qui crée
+        les rôles anonymous/authenticated, sans eux les GRANT échouent.)
+   1.2 Si le site annonce « table introuvable », attendre 30 s ou Data API >
+       Refresh schema cache.
+
+2. COMPTE ADMINISTRATEUR
+   2.1 Ouvrir votre-site/admin.html > « Créer mon compte administrateur »
+       (email + mot de passe de 8 caractères minimum ; confirmer l'email si demandé).
+   2.2 Se connecter : l'écran « Compte à activer » affiche une ligne SQL.
+       La copier dans Neon > SQL Editor > Run, puis « Vérifier à nouveau ».
+   2.3 Neon > Auth > Trusted domains : ajouter l'adresse du site
+       (et http://localhost pour tester en local).
+       Neon > Data API > Settings > CORS : ajouter la même adresse.
+
+3. MISE EN LIGNE
+   3.1 GitHub : dépôt aminepare931-source/finagnon-vision (tout le dossier y est).
+   3.2 Vercel : New Project > importer ce dépôt GitHub (site statique, aucun réglage)
+       > Deploy. Administration : https://votre-site/admin.html
+
+4. SANS ÉTAPE 1 : mode local (test) - les modifications restent dans CE navigateur
+   et ne sont pas visibles par les clients.
+
+Photos : celles ajoutées depuis l'admin sont enregistrées dans la base (redimensionnées),
+les photos d'origine restent dans images/ et sont utilisées par les modèles de départ.
+
