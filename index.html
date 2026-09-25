@@ -378,7 +378,7 @@
       flex-shrink: 0;
     }
 
-    /* Hero compact : texte à gauche, photo intégrée à droite du cadre (même sur mobile) */
+    /* Hero : photo en ARRIÈRE-PLAN du cadre, texte par-dessus (mobile & desktop) */
     .hero { padding-block: clamp(1.25rem, 3.5vw, 2.5rem) 0; }
     .hero__panel {
       position: relative;
@@ -387,13 +387,34 @@
       color: #fff;
       border: 1px solid var(--carbon-line);
       border-radius: var(--r-lg);
-      padding: clamp(1.15rem, 3.5vw, 3rem);
+      padding: clamp(1.35rem, 4vw, 3rem);
       box-shadow: var(--shadow-lg);
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 112px; /* colonne photo collée à droite */
-      gap: 1rem;
-      align-items: stretch;
+      display: flex;
+      align-items: center;
+      min-height: 260px;
     }
+
+    /* La photo occupe tout le fond du cadre + voile sombre pour la lisibilité */
+    .hero__media {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      overflow: hidden;
+      background: var(--carbon-soft);
+    }
+    .hero__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 70% center;
+    }
+    .hero__media::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(11, 15, 25, 0.78) 0%, rgba(11, 15, 25, 0.88) 100%);
+    }
+
     .hero__copy {
       position: relative;
       z-index: 2;
@@ -401,14 +422,15 @@
       flex-direction: column;
       gap: 0.75rem;
       min-width: 0;
+      width: 100%;
     }
     .hero__title {
-      font-size: clamp(1.35rem, 4.6vw, 3rem);
+      font-size: clamp(1.45rem, 5vw, 3rem);
       line-height: 1.12;
     }
     .hero__title span { color: #60a5fa; }
     .hero__text {
-      color: #cbd5e1;
+      color: #e2e8f0;
       font-size: clamp(0.88rem, 1.8vw, 1.05rem);
       max-width: 48ch;
     }
@@ -422,22 +444,17 @@
     @media (max-width: 599px) {
       .hero__actions .btn { padding: 0.7rem 0.9rem; font-size: 0.88rem; }
     }
-
-    .hero__media {
-      position: relative;
-      z-index: 2;
-      border-radius: var(--r);
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      background: var(--carbon-soft);
-      min-height: 190px;
+    @media (min-width: 600px) {
+      .hero__actions .btn { flex: 0 1 auto; }
     }
-    .hero__media img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Badge "Ouvert à Gounghin" — grands écrans uniquement */
     .hero__tag {
       position: absolute;
-      left: 0.75rem;
+      right: 0.75rem;
       bottom: 0.75rem;
-      display: none; /* badge réservé aux grands écrans */
+      z-index: 3;
+      display: none;
       align-items: center;
       gap: 0.45rem;
       padding: 0.45rem 0.8rem;
@@ -447,10 +464,6 @@
       backdrop-filter: blur(8px);
       font-size: 0.75rem;
       font-weight: 700;
-    }
-    @media (min-width: 600px) {
-      .hero__panel { grid-template-columns: minmax(0, 1fr) 150px; }
-      .hero__actions .btn { flex: 0 1 auto; }
     }
 
     /* Bandeau d'infos clés */
@@ -1210,7 +1223,12 @@
     }
 
     @media (min-width: 861px) {
-      .hero__panel { grid-template-columns: 1.15fr 0.85fr; gap: 2rem; padding: clamp(1.5rem, 4vw, 3rem); }
+      .hero__panel { min-height: 360px; padding: clamp(2rem, 4.5vw, 3.5rem); }
+      .hero__media img { object-position: 75% center; }
+      .hero__media::after {
+        background: linear-gradient(95deg, rgba(11, 15, 25, 0.96) 0%, rgba(11, 15, 25, 0.85) 45%, rgba(11, 15, 25, 0.32) 100%);
+      }
+      .hero__copy { max-width: 620px; }
       .hero__tag { display: inline-flex; }
       .expertise { grid-template-columns: 0.9fr 1.1fr; }
       .frames-grid, .cat-grid { grid-template-columns: repeat(4, 1fr); }
