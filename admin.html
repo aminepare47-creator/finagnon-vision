@@ -143,7 +143,8 @@ $("#out").onclick=()=>{Store.logout();location.reload()};
 $$(".tab").forEach(b=>b.onclick=()=>{$$(".tab").forEach(x=>x.classList.toggle("on",x==b));["lun","blog","site"].forEach(t=>$("#t-"+t).classList.toggle("hidden",t!=b.dataset.t))});
 
 // ---------- lunettes
-async function refreshL(){L=await Store.list("lunettes");$("#l-n").textContent="("+L.length+")";$("#seed").classList.toggle("hidden",!(Store.remote&&L.length==0));
+async function refreshL(){try{L=await Store.list("lunettes")}catch(e){L=[];$("#l-list").innerHTML="";$("#l-n").textContent="";$("#seed").classList.add("hidden");return say("Base non prête : exécutez neon/schema.sql dans Neon (SQL Editor) puis rechargez.",false)}
+ $("#l-n").textContent="("+L.length+")";$("#seed").classList.toggle("hidden",!(Store.remote&&L.length==0));
  $("#l-list").innerHTML=L.map(m=>`<div class="bg-white rounded-xl p-2 shadow-sm flex items-center gap-3 flex-wrap ${m.disponible===false?"opacity-60":""}">
  <img src="${esc(m.image_url)}" class="w-16 h-16 rounded-lg object-cover bg-sky" alt=""/><div class="flex-1 min-w-[120px]"><b class="block truncate">${esc(m.nom)}</b><span class="text-xs text-slate-500">${m.prix>0?Number(m.prix).toLocaleString("fr-FR")+" FCFA":"Prix sur demande"} · ${esc(m.genre)} · ${esc(m.forme)}${m.disponible===false?" · masquée":""}</span></div>
  <button data-e="${m.id}" class="px-3 py-2 rounded-lg bg-sky text-sm font-semibold">Modifier</button><button data-t="${m.id}" class="px-3 py-2 rounded-lg bg-sky text-sm font-semibold">${m.disponible===false?"Afficher":"Masquer"}</button><button data-d="${m.id}" class="px-3 py-2 rounded-lg bg-red-50 text-red-700 text-sm font-semibold">Supprimer</button></div>`).join("")}
@@ -160,7 +161,8 @@ $("#f-lun").onsubmit=e=>{e.preventDefault();const id=$("#l-id").value,file=$("#l
 
 // ---------- blog
 const host=u=>/tiktok/i.test(u)?"TikTok":/facebook|fb\./i.test(u)?"Facebook":u?"Lien":"";
-async function refreshB(){B=await Store.list("blog");$("#b-n").textContent="("+B.length+")";
+async function refreshB(){try{B=await Store.list("blog")}catch(e){B=[];$("#b-list").innerHTML="";$("#b-n").textContent="";return say("Base non prête : exécutez neon/schema.sql dans Neon (SQL Editor) puis rechargez.",false)}
+ $("#b-n").textContent="("+B.length+")";
  $("#b-list").innerHTML=B.map(p=>`<div class="bg-white rounded-xl p-2 shadow-sm flex items-center gap-3 flex-wrap ${p.publie===false?"opacity-60":""}">
  ${p.image_url?`<img src="${esc(p.image_url)}" class="w-16 h-16 rounded-lg object-cover bg-sky" alt=""/>`:`<div class="w-16 h-16 rounded-lg bg-navy text-white text-xs font-bold flex items-center justify-center">${host(p.url)||"Texte"}</div>`}
  <div class="flex-1 min-w-[120px]"><b class="block truncate">${esc(p.titre)}</b><span class="text-xs text-slate-500">${host(p.url)||"Texte"}${p.image_url?" · photo":""}${p.publie===false?" · brouillon":""}</span></div>

@@ -425,7 +425,7 @@ apply();sum();route();
 (async()=>{
  try{Object.assign(C,await Store.settings())}catch{}
  apply();
- try{items=await Store.list("lunettes")}catch{$("#grid").innerHTML='<p class="col-span-2 text-center text-muted py-10 text-sm">Le catalogue est momentanément indisponible. Écrivez-nous sur WhatsApp.</p>'}
+ try{items=await Store.list("lunettes")}catch{items=window.FV_SEED}
  loaded=true;draw();if(location.hash.startsWith("#produit"))renderDetail();
  try{drawBlog(await Store.list("blog",true))}catch{drawBlog([])}
 })();
