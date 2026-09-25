@@ -33,19 +33,8 @@ html{scroll-behavior:smooth}
 .hero-in{opacity:0;transform:translateY(16px);animation:fadeUp .8s var(--ease) forwards;animation-delay:var(--hd,.6s)}
 .hero-in:nth-of-type(2){--hd:.85s}
 @keyframes fadeUp{to{opacity:1;transform:none}}
-.hero .shine{position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.14) 50%,transparent 65%);transform:translateX(-120%);animation:shine 5.5s 1.4s ease-in-out infinite;pointer-events:none}
-@keyframes shine{0%,60%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
-.hero-float{position:absolute;right:-28px;bottom:-10px;width:46%;max-width:210px;aspect-ratio:1;object-fit:cover;border-radius:50%;opacity:.95;border:3px solid rgba(255,255,255,.18);box-shadow:0 20px 40px rgba(0,0,0,.35);animation:float 6s ease-in-out infinite,popIn 1s .5s var(--ease) both;transform:translate(var(--px,0),var(--py,0))}
 @keyframes float{50%{translate:0 -12px;rotate:3deg}}
-@keyframes popIn{from{opacity:0;scale:.6}to{opacity:.95;scale:1}}
 .hero>div.relative{z-index:2}
-
-/* bandeau défilant */
-.marquee{overflow:hidden;margin:0 0 20px;padding:10px 0;background:#0e1c2f;color:#e6eeff;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
-.marquee .track{display:inline-flex;align-items:center;gap:18px;padding-left:18px;animation:mq 28s linear infinite}
-.marquee i{width:6px;height:6px;border-radius:50%;background:#76f4e0;display:inline-block}
-@keyframes mq{to{transform:translateX(-50%)}}
-.marquee:hover .track{animation-play-state:paused}
 
 /* nav : pastille qui glisse */
 #nav{position:relative}
@@ -115,7 +104,7 @@ html,body{margin:0;overscroll-behavior:none}::-webkit-scrollbar{display:none}
 
 <!-- ACCUEIL -->
 <section id="accueil" class="view">
- <div class="px-5 pt-4 pb-6"><div class="hero relative bg-navy text-white rounded-xl p-6 shadow-xl overflow-hidden"><span class="shine"></span><img src="images/lunette-08.jpg" alt="" class="hero-float"/>
+ <div class="px-5 pt-4 pb-6"><div class="hero relative bg-navy text-white rounded-xl p-6 shadow-xl overflow-hidden">
   <div class="absolute -right-12 -top-12 w-56 h-56 rounded-full bg-teal/20 blur-3xl"></div>
   <div class="relative flex flex-col gap-3"><div class="hero-photo"><img id="hero-photo" src="images/clinique.jpg" alt="Examen de la vue chez Finagnon Vision"/></div>
    <span class="hero-in self-start inline-flex items-center gap-1.5 px-2 py-1 rounded-full bg-white/10 text-[#79f7e3] text-[11px] font-bold uppercase tracking-wider"><span class="material-symbols-outlined text-[16px]">verified</span><span data-cfg="SLOGAN">Votre partenaire optique de confiance</span></span>
@@ -126,7 +115,6 @@ html,body{margin:0;overscroll-behavior:none}::-webkit-scrollbar{display:none}
     <a href="#devis" class="flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-white/15 text-white text-sm font-semibold hover:bg-white/25 transition-colors"><span class="material-symbols-outlined text-[20px]">document_scanner</span>Envoyer mon ordonnance</a>
    </div></div></div></div>
 
- <div class="marquee" aria-hidden="true"><div class="track"><span>Visez plus net, toujours plus loin</span><i></i><span>Montures tendances</span><i></i><span>Verres protecteurs</span><i></i><span>Verres correcteurs</span><i></i><span>Visez plus net, toujours plus loin</span><i></i><span>Montures tendances</span><i></i><span>Verres protecteurs</span><i></i><span>Verres correcteurs</span><i></i></div></div>
  <div class="px-5 pb-6 reveal"><div class="bg-white rounded-xl p-4 shadow-sm flex flex-col gap-4">
   <div class="flex items-center justify-between gap-2">
    <span class="text-xs font-semibold flex items-center gap-2"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute h-full w-full rounded-full bg-teal opacity-75"></span><span class="relative rounded-full h-2.5 w-2.5 bg-teal"></span></span>Boutique à Gounghin</span>
@@ -466,10 +454,6 @@ addEventListener("scroll",()=>{const m=document.documentElement.scrollHeight-inn
 
 // ondulation sur les boutons
 document.addEventListener("pointerdown",e=>{if(reduce)return;const b=e.target.closest("button,a[target]");if(!b)return;const r=b.getBoundingClientRect(),s=Math.max(r.width,r.height),d=document.createElement("span");d.className="rip";d.style.cssText=`width:${s}px;height:${s}px;left:${e.clientX-r.left-s/2}px;top:${e.clientY-r.top-s/2}px`;b.appendChild(d);setTimeout(()=>d.remove(),600)});
-
-// parallaxe douce de la photo du hero
-const hero=$(".hero"),ph=$(".hero-float");
-if(hero&&ph&&!reduce)hero.addEventListener("pointermove",e=>{const r=hero.getBoundingClientRect();ph.style.setProperty("--px",((e.clientX-r.left)/r.width-.5)*-16+"px");ph.style.setProperty("--py",((e.clientY-r.top)/r.height-.5)*-16+"px")});
 
 // transition du conseil visage
 const faces=$("#faces");if(faces)faces.addEventListener("click",()=>{["#adv-t","#adv-p"].forEach(s=>{const el=$(s);el.classList.add("sw");setTimeout(()=>el.classList.remove("sw"),260)})},true);
