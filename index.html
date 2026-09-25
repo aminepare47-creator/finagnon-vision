@@ -1,1535 +1,2172 @@
 <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Finagnon Vision — Optique &amp; Lunetterie à Ouagadougou (Gounghin)</title>
+  <meta name="description" content="Finagnon Vision à Gounghin, Ouagadougou : examen visuel, montures tendance, verres anti-lumière bleue, photochromiques et progressifs. Devis rapide sur WhatsApp." />
+  <meta name="theme-color" content="#0b0f19" />
 
-<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{
-"primary":"#0052FF","primary-dark":"#003EC7","primary-container":"#0052FF","on-primary":"#FFFFFF","on-primary-container":"#E5EFFF",
-"carbon":"#0B0F19","carbon-light":"#151C2C","surface":"#F4F6FB","surface-container-lowest":"#FFFFFF","surface-container-low":"#EDF1F8",
-"surface-container":"#E4E9F4","surface-container-high":"#DCE3F0","surface-container-highest":"#D0D9E8","on-surface":"#0B0F19",
-"on-surface-variant":"#535B6D","outline":"#7B8599","outline-variant":"#D2D8E4","outline-light":"#E5E9F2","accent-blue":"#2563EB",
-"blue-badge":"#EEF4FF","secondary":"#0B0F19","secondary-container":"#EBF1FF","on-secondary-container":"#0052FF",
-"brand-blue":"#0052ff","brand-black":"#0a0f1d","brand-dark":"#0B0F19","electric-blue":"#0052FF","error":"#ba1a1a"
-},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","2xl":"1rem","3xl":"1.5rem","full":"9999px"},
-spacing:{"gutter":"1.5rem","space-sm":"0.5rem","margin":"2rem","space-md":"1rem","space-lg":"1.5rem","margin-sm":"1.25rem","space-xs":"0.25rem","gutter-sm":"1rem","space-xl":"2.5rem"},
-fontFamily:{"sans":["Plus Jakarta Sans","sans-serif"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-caps":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"]},
-fontSize:{"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"800"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"700"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.06em","fontWeight":"700"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"700"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"500"}],"label-caps":["11px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"700"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"800"}]}
-}}};</script><style>
+  <!-- Anti-cache strict pour garantir les mises à jour immédiates -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <link rel="icon" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =====================================================================
+       Finagnon Vision — Styles intégrés, Mobile-first & Anti-débordement
+       ===================================================================== */
+    :root {
+      --blue: #0052ff;
+      --blue-dark: #003ec7;
+      --blue-soft: #eef4ff;
+      --blue-line: #c9dbff;
+      --carbon: #0b0f19;
+      --carbon-soft: #151c2c;
+      --carbon-line: #26304a;
+      --surface: #f4f6fb;
+      --white: #ffffff;
+      --line: #e2e8f0;
+      --line-strong: #cbd5e1;
+      --ink: #0f172a;
+      --muted: #475569;
+      --muted-soft: #64748b;
+      --ok: #059669;
+
+      --r-sm: 8px;
+      --r: 14px;
+      --r-lg: 20px;
+      --r-pill: 9999px;
+
+      --shadow-sm: 0 1px 3px rgba(11, 15, 25, 0.06), 0 4px 12px rgba(11, 15, 25, 0.04);
+      --shadow: 0 10px 30px rgba(11, 15, 25, 0.08);
+      --shadow-lg: 0 20px 50px rgba(11, 15, 25, 0.16);
+
+      --gap: clamp(1rem, 2vw, 1.75rem);
+      --section-y: clamp(2.75rem, 6vw, 5.5rem);
+      --wrap: 1160px;
+      --pad-x: clamp(1rem, 4vw, 2.25rem);
+      --font: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    /* Base & Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
     body {
-      min-height: max(884px, 100dvh);
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      font-family: var(--font);
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--ink);
+      background: var(--surface);
+      -webkit-font-smoothing: antialiased;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; border: none; background: none; }
+    input, select, textarea { font: inherit; box-sizing: border-box; }
+
+    h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -0.02em; font-weight: 800; }
+    .hidden { display: none !important; }
+
+    .wrap {
+      width: 100%;
+      max-width: var(--wrap);
+      margin-inline: auto;
+      padding-inline: var(--pad-x);
+    }
+
+    .icon {
+      font-size: 1.2em;
+      line-height: 1;
+      vertical-align: middle;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* Sections */
+    .section { padding-block: var(--section-y); width: 100%; overflow: hidden; }
+    .section--alt { background: var(--white); }
+    .section--dark { background: var(--carbon); color: #fff; }
+    .section--dark .section-lead { color: #94a3b8; }
+
+    .section-head {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: clamp(1.5rem, 3.5vw, 2.5rem);
+      max-width: 60ch;
+    }
+    .section-head--split {
+      max-width: none;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    .eyebrow--light { color: #93c5fd; }
+
+    .section-title { font-size: clamp(1.4rem, 3.6vw, 2.2rem); }
+    .section-lead { color: var(--muted); font-size: clamp(0.92rem, 2vw, 1.05rem); }
+
+    /* Boutons flexibles et incassables sur mobile */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 0.45rem;
+      padding: 0.75rem 1.25rem;
+      border: 1px solid transparent;
+      border-radius: var(--r-pill);
+      font-size: 0.92rem;
+      font-weight: 700;
+      line-height: 1.2;
+      max-width: 100%;
+      white-space: normal;
+      cursor: pointer;
+      transition: all 0.16s ease;
+      touch-action: manipulation;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn--primary {
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(0, 82, 255, 0.28);
+    }
+    .btn--primary:hover { background: var(--blue-dark); }
+    .btn--dark { background: var(--carbon); color: #fff; }
+    .btn--dark:hover { background: #000; }
+    .btn--outline {
+      background: var(--white);
+      color: var(--ink);
+      border-color: var(--line-strong);
+    }
+    .btn--outline:hover { border-color: var(--carbon); }
+    .btn--ghost {
+      background: var(--blue-soft);
+      color: var(--blue);
+      border-color: var(--blue-line);
+    }
+    .btn--ghost:hover { background: var(--blue); color: #fff; }
+    .btn--light {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+    .btn--light:hover { background: rgba(255, 255, 255, 0.2); }
+    .btn--lg { padding: 0.9rem 1.5rem; font-size: 0.98rem; }
+    .btn--block { width: 100%; }
+    .btn__small { padding: 0.55rem 0.85rem; font-size: 0.82rem; }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--r-pill);
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .badge--blue { background: var(--blue-soft); color: var(--blue); border: 1px solid var(--blue-line); }
+    .badge--dark { background: var(--carbon); color: #fff; }
+    .badge--soft { background: var(--surface); color: var(--muted); border: 1px solid var(--line); }
+
+    .dot-live {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: #10b981;
+      display: inline-block;
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      animation: pulse 2s infinite;
+      flex-shrink: 0;
+    }
+    @keyframes pulse {
+      70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+
+    /* En-tête */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 4.25rem;
+      padding-block: 0.5rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      min-width: 0;
+    }
+    .brand__logo {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: var(--r-sm);
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 0.15rem;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .brand__text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+      min-width: 0;
+    }
+    .brand__name {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+    .brand__name span { color: var(--blue); }
+    .brand__meta {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(0.4rem, 1.4vw, 1.25rem);
+    }
+    .site-nav a {
+      padding: 0.45rem 0.2rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--muted);
+      border-bottom: 2px solid transparent;
+      transition: all 0.16s ease;
+      white-space: nowrap;
+    }
+    .site-nav a:hover, .site-nav a.is-on {
+      color: var(--blue);
+      border-color: var(--blue);
+    }
+
+    .header__actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-shrink: 0;
+    }
+    .nav-toggle {
+      display: none;
+      width: 2.6rem;
+      height: 2.6rem;
+      align-items: center;
+      justify-content: center;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r-sm);
+      color: var(--ink);
+    }
+
+    /* Hero */
+    .hero { padding-block: clamp(1.5rem, 4vw, 3rem) 0; }
+    .hero__panel {
+      position: relative;
+      overflow: hidden;
+      background: var(--carbon);
+      color: #fff;
+      border: 1px solid var(--carbon-line);
+      border-radius: var(--r-lg);
+      padding: clamp(1.5rem, 4vw, 3rem);
+      box-shadow: var(--shadow-lg);
+      display: grid;
+      gap: 2rem;
+      align-items: center;
+    }
+    .hero__copy {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .hero__title {
+      font-size: clamp(1.75rem, 5.5vw, 3rem);
+      line-height: 1.15;
+    }
+    .hero__text {
+      color: #cbd5e1;
+      font-size: clamp(0.95rem, 2vw, 1.08rem);
+      max-width: 50ch;
+    }
+    .hero__points {
+      list-style: none;
+      display: grid;
+      gap: 0.5rem;
+      color: #f1f5f9;
+      font-size: 0.92rem;
+    }
+    .hero__points li { display: flex; align-items: center; gap: 0.5rem; }
+    .hero__points .icon { color: #60a5fa; }
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      padding-top: 0.5rem;
+    }
+
+    .hero__media {
+      position: relative;
+      z-index: 2;
+      border-radius: var(--r);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      aspect-ratio: 4 / 3;
+      background: var(--carbon-soft);
+      max-height: 24rem;
+    }
+    .hero__media img { width: 100%; height: 100%; object-fit: cover; }
+    .hero__tag {
+      position: absolute;
+      left: 0.75rem;
+      bottom: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.45rem 0.8rem;
+      border-radius: var(--r-pill);
+      background: rgba(11, 15, 25, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    /* Bandeau d'infos clés */
+    .info-strip {
+      display: grid;
+      gap: 0.85rem;
+      margin-top: 1.5rem;
+      grid-template-columns: 1fr;
+    }
+    .info-card {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      padding: 1rem 1.25rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .info-card__icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: var(--r-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--blue-soft);
+      color: var(--blue);
+      flex-shrink: 0;
+    }
+    .info-card__label {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted-soft);
+    }
+    .info-card__value { font-weight: 800; font-size: 0.95rem; color: var(--ink); }
+
+    /* Filtres et Catalogue */
+    .pill-bar {
+      display: flex;
+      gap: 0.5rem;
+      overflow-x: auto;
+      padding-bottom: 0.35rem;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    .pill-bar::-webkit-scrollbar { display: none; }
+    .pill {
+      flex: 0 0 auto;
+      padding: 0.55rem 1rem;
+      border-radius: var(--r-pill);
+      border: 1px solid var(--line-strong);
+      background: var(--white);
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: all 0.16s ease;
+    }
+    .pill:hover { border-color: var(--carbon); color: var(--ink); }
+    .pill.is-on { background: var(--carbon); color: #fff; border-color: var(--carbon); }
+
+    .frames-grid, .cat-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+      margin-top: 1rem;
+    }
+    .frame-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+    .frame-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+      border-color: var(--blue-line);
+    }
+    .frame-card__media {
+      position: relative;
+      background: var(--surface);
+      padding: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 4 / 3;
+    }
+    .frame-card__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+    .frame-card__badge {
+      position: absolute;
+      top: 0.65rem;
+      left: 0.65rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: var(--r-pill);
+      background: var(--blue);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .frame-card__body {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      padding: 1rem;
+      border-top: 1px solid var(--line);
+      flex: 1;
+    }
+    .frame-card__type {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--muted-soft);
+      letter-spacing: 0.08em;
+    }
+    .frame-card__name { font-size: 1rem; font-weight: 800; line-height: 1.2; }
+    .frame-card__desc { font-size: 0.85rem; color: var(--muted); }
+    .frame-card__price {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.4rem;
+      margin-top: auto;
+      padding-top: 0.6rem;
+    }
+    .frame-card__price b { font-size: 1.1rem; font-weight: 800; }
+    .frame-card__price span { font-size: 0.75rem; font-weight: 800; color: var(--blue); text-transform: uppercase; }
+
+    .frame-card__btns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.45rem;
+      margin-top: 0.65rem;
+      width: 100%;
+    }
+
+    .fv-empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+      background: var(--white);
+      border: 1px dashed var(--line-strong);
+      border-radius: var(--r);
+    }
+    .skeleton {
+      grid-column: 1 / -1;
+      height: 12rem;
+      border-radius: var(--r);
+      background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+      background-size: 200% 100%;
+      animation: sk 1.2s linear infinite;
+    }
+    @keyframes sk { to { background-position: -200% 0; } }
+
+    /* Recherche & filtres de forme */
+    .tools { display: flex; flex-direction: column; gap: 1rem; }
+    .search {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--white);
+      border: 1px solid var(--line-strong);
+      border-radius: var(--r-pill);
+      padding: 0.75rem 1.15rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .search:focus-within { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(0, 82, 255, 0.12); }
+    .search input {
+      flex: 1;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 0.95rem;
+      color: var(--ink);
+      min-width: 0;
+    }
+
+    .shape-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      padding: 0.65rem;
+    }
+    .shape-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.6rem 0.25rem;
+      border-radius: var(--r-sm);
+      border: 1px solid var(--line);
+      background: var(--white);
+      color: var(--muted);
+      font-size: 0.75rem;
+      font-weight: 700;
+      transition: all 0.16s ease;
+    }
+    .shape-btn .icon { font-size: 1.3rem; color: var(--ink); }
+    .shape-btn.is-on {
+      border-color: var(--blue);
+      background: var(--blue-soft);
+      color: var(--blue);
+    }
+    .shape-btn.is-on .icon { color: var(--blue); }
+
+    .chip {
+      flex: 0 0 auto;
+      padding: 0.45rem 0.9rem;
+      border-radius: var(--r-pill);
+      border: 1px solid var(--line-strong);
+      background: var(--white);
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: all 0.16s ease;
+    }
+    .chip.is-on { background: var(--blue); color: #fff; border-color: var(--blue); }
+
+    /* Verres & Traitements */
+    .grid { display: grid; gap: 1rem; }
+    .grid--2 { grid-template-columns: 1fr; }
+    .lens-card {
+      display: flex;
+      gap: 0.9rem;
+      align-items: flex-start;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      padding: 1.15rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .lens-card__icon {
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: var(--r-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--blue-soft);
+      border: 1px solid var(--blue-line);
+      color: var(--blue);
+      flex-shrink: 0;
+    }
+    .lens-card h3 { font-size: 0.98rem; font-weight: 800; margin-bottom: 0.25rem; }
+    .lens-card p { font-size: 0.88rem; color: var(--muted); }
+
+    /* Expertise */
+    .expertise {
+      display: grid;
+      gap: 1.5rem;
+      align-items: center;
+      grid-template-columns: 1fr;
+    }
+    .expertise__photo {
+      border-radius: var(--r);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      aspect-ratio: 4 / 3;
+      max-height: 22rem;
+    }
+    .expertise__photo img { width: 100%; height: 100%; object-fit: cover; }
+    .feature-grid {
+      display: grid;
+      gap: 0.65rem;
+      grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+      margin-block: 0.5rem;
+    }
+    .feature {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      padding: 0.8rem;
+      border-radius: var(--r-sm);
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+    .feature .icon { color: var(--blue); font-size: 1.3rem; }
+    .feature b { font-size: 0.88rem; }
+    .feature span { font-size: 0.78rem; color: var(--muted); }
+
+    /* Morphologie */
+    .face-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+    }
+    .face-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.75rem 0.5rem;
+      border-radius: var(--r-sm);
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+    .face-btn .icon { font-size: 1.3rem; }
+    .face-btn.is-on { background: var(--carbon); border-color: var(--carbon); color: #fff; }
+    .advice {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      margin-top: 0.75rem;
+      padding: 1rem;
+      border-radius: var(--r);
+      background: var(--blue-soft);
+      border: 1px solid var(--blue-line);
+    }
+    .advice__icon {
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: var(--r-sm);
+      background: var(--blue);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .advice b { display: block; font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .advice p { font-size: 0.88rem; color: #1e3a8a; }
+
+    /* Bandeau ordonnance express */
+    .banner {
+      position: relative;
+      overflow: hidden;
+      background: var(--carbon);
+      color: #fff;
+      border-radius: var(--r-lg);
+      padding: clamp(1.25rem, 3.5vw, 2.5rem);
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .banner h3 { font-size: clamp(1.2rem, 3vw, 1.75rem); }
+    .banner p { color: #cbd5e1; font-size: 0.92rem; }
+    .banner__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+    /* Rendez-vous & Devis */
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      padding: clamp(1rem, 2.5vw, 1.5rem);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .step { display: flex; flex-direction: column; gap: 0.75rem; }
+    .step__head { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+    .step__num {
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 50%;
+      background: var(--carbon);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .step__title { font-size: 0.98rem; font-weight: 800; }
+
+    .motif-grid { display: grid; gap: 0.65rem; grid-template-columns: 1fr; }
+    .motif-card {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.85rem;
+      border: 1px solid var(--line);
+      border-radius: var(--r-sm);
+      background: var(--white);
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.16s ease;
+    }
+    .motif-card.is-on {
+      border-color: var(--blue);
+      background: #f8faff;
+      box-shadow: 0 0 0 2px rgba(0, 82, 255, 0.12);
+    }
+    .motif-card__icon {
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: var(--r-sm);
+      background: var(--surface);
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .motif-card.is-on .motif-card__icon { background: var(--blue); color: #fff; }
+    .motif-card__body { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+    .motif-card__name { font-size: 0.9rem; font-weight: 800; }
+    .motif-card__text { font-size: 0.78rem; color: var(--muted); }
+
+    .date-row {
+      display: flex;
+      gap: 0.5rem;
+      overflow-x: auto;
+      padding-bottom: 0.4rem;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+    }
+    .date-row::-webkit-scrollbar { display: none; }
+    .date-btn {
+      flex: 0 0 4.4rem;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.1rem;
+      padding: 0.65rem 0.35rem;
+      border-radius: var(--r-sm);
+      border: 1px solid var(--line);
+      background: var(--white);
+      color: var(--ink);
+    }
+    .date-btn small { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; color: var(--muted); }
+    .date-btn b { font-size: 1.05rem; font-weight: 800; }
+    .date-btn.is-on { background: var(--blue); border-color: var(--blue); color: #fff; }
+    .date-btn.is-on small { color: rgba(255, 255, 255, 0.85); }
+
+    .slots {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.45rem;
+    }
+    .slot {
+      padding: 0.65rem 0.25rem;
+      border-radius: var(--r-sm);
+      border: 1px solid var(--line);
+      background: var(--white);
+      color: var(--ink);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    .slot.is-on { background: var(--blue); border-color: var(--blue); color: #fff; }
+
+    .form-grid { display: grid; gap: 0.75rem; grid-template-columns: 1fr; }
+    .field { display: flex; flex-direction: column; gap: 0.35rem; }
+    .field__label { font-size: 0.84rem; font-weight: 700; }
+    .field__hint { font-size: 0.76rem; color: var(--muted); }
+    .input {
+      width: 100%;
+      padding: 0.8rem 0.95rem;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--r-sm);
+      background: var(--white);
+      color: var(--ink);
+      font-size: 16px; /* Évite le zoom automatique sur iPhone */
+    }
+    .input:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(0, 82, 255, 0.12); }
+    .input-group { display: flex; align-items: center; gap: 0.5rem; }
+    .input-group .input { flex: 1; min-width: 0; }
+    .input-prefix {
+      padding: 0.8rem 0.75rem;
+      border-radius: var(--r-sm);
+      background: var(--blue-soft);
+      border: 1px solid var(--blue-line);
+      color: var(--blue);
+      font-size: 0.85rem;
+      font-weight: 800;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .drop-zone {
+      position: relative;
+      border: 2px dashed var(--blue-line);
+      border-radius: var(--r);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      background: var(--white);
+      cursor: pointer;
+    }
+    .drop-zone input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+
+    .check-grid { display: grid; gap: 0.6rem; grid-template-columns: 1fr; }
+    .check-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      padding: 0.75rem 0.85rem;
+      border: 1px solid var(--line);
+      border-radius: var(--r-sm);
+      background: var(--white);
+      cursor: pointer;
+    }
+    .check-card input { margin-top: 0.2rem; accent-color: var(--blue); }
+    .check-card b { font-size: 0.9rem; }
+    .check-card span { font-size: 0.8rem; color: var(--muted); }
+
+    .tier-grid { display: grid; gap: 0.5rem; grid-template-columns: repeat(2, 1fr); }
+    .tier-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      padding: 0.75rem 0.5rem;
+      border: 1px solid var(--line);
+      border-radius: var(--r-sm);
+      background: var(--white);
+      text-align: center;
+      cursor: pointer;
+    }
+    .tier-card input { position: absolute; opacity: 0; pointer-events: none; }
+    .tier-card b { font-size: 0.85rem; }
+    .tier-card span { font-size: 0.75rem; color: var(--muted); }
+    .tier-card:has(input:checked) { background: var(--carbon); border-color: var(--carbon); color: #fff; }
+    .tier-card:has(input:checked) span { color: #cbd5e1; }
+
+    /* Modales */
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      background: rgba(11, 15, 25, 0.7);
+      backdrop-filter: blur(6px);
+      padding: 0;
+    }
+    .modal__panel {
+      width: 100%;
+      max-width: 28rem;
+      max-height: 88vh;
+      overflow-y: auto;
+      background: var(--white);
+      border-radius: var(--r-lg) var(--r-lg) 0 0;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      box-shadow: var(--shadow-lg);
+    }
+    .modal__media {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: var(--r);
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+    .modal__media img { width: 100%; height: 100%; object-fit: contain; }
+    .modal__close {
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal__price { font-size: 1.35rem; font-weight: 800; color: var(--blue); }
+
+    /* Pied de page */
+    .site-footer {
+      background: var(--carbon);
+      color: #fff;
+      padding-block: 2.5rem;
+      padding-bottom: calc(2.5rem + 4.5rem); /* Espace pour la barre mobile */
+    }
+    .footer-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: 1fr;
+    }
+    .footer-grid h3 { font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: #93c5fd; margin-bottom: 0.5rem; }
+    .footer-grid p, .footer-grid a { color: #cbd5e1; font-size: 0.88rem; }
+    .footer-bottom {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--carbon-line);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      color: #64748b;
+    }
+
+    /* Barre d'actions rapides Mobile (Fixe en bas) */
+    .mobile-cta {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 70;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.55rem var(--pad-x) calc(0.55rem + env(safe-area-inset-bottom, 0px));
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(14px);
+      border-top: 1px solid var(--line);
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.06);
+    }
+    .mobile-cta .btn {
+      flex: 1;
+      min-width: 0;
+      padding: 0.65rem 0.35rem;
+      font-size: 0.82rem;
+      gap: 0.3rem;
+    }
+
+    /* =====================================================================
+       Responsive & Adaptations écrans
+       ===================================================================== */
+    @media (max-width: 860px) {
+      .site-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0.5rem var(--pad-x) 1.25rem;
+        background: var(--white);
+        border-bottom: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
+      .site-nav.is-open { display: flex; }
+      .site-nav a { padding: 0.75rem 0; border-bottom: 1px solid var(--line); font-size: 0.95rem; }
+      .nav-toggle { display: inline-flex; }
+      .hide-mobile { display: none !important; }
+    }
+
+    @media (min-width: 600px) {
+      .info-strip { grid-template-columns: repeat(3, 1fr); }
+      .grid--2 { grid-template-columns: repeat(2, 1fr); }
+      .frames-grid, .cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .shape-row { grid-template-columns: repeat(6, 1fr); }
+      .face-row { grid-template-columns: repeat(4, 1fr); }
+      .tier-grid { grid-template-columns: repeat(4, 1fr); }
+      .form-grid { grid-template-columns: repeat(2, 1fr); }
+      .span-all { grid-column: 1 / -1; }
+      .modal { align-items: center; padding: 1.5rem; }
+      .modal__panel { border-radius: var(--r-lg); }
+    }
+
+    @media (min-width: 861px) {
+      .hero__panel { grid-template-columns: 1.15fr 0.85fr; }
+      .expertise { grid-template-columns: 0.9fr 1.1fr; }
+      .frames-grid, .cat-grid { grid-template-columns: repeat(4, 1fr); }
+      .footer-grid { grid-template-columns: repeat(4, 1fr); }
+      .footer-bottom { flex-direction: row; justify-content: space-between; }
+      .mobile-cta { display: none !important; }
+      .site-footer { padding-bottom: 2.5rem; }
     }
   </style>
-<link rel="icon" href="images/logo.png"/>
-<title>Finagnon Vision — Optique & Lunetterie, Ouagadougou</title>
-<meta name="description" content="Finagnon Vision, votre partenaire optique de confiance à Gounghin, Ouagadougou : montures tendances, verres protecteurs et verres correcteurs."/>
-<style>.view{display:none}.view.on{display:block}
-#frames-container:empty::before,#cat-grid:empty::before{content:"";grid-column:1/-1;height:200px;border-radius:16px;background:linear-gradient(90deg,#e6eeff 25%,#f8f9ff 50%,#e6eeff 75%);background-size:200% 100%;animation:sk 1.2s linear infinite}
-@keyframes sk{to{background-position:-200% 0}}
-.fv-empty{grid-column:1/-1;text-align:center;padding:2rem .5rem;color:#64748b;font-size:13px}
-#fv-nav [data-path]{cursor:pointer}</style></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/95 backdrop-blur-xl border-b border-surface-container-high/60 shadow-[0_1px_10px_rgba(11,15,25,0.04)]"><div class="h-16 px-gutter-sm flex items-center justify-between"><div class="flex items-center gap-3"><div class="h-11 w-11 rounded-lg bg-white p-1 border border-outline-variant/60 flex items-center justify-center shrink-0 shadow-sm overflow-hidden"><img alt="Finagnon Vision Logo" class="w-full h-full object-contain" src="images/logo.png"/></div><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm font-extrabold text-[17px] tracking-tight text-carbon">FINAGNON <span class="text-primary font-black">VISION</span></span></div><span class="text-[11px] font-bold tracking-wider text-on-surface-variant flex items-center gap-1.5 uppercase"><span class="w-2 h-2 rounded-full bg-primary inline-block"></span>Ouagadougou • Gounghin</span></div></div><div class="flex items-center gap-space-sm"><a aria-label="WhatsApp Finagnon Vision" class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-badge text-primary border border-primary/20 hover:bg-primary hover:text-white transition-colors" href="https://wa.me/22665164394" rel="noopener" target="_blank"><span class="material-symbols-outlined text-[20px]">chat</span></a><div class="relative flex items-center justify-center p-0.5 rounded-full ring-2 ring-primary/30"><img alt="Opticienne Diplômée" class="w-8 h-8 rounded-full object-cover" src="images/clinique.jpg"/></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
-<section id="accueil" class="view on">
-<!-- Hero Prestige Section -->
-<section class="relative w-full px-margin-sm pt-space-md pb-space-lg overflow-hidden">
-<div class="relative bg-carbon text-white rounded-2xl p-space-lg shadow-xl overflow-hidden border border-carbon-light">
-<!-- High-energy visual glows (electric blue & deep charcoal) -->
-<div class="absolute -right-10 -top-10 w-64 h-64 rounded-full bg-primary/30 blur-3xl pointer-events-none"></div>
-<div class="absolute -left-12 -bottom-12 w-52 h-52 rounded-full bg-primary-dark/25 blur-3xl pointer-events-none"></div>
-<div class="relative z-10 flex flex-col gap-space-sm">
-<div class="inline-flex items-center gap-1.5 self-start px-3 py-1 rounded-full bg-white/10 text-white border border-white/15 backdrop-blur-md">
-<span class="material-symbols-outlined text-[15px] text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
-<span class="text-[11px] font-bold tracking-wider uppercase">Clinique &amp; Lunetterie d'Art</span>
-</div>
-<h1 class="text-[25px] sm:text-[28px] text-white leading-tight font-extrabold tracking-tight">
-          Votre vue mérite l'excellence à Ouagadougou
-        </h1>
-<p class="text-[14px] text-surface-container-high leading-relaxed font-normal">
-          Optique de haute précision &amp; montures de créateurs à Gounghin. L'alliance d'un examen médical pointu et du style contemporain.
-        </p>
-<!-- Rapid Actions -->
-<div class="flex flex-col sm:flex-row gap-space-sm pt-space-xs">
-<a class="flex items-center justify-center gap-2 px-space-md py-3 rounded-xl bg-primary text-white font-bold text-[14px] shadow-lg shadow-primary/30 hover:bg-primary-dark active:scale-[0.98] transition-all" href="https://wa.me/22665164394?text=Bonjour%20Finagnon%20Vision,%20je%20souhaite%20prendre%20un%20rendez-vous">
-<span class="material-symbols-outlined text-[20px]">calendar_month</span>
-<span>Prendre rendez-vous</span>
-</a>
-<a class="flex items-center justify-center gap-2 px-space-md py-3 rounded-xl bg-white/10 border border-white/20 text-white font-bold text-[14px] hover:bg-white/20 backdrop-blur-md transition-colors" href="#ordonnance-express">
-<span class="material-symbols-outlined text-[20px]">document_scanner</span>
-<span>Envoyer mon ordonnance</span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- Flash Contact, Urgences & Réseaux Sociaux -->
-<section class="px-margin-sm pb-space-lg">
-<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm border border-outline-variant/50 flex flex-col gap-space-md">
-<!-- Status Bar -->
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="relative flex h-2.5 w-2.5">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
-</span>
-<span class="font-bold text-[13px] text-carbon">Boutique à Gounghin ouverte</span>
-</div>
-<span class="text-[11px] font-semibold text-on-surface-variant bg-surface-container-low px-2.5 py-0.5 rounded-full border border-surface-container">Lun - Sam : 08h30 - 19h00</span>
-</div>
-<!-- Quick Action Buttons Dual -->
-<div class="grid grid-cols-2 gap-space-sm">
-<a class="flex items-center justify-center gap-2 py-3 px-space-sm rounded-xl bg-surface-container-low text-carbon hover:bg-surface-container transition-colors border border-surface-container-high/60" href="tel:+22665164394">
-<span class="material-symbols-outlined text-primary text-[20px]">call</span>
-<div class="flex flex-col text-left">
-<span class="text-[11px] font-semibold text-on-surface-variant">Appel direct</span>
-<span class="text-[13px] font-black leading-none text-carbon">+226 65 16 43 94</span>
-</div>
-</a>
-<a class="flex items-center justify-center gap-2 py-3 px-space-sm rounded-xl bg-blue-badge text-primary hover:bg-primary hover:text-white transition-all border border-primary/20 group" href="https://wa.me/22665164394" target="_blank">
-<span class="material-symbols-outlined text-[20px] text-primary group-hover:text-white transition-colors">chat</span>
-<div class="flex flex-col text-left">
-<span class="text-[11px] font-semibold text-primary/80 group-hover:text-white/80 transition-colors">Discuter</span>
-<span class="text-[13px] font-black leading-none text-primary group-hover:text-white transition-colors">WhatsApp Pro</span>
-</div>
-</a>
-</div>
-<!-- Official Social Channels Badges -->
-<div class="flex items-center justify-between pt-1">
-<span class="text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Canaux Officiels :</span>
-<div class="flex items-center gap-space-xs">
-<a class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-carbon hover:bg-surface-container text-body-sm border border-surface-container" href="https://facebook.com/finagnonvision" rel="noopener" target="_blank">
-<span class="material-symbols-outlined text-[16px] text-primary">public</span>
-<span class="text-[12px] font-bold">@finagnonvision</span>
-<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-</a>
-<a class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-carbon hover:bg-surface-container text-body-sm border border-surface-container" href="https://tiktok.com/@finagnonvision" rel="noopener" target="_blank">
-<span class="material-symbols-outlined text-[16px] text-primary">play_circle</span>
-<span class="text-[12px] font-bold">TikTok</span>
-<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- Interactive Filter Tabs for Frames Showcase -->
-<section class="px-margin-sm pb-space-lg">
-<div class="flex items-center justify-between mb-space-sm">
-<div class="flex flex-col">
-<span class="text-[11px] font-black text-primary uppercase tracking-widest">Haute Lunetterie</span>
-<h2 class="text-[20px] text-carbon font-extrabold tracking-tight">Nouveautés &amp; Tendances 2025</h2>
-</div>
-<a class="text-[13px] font-bold text-primary hover:underline flex items-center gap-0.5" href="#">
-<span>Tout voir</span>
-<span class="material-symbols-outlined text-[16px]">chevron_right</span>
-</a>
-</div>
-<!-- Category Pill Switcher -->
-<div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none" id="catalog-filter-bar">
-<button class="frame-filter-btn px-4 py-1.5 rounded-full bg-carbon text-white font-bold text-[12px] shadow-sm transition-all" data-target="all" onclick="filterFrames('all')">
-        Tous les modèles
-      </button>
-<button class="frame-filter-btn px-4 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-semibold text-[12px] shadow-sm border border-outline-variant/50 transition-all hover:bg-surface-container-low" data-target="vue" onclick="filterFrames('vue')">
-        Optique &amp; Vue
-      </button>
-<button class="frame-filter-btn px-4 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-semibold text-[12px] shadow-sm border border-outline-variant/50 transition-all hover:bg-surface-container-low" data-target="solaire" onclick="filterFrames('solaire')">
-        Solaires d'Afrique
-      </button>
-<button class="frame-filter-btn px-4 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-semibold text-[12px] shadow-sm border border-outline-variant/50 transition-all hover:bg-surface-container-low" data-target="luxe" onclick="filterFrames('luxe')">
-        Série Or &amp; Titane
-      </button>
-</div>
-<!-- Frames Mosaic Grid (2-columns mobile optimized) -->
-<div class="grid grid-cols-2 gap-space-sm pt-space-xs" id="frames-container">
-</div>
-</section>
-<!-- High-Precision Ophthalmic Lens Solutions -->
-<section class="px-margin-sm pb-space-lg">
-<div class="bg-surface-container-low rounded-2xl p-space-md border border-surface-container-high/70">
-<div class="flex flex-col mb-space-md">
-<span class="text-[11px] font-black text-primary uppercase tracking-widest">Laboratoire Verrier</span>
-<h2 class="text-[20px] text-carbon font-extrabold tracking-tight">Solutions de Verres &amp; Traitements</h2>
-<p class="text-[13px] text-on-surface-variant font-medium">Taillés et montés avec calibrage micrométrique directement dans notre atelier de Gounghin.</p>
-</div>
-<div class="flex flex-col gap-space-sm">
-<!-- Lens Item 1 -->
-<div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/40 flex items-start gap-space-sm">
-<div class="w-12 h-12 rounded-xl bg-blue-badge text-primary flex items-center justify-center shrink-0 border border-primary/20">
-<span class="material-symbols-outlined text-[26px]">devices</span>
-</div>
-<div class="flex flex-col flex-1">
-<div class="flex items-center justify-between">
-<h3 class="text-[15px] text-carbon font-bold">Anti-Lumière Bleue Élite</h3>
-<span class="text-[10px] font-bold bg-blue-badge text-primary border border-primary/20 px-2 py-0.5 rounded-full">Filtre 420nm</span>
-</div>
-<p class="text-[13px] text-on-surface-variant mt-0.5">
-              Élimine la fatigue oculaire causée par les smartphones, tablettes et ordinateurs. Repos garanti pour le travail et les études.
-            </p>
-</div>
-</div>
-<!-- Lens Item 2 -->
-<div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/40 flex items-start gap-space-sm">
-<div class="w-12 h-12 rounded-xl bg-surface-container text-carbon flex items-center justify-center shrink-0 border border-outline-variant/40">
-<span class="material-symbols-outlined text-[26px] text-primary">wb_sunny</span>
-</div>
-<div class="flex flex-col flex-1">
-<div class="flex items-center justify-between">
-<h3 class="text-[15px] text-carbon font-bold">Photochromique Soleil d'Afrique</h3>
-<span class="text-[10px] font-bold bg-carbon text-white px-2 py-0.5 rounded-full">Transition Instantanée</span>
-</div>
-<p class="text-[13px] text-on-surface-variant mt-0.5">
-              Verres parfaitement clairs en intérieur qui s'obscurcissent automatiquement sous l'ardent soleil de Ouagadougou en moins de 30 secondes.
-            </p>
-</div>
-</div>
-<!-- Lens Item 3 -->
-<div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/40 flex items-start gap-space-sm">
-<div class="w-12 h-12 rounded-xl bg-blue-badge text-primary flex items-center justify-center shrink-0 border border-primary/20">
-<span class="material-symbols-outlined text-[26px]">visibility</span>
-</div>
-<div class="flex flex-col flex-1">
-<div class="flex items-center justify-between">
-<h3 class="text-[15px] text-carbon font-bold">Progressifs Haute Définition</h3>
-<span class="text-[10px] font-bold bg-surface-container text-carbon px-2 py-0.5 rounded-full">Vision Large HD</span>
-</div>
-<p class="text-[13px] text-on-surface-variant mt-0.5">
-              Champ visuel panoramique fluide pour la presbytie. Vision nette de près, intermédiaire et de loin sans saut d'image.
-            </p>
-</div>
-</div>
-<!-- Lens Item 4 -->
-<div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/40 flex items-start gap-space-sm">
-<div class="w-12 h-12 rounded-xl bg-surface-container text-primary flex items-center justify-center shrink-0 border border-outline-variant/40">
-<span class="material-symbols-outlined text-[26px]">shield</span>
-</div>
-<div class="flex flex-col flex-1">
-<div class="flex items-center justify-between">
-<h3 class="text-[15px] text-carbon font-bold">Solaires Polarisés UV400</h3>
-<span class="text-[10px] font-bold bg-blue-badge text-primary border border-primary/20 px-2 py-0.5 rounded-full">Anti-Éblouissement</span>
-</div>
-<p class="text-[13px] text-on-surface-variant mt-0.5">
-              Suppression intégrale des reflets sur l'asphalte et la poussière latéritique. Confort maximal lors de la conduite automobile et moto à Ouaga.
-            </p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Clinic & Optician Expertise Card -->
-<section class="px-margin-sm pb-space-lg">
-<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm border border-outline-variant/50 flex flex-col gap-space-md">
-<div class="flex items-center gap-space-md">
-<div class="relative w-20 h-20 rounded-2xl overflow-hidden shadow-sm shrink-0 border-2 border-primary/30">
-<img alt="Portrait Opticienne Finagnon Vision" class="w-full h-full object-cover" src="images/clinique.jpg"/>
-</div>
-<div class="flex flex-col">
-<div class="flex items-center gap-1 text-primary">
-<span class="material-symbols-outlined text-[18px]">verified_user</span>
-<span class="text-[11px] font-black uppercase tracking-wider">L'Excellence Métier</span>
-</div>
-<h3 class="text-[16px] text-carbon font-extrabold">Opticienne d'État Diplômée</h3>
-<p class="text-[13px] text-on-surface-variant">Accompagnement personnalisé pour vos yeux à Gounghin.</p>
-</div>
-</div>
-<!-- Feature badges grid -->
-<div class="grid grid-cols-3 gap-2 text-center pt-2">
-<div class="bg-surface-container-low p-2 rounded-xl flex flex-col items-center border border-surface-container">
-<span class="material-symbols-outlined text-primary text-[22px] mb-1">face_retouching_natural</span>
-<span class="text-[11px] font-bold text-carbon">Conseil Visagisme</span>
-<span class="text-[10px] text-on-surface-variant">Selon morphologie</span>
-</div>
-<div class="bg-surface-container-low p-2 rounded-xl flex flex-col items-center border border-surface-container">
-<span class="material-symbols-outlined text-primary text-[22px] mb-1">center_focus_strong</span>
-<span class="text-[11px] font-bold text-carbon">Centrage Numérique</span>
-<span class="text-[10px] text-on-surface-variant">Précision 0.1 mm</span>
-</div>
-<div class="bg-surface-container-low p-2 rounded-xl flex flex-col items-center border border-surface-container">
-<span class="material-symbols-outlined text-primary text-[22px] mb-1">eyeglasses</span>
-<span class="text-[11px] font-bold text-carbon">Verres Correcteurs</span>
-<span class="text-[10px] text-on-surface-variant">Sur ordonnance</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Prescription Express Upload & Interactive Quotation Area -->
-<section class="px-margin-sm pb-space-lg" id="ordonnance-express">
-<div class="bg-gradient-to-br from-surface-container-low to-blue-badge/40 rounded-2xl p-space-md shadow-sm border border-primary/20">
-<div class="flex items-center gap-2 text-primary mb-1">
-<span class="material-symbols-outlined text-[20px]">receipt_long</span>
-<span class="text-[11px] font-black uppercase tracking-wider">Devis Rapide &amp; Prise en Charge</span>
-</div>
-<h3 class="text-[20px] text-carbon font-extrabold">Transmettez votre ordonnance</h3>
-<p class="text-[13px] text-on-surface-variant mt-1 mb-space-md font-medium">
-        Prenez une simple photo de votre ordonnance ophtalmologique. Nos opticiens vous répondent sur WhatsApp avec votre tarif exact et vos prises en charge mutuelles.
-      </p>
-<!-- Prescription drop/upload action -->
-<label class="flex flex-col items-center justify-center p-space-md rounded-xl bg-surface-container-lowest border-2 border-dashed border-primary/30 cursor-pointer hover:border-primary transition-colors">
-<span class="material-symbols-outlined text-primary text-[36px] mb-1">add_a_photo</span>
-<span class="text-[14px] text-carbon font-bold">Télécharger ou photographier l'ordonnance</span>
-<span class="text-[12px] text-on-surface-variant mt-0.5">Formats acceptés : JPG, PNG, PDF</span>
-<input accept="image/*,application/pdf" class="hidden" onchange="handlePrescriptionFile(this)" type="file"/>
-</label>
-<!-- Mutualité & Assurances badges -->
-<div class="mt-space-md flex flex-wrap items-center justify-between gap-2 pt-space-xs">
-<span class="text-[11px] font-black text-on-surface-variant uppercase tracking-wider">Prise en charge directe :</span>
-<div class="flex items-center gap-2">
-<span class="px-2.5 py-1 rounded-lg bg-surface-container-lowest border border-outline-variant/60 text-[11px] text-carbon font-extrabold">SONAR</span>
-<span class="px-2.5 py-1 rounded-lg bg-surface-container-lowest border border-outline-variant/60 text-[11px] text-carbon font-extrabold">UAB</span>
-<span class="px-2.5 py-1 rounded-lg bg-surface-container-lowest border border-outline-variant/60 text-[11px] text-carbon font-extrabold">SUNU</span>
-<span class="px-2.5 py-1 rounded-lg bg-surface-container-lowest border border-outline-variant/60 text-[11px] text-carbon font-extrabold">ASCOMA</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Persistent Booking CTA Dock (Mobile floating action) -->
-<div class="sticky bottom-16 w-full px-margin-sm py-2 z-40 bg-surface/85 backdrop-blur-md">
-<div class="flex items-center gap-space-sm p-1.5 rounded-full bg-carbon text-white shadow-xl border border-carbon-light">
-<div class="flex items-center gap-2 pl-3">
-<span class="material-symbols-outlined text-primary text-[22px]" style="font-variation-settings: 'FILL' 1;">verified</span>
-<div class="flex flex-col">
-<span class="text-[13px] font-bold leading-tight text-white">Rendez-vous à Gounghin</span>
-<span class="text-[11px] text-surface-container-high">Selon disponibilités</span>
-</div>
-</div>
-<a class="ml-auto px-4 py-2 rounded-full bg-primary text-white text-[13px] font-extrabold hover:bg-primary-dark transition-all shadow-md shadow-primary/30 whitespace-nowrap" href="https://wa.me/22665164394?text=Bonjour%20Finagnon%20Vision,%20je%20souhaite%20prendre%20rendez-vous">
-        Réserver
+</head>
+<body>
+  <!-- ================= En-tête ================= -->
+  <header class="site-header">
+    <div class="wrap header__inner">
+      <a class="brand" href="#accueil" aria-label="Finagnon Vision — accueil">
+        <img class="brand__logo" src="images/logo.png" alt="Logo" />
+        <span class="brand__text">
+          <span class="brand__name">FINAGNON <span>VISION</span></span>
+          <span class="brand__meta" data-set="QUARTIER">Ouagadougou • Gounghin</span>
+        </span>
       </a>
-</div>
-</div>
-</div>
-<script>
-  // Filter Frames logic
-  function filterFrames(category) {
-    const cards = document.querySelectorAll('.frame-card');
-    const buttons = document.querySelectorAll('.frame-filter-btn');
 
-    buttons.forEach(btn => {
-      if (btn.getAttribute('data-target') === category) {
-        btn.classList.add('bg-carbon', 'text-white');
-        btn.classList.remove('bg-surface-container-lowest', 'text-on-surface');
-      } else {
-        btn.classList.remove('bg-carbon', 'text-white');
-        btn.classList.add('bg-surface-container-lowest', 'text-on-surface');
-      }
-    });
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <a href="#accueil" class="is-on">Accueil</a>
+        <a href="#catalogue">Catalogue</a>
+        <a href="#verres">Verres</a>
+        <a href="#rendez-vous">Rendez-vous</a>
+        <a href="#devis">Devis</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-    cards.forEach(card => {
-      if (category === 'all' || card.getAttribute('data-category') === category) {
-        card.style.display = 'flex';
-      } else {
-        card.style.display = 'none';
-      }
-    });
-  }
-
-  // Quick View Modal
-  function openQuickView(title, price, desc, img) {
-    const modal = document.getElementById('quickview-modal');
-    document.getElementById('qv-title').innerText = title;
-    document.getElementById('qv-price').innerText = price;
-    document.getElementById('qv-desc').innerText = desc;
-    const qvi = document.getElementById('qv-img');
-    if (qvi) qvi.src = img || 'images/logo.png';
-    
-    const waUrl = "https://wa.me/"+FW.WHATSAPP+"?text=" + encodeURIComponent("Bonjour Finagnon Vision, je souhaite essayer le modèle " + title + " (" + price + ") en boutique à Gounghin.");
-    document.getElementById('qv-whatsapp-link').setAttribute('href', waUrl);
-    
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
-  }
-
-  function closeQuickView() {
-    const modal = document.getElementById('quickview-modal');
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
-  }
-
-  // Prescription Instant Feedback
-  function handlePrescriptionFile(input) {
-    if (input.files && input.files[0]) {
-      const fileName = input.files[0].name;
-      alert("Votre ordonnance (" + fileName + ") a bien été sélectionnée. Vous allez être redirigé vers notre opticien WhatsApp pour l'évaluation instantanée.");
-      window.open("https://wa.me/"+FW.WHATSAPP+"?text=" + encodeURIComponent("Bonjour Finagnon Vision, je viens de joindre mon ordonnance médicale pour un devis de verres."), '_blank');
-    }
-  }
-</script>
-</section>
-<section id="catalogue" class="view">
-<!-- Search & Filter Bar -->
-<div class="px-margin-sm pt-space-md pb-space-sm flex flex-col gap-space-sm">
-<div class="flex items-center gap-space-sm">
-<div class="flex-1 flex items-center bg-surface-container-lowest border border-outline-variant/50 focus-within:border-[#0052ff] focus-within:ring-2 focus-within:ring-[#0052ff]/10 shadow-xs rounded-xl px-space-md py-2.5 transition-all">
-<span class="material-symbols-outlined text-outline text-[20px] mr-2">search</span>
-<input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" id="cat-search" placeholder="Rechercher une monture, marque ou style..." type="text"/>
-</div>
-<button aria-label="Filtres avancés" class="w-11 h-11 flex items-center justify-center rounded-xl bg-black text-white hover:bg-[#0052ff] transition-all shadow-xs shrink-0" id="toggle-filter-btn" type="button">
-<span class="material-symbols-outlined text-[20px]">tune</span>
-</button>
-</div>
-<!-- Quick Badges Horizontal Scroll -->
-<div class="flex items-center gap-2 overflow-x-auto pb-1 -mx-margin-sm px-margin-sm scrollbar-none">
-<button class="filter-chip whitespace-nowrap px-4 py-1.5 rounded-full font-label-md text-label-md bg-[#0052ff] text-white transition-all shadow-xs" data-filter="all">
-        Tous
-      </button>
-<button class="filter-chip whitespace-nowrap px-4 py-1.5 rounded-full font-label-md text-label-md bg-white text-on-surface border border-outline-variant/60 hover:border-black transition-all shadow-xs" data-filter="homme">
-        Hommes
-      </button>
-<button class="filter-chip whitespace-nowrap px-4 py-1.5 rounded-full font-label-md text-label-md bg-white text-on-surface border border-outline-variant/60 hover:border-black transition-all shadow-xs" data-filter="femme">
-        Femmes
-      </button>
-<button class="filter-chip whitespace-nowrap px-4 py-1.5 rounded-full font-label-md text-label-md bg-white text-on-surface border border-outline-variant/60 hover:border-black transition-all shadow-xs" data-filter="vue">
-        Optiques / Vue
-      </button>
-<button class="filter-chip whitespace-nowrap px-4 py-1.5 rounded-full font-label-md text-label-md bg-white text-on-surface border border-outline-variant/60 hover:border-black transition-all shadow-xs" data-filter="solaire">
-        Solaires Polarisées
-      </button>
-<button class="filter-chip whitespace-nowrap px-4 py-1.5 rounded-full font-label-md text-label-md bg-white text-on-surface border border-outline-variant/60 hover:border-black transition-all shadow-xs" data-filter="bluelight">
-        Anti-Lumière Bleue
-      </button>
-<button class="filter-chip whitespace-nowrap px-4 py-1.5 rounded-full font-label-md text-label-md bg-white text-on-surface border border-outline-variant/60 hover:border-black transition-all shadow-xs" data-filter="all" data-q="titane">
-        Titane Léger
-      </button>
-<button class="filter-chip whitespace-nowrap px-4 py-1.5 rounded-full font-label-md text-label-md bg-white text-on-surface border border-outline-variant/60 hover:border-black transition-all shadow-xs" data-filter="all">
-        Grandes Marques
-      </button>
-</div>
-</div>
-<!-- Advanced Shape Selector -->
-<div class="px-margin-sm py-space-sm">
-<div class="flex items-center justify-between mb-space-xs">
-<span class="font-label-caps text-label-caps text-secondary font-bold uppercase tracking-wider">Silhouettes de Montures</span>
-<span class="font-body-sm text-body-sm text-[#0052ff] font-semibold">6 formes iconiques</span>
-</div>
-<div class="grid grid-cols-6 gap-2">
-<!-- Shape: Rondes -->
-<button class="shape-btn flex flex-col items-center p-2 rounded-xl bg-white border border-outline-variant/50 hover:border-[#0052ff] hover:text-[#0052ff] transition-all shadow-xs text-on-surface group" data-forme="ronde">
-<div class="w-8 h-8 rounded-lg bg-surface-container-low group-hover:bg-[#0052ff]/10 flex items-center justify-center transition-colors">
-<span class="material-symbols-outlined text-[18px] text-black group-hover:text-[#0052ff]">lens_blur</span>
-</div>
-<span class="font-label-caps text-[11px] mt-1 text-on-surface-variant group-hover:text-[#0052ff] font-semibold">Rondes</span>
-</button>
-<!-- Shape: Pantos -->
-<button class="shape-btn flex flex-col items-center p-2 rounded-xl bg-white border border-outline-variant/50 hover:border-[#0052ff] hover:text-[#0052ff] transition-all shadow-xs text-on-surface group" data-forme="panto">
-<div class="w-8 h-8 rounded-lg bg-surface-container-low group-hover:bg-[#0052ff]/10 flex items-center justify-center transition-colors">
-<span class="material-symbols-outlined text-[18px] text-black group-hover:text-[#0052ff]">trip_origin</span>
-</div>
-<span class="font-label-caps text-[11px] mt-1 text-on-surface-variant group-hover:text-[#0052ff] font-semibold">Pantos</span>
-</button>
-<!-- Shape: Rectangulaires -->
-<button class="shape-btn flex flex-col items-center p-2 rounded-xl bg-white border border-outline-variant/50 hover:border-[#0052ff] hover:text-[#0052ff] transition-all shadow-xs text-on-surface group" data-forme="rect">
-<div class="w-8 h-8 rounded-lg bg-surface-container-low group-hover:bg-[#0052ff]/10 flex items-center justify-center transition-colors">
-<span class="material-symbols-outlined text-[18px] text-black group-hover:text-[#0052ff]">crop_16_9</span>
-</div>
-<span class="font-label-caps text-[11px] mt-1 text-on-surface-variant group-hover:text-[#0052ff] font-semibold">Rectang.</span>
-</button>
-<!-- Shape: Aviateur -->
-<button class="shape-btn flex flex-col items-center p-2 rounded-xl bg-white border border-outline-variant/50 hover:border-[#0052ff] hover:text-[#0052ff] transition-all shadow-xs text-on-surface group" data-forme="aviateur">
-<div class="w-8 h-8 rounded-lg bg-surface-container-low group-hover:bg-[#0052ff]/10 flex items-center justify-center transition-colors">
-<span class="material-symbols-outlined text-[18px] text-black group-hover:text-[#0052ff]">flight</span>
-</div>
-<span class="font-label-caps text-[11px] mt-1 text-on-surface-variant group-hover:text-[#0052ff] font-semibold">Aviateur</span>
-</button>
-<!-- Shape: Papillon/Cat-Eye -->
-<button class="shape-btn flex flex-col items-center p-2 rounded-xl bg-white border border-outline-variant/50 hover:border-[#0052ff] hover:text-[#0052ff] transition-all shadow-xs text-on-surface group" data-forme="papillon">
-<div class="w-8 h-8 rounded-lg bg-surface-container-low group-hover:bg-[#0052ff]/10 flex items-center justify-center transition-colors">
-<span class="material-symbols-outlined text-[18px] text-black group-hover:text-[#0052ff]">visibility</span>
-</div>
-<span class="font-label-caps text-[11px] mt-1 text-on-surface-variant group-hover:text-[#0052ff] font-semibold">Papillon</span>
-</button>
-<!-- Shape: Carrées -->
-<button class="shape-btn flex flex-col items-center p-2 rounded-xl bg-white border border-outline-variant/50 hover:border-[#0052ff] hover:text-[#0052ff] transition-all shadow-xs text-on-surface group" data-forme="carree">
-<div class="w-8 h-8 rounded-lg bg-surface-container-low group-hover:bg-[#0052ff]/10 flex items-center justify-center transition-colors">
-<span class="material-symbols-outlined text-[18px] text-black group-hover:text-[#0052ff]">crop_square</span>
-</div>
-<span class="font-label-caps text-[11px] mt-1 text-on-surface-variant group-hover:text-[#0052ff] font-semibold">Carrées</span>
-</button>
-</div>
-</div>
-<!-- Eyewear Showcase 2-Column Grid -->
-<div class="px-margin-sm py-space-sm flex flex-col gap-space-md">
-<div class="flex items-center justify-between">
-<div class="flex items-baseline gap-2">
-<h2 class="font-title-md text-title-md text-black font-extrabold">Collections Lunettes</h2>
-<span id="cat-count" class="font-label-md text-label-md text-secondary">142 modèles</span>
-</div>
-<span class="flex items-center gap-1 font-label-caps text-[11px] text-[#0052ff] font-bold">
-<span class="w-2 h-2 rounded-full bg-[#0052ff] animate-pulse"></span>
-        Gounghin Live
-      </span>
-</div>
-<div class="grid grid-cols-2 gap-space-sm" id="cat-grid">
-<!-- Interactive Face Shape Selector & Optician Advice -->
-<div class="px-margin-sm py-space-sm">
-<div class="bg-white border border-surface-container-high rounded-2xl p-space-md shadow-xs flex flex-col gap-space-sm relative overflow-hidden">
-<div class="flex items-start justify-between">
-<div class="flex items-center gap-space-sm">
-<div class="w-10 h-10 rounded-xl bg-[#0052ff]/10 text-[#0052ff] flex items-center justify-center border border-[#0052ff]/20">
-<span class="material-symbols-outlined text-[24px]">face</span>
-</div>
-<div>
-<h3 class="font-title-md text-title-md text-black font-extrabold">Guide Morphologie du Visage</h3>
-<span class="font-label-caps text-[10px] text-[#0052ff] uppercase tracking-wider font-bold">Conseils personnalisés de l'opticienne</span>
-</div>
-</div>
-</div>
-<p class="font-body-sm text-body-sm text-secondary">
-        Sélectionnez votre silhouette faciale pour harmoniser naturellement vos traits avec nos montures :
-      </p>
-<!-- Face Shape Selector Pills -->
-<div class="grid grid-cols-4 gap-2 pt-1" id="face-selector-group">
-<button class="face-pill p-2 rounded-xl bg-black text-white font-label-md text-label-md flex flex-col items-center gap-1 transition-all active:scale-95 shadow-xs" data-face="rond">
-<span class="material-symbols-outlined text-[20px]">circle</span>
-          Rond
-        </button>
-<button class="face-pill p-2 rounded-xl bg-surface-container-low text-on-surface-variant border border-outline-variant/40 font-label-md text-label-md flex flex-col items-center gap-1 transition-all active:scale-95 hover:border-black" data-face="ovale">
-<span class="material-symbols-outlined text-[20px]">egg</span>
-          Ovale
-        </button>
-<button class="face-pill p-2 rounded-xl bg-surface-container-low text-on-surface-variant border border-outline-variant/40 font-label-md text-label-md flex flex-col items-center gap-1 transition-all active:scale-95 hover:border-black" data-face="carre">
-<span class="material-symbols-outlined text-[20px]">crop_square</span>
-          Carré
-        </button>
-<button class="face-pill p-2 rounded-xl bg-surface-container-low text-on-surface-variant border border-outline-variant/40 font-label-md text-label-md flex flex-col items-center gap-1 transition-all active:scale-95 hover:border-black" data-face="coeur">
-<span class="material-symbols-outlined text-[20px]">favorite</span>
-          Cœur
-        </button>
-</div>
-<!-- Dynamic Optician Advice Box -->
-<div class="bg-[#f0f4ff] border border-[#0052ff]/20 rounded-xl p-3.5 flex items-start gap-3 mt-1" id="advice-card">
-<div class="w-8 h-8 rounded-lg bg-[#0052ff] text-white flex items-center justify-center shrink-0 mt-0.5">
-<span class="material-symbols-outlined text-[18px]">psychology</span>
-</div>
-<div class="flex flex-col">
-<span class="font-label-lg text-label-lg text-black font-bold" id="advice-title">Recommandation Visage Rond</span>
-<p class="font-body-sm text-body-sm text-secondary mt-0.5" id="advice-text">
-            Privilégiez les formes angulaires ou géométriques (rectangulaires, carrées, papillon). Évitez les montures parfaitement rondes pour allonger et affiner subtilement vos pommettes.
-          </p>
-</div>
-</div>
-</div>
-</div>
-<!-- Prescription Express Banner (48h Assembly) -->
-<div class="px-margin-sm pb-space-lg">
-<div class="bg-black text-white rounded-2xl p-space-md shadow-md flex flex-col gap-3 relative overflow-hidden border border-neutral-800">
-<div class="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-[#0052ff]/25 blur-2xl pointer-events-none"></div>
-<div class="flex items-center gap-2">
-<span class="w-2.5 h-2.5 rounded-full bg-[#0052ff] animate-pulse"></span>
-<span class="font-label-caps text-[10px] text-[#0052ff] uppercase tracking-widest font-extrabold">Atelier de Montage Ouaga</span>
-</div>
-<div class="flex items-start justify-between gap-3">
-<div class="flex flex-col">
-<h4 class="font-title-md text-title-md text-white font-extrabold leading-tight">
-            Vous avez une ordonnance ?
-          </h4>
-<p class="font-body-sm text-body-sm text-neutral-300 mt-1">
-            Transmettez-la en photo. Nos opticiens taillent et montent vos verres de précision en <strong class="text-[#0052ff] font-bold">48h chrono</strong> à Gounghin.
-          </p>
-</div>
-<div class="w-12 h-12 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-[#0052ff] shrink-0">
-<span class="material-symbols-outlined text-[28px]">speed</span>
-</div>
-</div>
-<div class="flex items-center gap-2 pt-1">
-<a class="flex-1 py-3 px-4 rounded-xl bg-[#0052ff] text-white font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-sm hover:bg-[#003ec7] transition-all" href="https://wa.me/22665164394?text=Bonjour%20Finagnon%20Vision,%20voici%20mon%20ordonnance%20pour%20un%20montage%20de%20verres" rel="noopener" target="_blank">
-<span class="material-symbols-outlined text-[20px]">document_scanner</span>
-          Envoyer mon ordonnance
+      <div class="header__actions">
+        <a class="btn btn--ghost btn__small hide-mobile" data-link="whatsapp" href="https://wa.me/22665164394" target="_blank" rel="noopener">
+          <span class="icon material-symbols-outlined">chat</span> WhatsApp
         </a>
-<a class="w-11 h-11 rounded-xl bg-white/10 border border-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-colors shrink-0" href="#" title="Consulter les tarifs de verres">
-<span class="material-symbols-outlined text-[20px]">info</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-<script>
-  // Filter chips selection
-  document.querySelectorAll('.filter-chip').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-chip').forEach(b => {
-        b.classList.remove('bg-[#0052ff]', 'text-white', 'border-transparent');
-        b.classList.add('bg-white', 'text-on-surface', 'border', 'border-outline-variant/60');
-      });
-      btn.classList.remove('bg-white', 'text-on-surface', 'border', 'border-outline-variant/60');
-      btn.classList.add('bg-[#0052ff]', 'text-white', 'border-transparent');
-    });
-  });
+        <a class="btn btn--primary btn__small hide-mobile" href="#rendez-vous">Rendez-vous</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu">
+          <span class="icon material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-  const adviceData = {
-    rond: {
-      title: "Recommandation Visage Rond",
-      text: "Privilégiez les formes angulaires ou géométriques (rectangulaires, carrées, papillon). Évitez les montures parfaitement rondes pour allonger et affiner subtilement vos traits."
-    },
-    ovale: {
-      title: "Recommandation Visage Ovale",
-      text: "La forme idéale ! Presque tous les styles vous subliment : pantos, aviateur, oversize ou hexagonales. Veillez simplement à respecter la largeur des tempes."
-    },
-    carre: {
-      title: "Recommandation Visage Carré",
-      text: "Adoucissez les angles marqués de la mâchoire grâce à des montures rondes, ovales ou pantos fluides en titane fin ou acétate biseauté."
-    },
-    coeur: {
-      title: "Recommandation Visage Cœur",
-      text: "Équilibrez un front large avec un menton délicat en choisissant des montures fines, trapèze ou papillon doux sans surcharge sur la ligne supérieure."
+  <main>
+    <!-- ================= Accueil / Hero ================= -->
+    <section class="hero" id="accueil">
+      <div class="wrap">
+        <div class="hero__panel">
+          <div class="hero__copy">
+            <span class="eyebrow eyebrow--light" data-set="SLOGAN">Cabinet d'Optique &amp; Lunetterie</span>
+            <h1 class="hero__title" data-set="HERO_TITLE">Votre vue mérite l'excellence</h1>
+            <p class="hero__text" data-set="HERO_TEXT">
+              Examen visuel précis, montures de créateurs et verres taillés sur place en 48h à Gounghin, Ouagadougou.
+            </p>
+            <ul class="hero__points">
+              <li><span class="icon material-symbols-outlined">verified</span> Opticienne d'État diplômée &amp; bilan personnalisé</li>
+              <li><span class="icon material-symbols-outlined">bolt</span> Montage et calibrage des verres en atelier (48h)</li>
+              <li><span class="icon material-symbols-outlined">chat</span> Devis immédiat et conseils sur WhatsApp</li>
+            </ul>
+            <div class="hero__actions">
+              <a class="btn btn--primary btn--lg" href="#catalogue">Voir les montures</a>
+              <a class="btn btn--light btn--lg" data-link="whatsapp" href="https://wa.me/22665164394" target="_blank" rel="noopener">
+                <span class="icon material-symbols-outlined">chat</span> Discuter sur WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__media">
+            <img src="images/clinique.jpg" alt="Cabinet Finagnon Vision" />
+            <span class="hero__tag">
+              <span class="dot-live"></span> Ouvert à Gounghin
+            </span>
+          </div>
+        </div>
+
+        <!-- 3 Cartes d'infos clés -->
+        <div class="info-strip">
+          <div class="info-card">
+            <span class="info-card__icon icon material-symbols-outlined">schedule</span>
+            <div>
+              <span class="info-card__label">Horaires</span>
+              <p class="info-card__value" data-set="HOURS">Lun - Sam : 08h30 - 19h00</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="info-card__icon icon material-symbols-outlined">call</span>
+            <div>
+              <span class="info-card__label">Téléphone &amp; WhatsApp</span>
+              <p class="info-card__value" data-set="PHONE_DISPLAY">+226 65 16 43 94</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="info-card__icon icon material-symbols-outlined">location_on</span>
+            <div>
+              <span class="info-card__label">Boutique</span>
+              <p class="info-card__value">Gounghin, face pharmacie</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Nouveautés ================= -->
+    <section class="section" id="nouveautes">
+      <div class="wrap">
+        <div class="section-head section-head--split">
+          <div>
+            <span class="eyebrow">Sélection du moment</span>
+            <h2 class="section-title">Nouveautés &amp; tendances</h2>
+            <p class="section-lead">Essayez nos modèles directement en boutique ou commandez sur WhatsApp.</p>
+          </div>
+          <a class="btn btn--outline btn__small" href="#catalogue">
+            Tout le catalogue <span class="icon material-symbols-outlined">chevron_right</span>
+          </a>
+        </div>
+
+        <div class="pill-bar" id="catalog-filter-bar">
+          <button class="pill frame-filter-btn is-on" type="button" data-target="all">Tous les modèles</button>
+          <button class="pill frame-filter-btn" type="button" data-target="vue">Optiques / Vue</button>
+          <button class="pill frame-filter-btn" type="button" data-target="solaire">Solaires</button>
+          <button class="pill frame-filter-btn" type="button" data-target="luxe">Créateurs &amp; Titane</button>
+        </div>
+
+        <div class="frames-grid" id="frames-container">
+          <div class="skeleton"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Verres & Traitements ================= -->
+    <section class="section section--alt" id="verres">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Haute technologie</span>
+          <h2 class="section-title">Solutions verres &amp; traitements</h2>
+          <p class="section-lead">Taillés et montés au millimètre dans notre atelier de Gounghin.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <article class="lens-card">
+            <span class="lens-card__icon icon material-symbols-outlined">devices</span>
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem;">
+                <h3>Anti-lumière bleue</h3>
+                <span class="badge badge--blue">Filtre 420 nm</span>
+              </div>
+              <p>Élimine la fatigue oculaire due aux smartphones et ordinateurs. Confort visuel immédiat.</p>
+            </div>
+          </article>
+
+          <article class="lens-card">
+            <span class="lens-card__icon icon material-symbols-outlined">wb_sunny</span>
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem;">
+                <h3>Photochromique Soleil</h3>
+                <span class="badge badge--dark">Teinte auto</span>
+              </div>
+              <p>Clairs en intérieur, ils s'obscurcissent automatiquement sous le soleil de Ouagadougou.</p>
+            </div>
+          </article>
+
+          <article class="lens-card">
+            <span class="lens-card__icon icon material-symbols-outlined">visibility</span>
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem;">
+                <h3>Progressifs Haute Définition</h3>
+                <span class="badge badge--soft">Champ large</span>
+              </div>
+              <p>Vision nette et fluide à toute distance (près, mi-distance, loin) sans fatigue.</p>
+            </div>
+          </article>
+
+          <article class="lens-card">
+            <span class="lens-card__icon icon material-symbols-outlined">shield</span>
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem;">
+                <h3>Solaires Polarisées UV400</h3>
+                <span class="badge badge--blue">Anti-reflets</span>
+              </div>
+              <p>Suppression des reflets sur route et asphalte pour une sécurité optimale à moto et en voiture.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Expertise ================= -->
+    <section class="section" id="expertise">
+      <div class="wrap">
+        <div class="expertise">
+          <div class="expertise__photo">
+            <img src="images/clinique.jpg" alt="Opticienne de Finagnon Vision" loading="lazy" />
+          </div>
+          <div>
+            <span class="eyebrow"><span class="icon material-symbols-outlined">verified</span> Accompagnement</span>
+            <h2 class="section-title">Une opticienne d'État à votre écoute</h2>
+            <p class="section-lead" style="margin-top: 0.5rem;">
+              Chaque visage est unique. Nous associons précision de réfraction, conseil en visagisme et ajustage micrométrique.
+            </p>
+            <div class="feature-grid">
+              <div class="feature">
+                <span class="icon material-symbols-outlined">face</span>
+                <b>Visagisme</b>
+                <span>Selon votre silhouette</span>
+              </div>
+              <div class="feature">
+                <span class="icon material-symbols-outlined">center_focus_strong</span>
+                <b>Précision</b>
+                <span>Centrage numérique</span>
+              </div>
+              <div class="feature">
+                <span class="icon material-symbols-outlined">speed</span>
+                <b>Montage 48h</b>
+                <span>Atelier sur place</span>
+              </div>
+            </div>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem;">
+              <a class="btn btn--primary" href="#rendez-vous">Prendre rendez-vous</a>
+              <a class="btn btn--outline" href="tel:+22665164394">
+                <span class="icon material-symbols-outlined">call</span> Appeler la boutique
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Guide Morphologie ================= -->
+    <section class="section section--alt" id="guide">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Conseil rapide</span>
+          <h2 class="section-title">Guide morphologie du visage</h2>
+          <p class="section-lead">Choisissez votre silhouette pour connaître les formes adaptées :</p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="face-row">
+            <button class="face-btn face-pill is-on" type="button" data-face="rond">
+              <span class="icon material-symbols-outlined">circle</span> Rond
+            </button>
+            <button class="face-btn face-pill" type="button" data-face="ovale">
+              <span class="icon material-symbols-outlined">egg</span> Ovale
+            </button>
+            <button class="face-btn face-pill" type="button" data-face="carre">
+              <span class="icon material-symbols-outlined">crop_square</span> Carré
+            </button>
+            <button class="face-btn face-pill" type="button" data-face="coeur">
+              <span class="icon material-symbols-outlined">favorite</span> Cœur
+            </button>
+          </div>
+
+          <div class="advice">
+            <span class="advice__icon icon material-symbols-outlined">psychology</span>
+            <div>
+              <b id="advice-title">Conseil pour visage rond</b>
+              <p id="advice-text">Privilégiez les formes angulaires ou rectangulaires pour structurer et affiner les traits.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Bandeau ordonnance ================= -->
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="banner">
+          <div>
+            <span class="eyebrow eyebrow--light"><span class="dot-live"></span> Service Express Ouaga</span>
+            <h3 style="margin-top:0.4rem;">Vous avez une ordonnance ?</h3>
+            <p style="margin-top:0.35rem;">Envoyez-la en photo sur WhatsApp : nos opticiens vous transmettent un devis chiffré sous 1h.</p>
+          </div>
+          <div class="banner__actions">
+            <a class="btn btn--primary btn--lg" data-link="whatsapp" href="https://wa.me/22665164394" target="_blank" rel="noopener">
+              <span class="icon material-symbols-outlined">photo_camera</span> Envoyer mon ordonnance
+            </a>
+            <a class="btn btn--light btn--lg" href="#devis">Devis en ligne</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Catalogue complet ================= -->
+    <section class="section" id="catalogue">
+      <div class="wrap">
+        <div class="section-head section-head--split">
+          <div>
+            <span class="eyebrow">Catalogue boutique</span>
+            <h2 class="section-title">Toutes nos montures</h2>
+            <p class="section-lead">Recherchez par nom, forme ou type. Modèles disponibles à Gounghin.</p>
+          </div>
+          <span class="badge badge--soft" id="cat-count">Chargement…</span>
+        </div>
+
+        <div class="tools">
+          <div class="search">
+            <span class="icon material-symbols-outlined">search</span>
+            <input id="cat-search" type="search" placeholder="Rechercher une monture, couleur, style…" aria-label="Rechercher" />
+          </div>
+
+          <div class="shape-row">
+            <button class="shape-btn" type="button" data-forme="ronde">
+              <span class="icon material-symbols-outlined">lens_blur</span> Rondes
+            </button>
+            <button class="shape-btn" type="button" data-forme="panto">
+              <span class="icon material-symbols-outlined">trip_origin</span> Pantos
+            </button>
+            <button class="shape-btn" type="button" data-forme="rect">
+              <span class="icon material-symbols-outlined">crop_16_9</span> Rectang.
+            </button>
+            <button class="shape-btn" type="button" data-forme="aviateur">
+              <span class="icon material-symbols-outlined">flight</span> Aviateur
+            </button>
+            <button class="shape-btn" type="button" data-forme="papillon">
+              <span class="icon material-symbols-outlined">visibility</span> Papillon
+            </button>
+            <button class="shape-btn" type="button" data-forme="carree">
+              <span class="icon material-symbols-outlined">crop_square</span> Carrées
+            </button>
+          </div>
+
+          <div class="pill-bar">
+            <button class="chip filter-chip is-on" type="button" data-filter="all">Tous</button>
+            <button class="chip filter-chip" type="button" data-filter="homme">Hommes</button>
+            <button class="chip filter-chip" type="button" data-filter="femme">Femmes</button>
+            <button class="chip filter-chip" type="button" data-filter="vue">Optiques</button>
+            <button class="chip filter-chip" type="button" data-filter="solaire">Solaires</button>
+            <button class="chip filter-chip" type="button" data-filter="bluelight">Lumière bleue</button>
+            <button class="chip filter-chip" type="button" data-filter="luxe">Créateurs</button>
+          </div>
+
+          <div class="cat-grid" id="cat-grid">
+            <div class="skeleton"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Rendez-vous ================= -->
+    <section class="section section--alt" id="rendez-vous">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow"><span class="icon material-symbols-outlined">calendar_month</span> Cabinet de Gounghin</span>
+          <h2 class="section-title">Prendre rendez-vous en ligne</h2>
+          <p class="section-lead">Choisissez votre motif, jour et heure. Confirmation instantanée.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <div style="display:flex; flex-direction:column; gap:1.25rem;">
+            <!-- Étape 1 : Motif -->
+            <div class="step">
+              <div class="step__head">
+                <span class="step__num">1</span>
+                <h3 class="step__title">Motif de consultation</h3>
+              </div>
+              <div class="motif-grid" id="motif-group">
+                <button class="motif-card is-on" type="button" data-motif="Bilan &amp; contrôle visuel">
+                  <span class="motif-card__icon icon material-symbols-outlined">visibility</span>
+                  <span class="motif-card__body">
+                    <span class="motif-card__name">Bilan &amp; contrôle visuel</span>
+                    <span class="motif-card__text">Contrôle d'acuité et réfraction complète (30 min).</span>
+                  </span>
+                </button>
+                <button class="motif-card" type="button" data-motif="Conseil &amp; essayage montures">
+                  <span class="motif-card__icon icon material-symbols-outlined">eyeglasses</span>
+                  <span class="motif-card__body">
+                    <span class="motif-card__name">Conseil &amp; essayage montures</span>
+                    <span class="motif-card__text">Choix selon votre visage et morphologie (30 min).</span>
+                  </span>
+                </button>
+                <button class="motif-card" type="button" data-motif="Renouvellement ordonnance">
+                  <span class="motif-card__icon icon material-symbols-outlined">receipt_long</span>
+                  <span class="motif-card__body">
+                    <span class="motif-card__name">Renouvellement ordonnance</span>
+                    <span class="motif-card__text">Prise de mesures et choix des verres (30 min).</span>
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Étape 2 : Jour -->
+            <div class="step">
+              <div class="step__head">
+                <span class="step__num">2</span>
+                <h3 class="step__title">Jour souhaité</h3>
+              </div>
+              <div class="date-row" id="date-selector"></div>
+            </div>
+
+            <!-- Étape 3 : Créneau -->
+            <div class="step">
+              <div class="step__head">
+                <span class="step__num">3</span>
+                <h3 class="step__title">Créneau horaire</h3>
+              </div>
+              <p class="field__hint" style="font-weight:700;">Matin</p>
+              <div class="slots" id="slot-morning"></div>
+              <p class="field__hint" style="font-weight:700; margin-top:0.4rem;">Après-midi</p>
+              <div class="slots" id="slot-afternoon"></div>
+            </div>
+          </div>
+
+          <!-- Formulaire de contact pour le RDV -->
+          <div style="display:flex; flex-direction:column; gap:1rem;">
+            <div class="card" style="background:#f8faff; border-color:var(--blue-line);">
+              <div style="display:flex; align-items:center; gap:0.5rem; font-weight:800; color:var(--blue);">
+                <span class="icon material-symbols-outlined">event_available</span> Votre sélection
+              </div>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; font-size:0.88rem;">
+                <div>
+                  <span class="field__hint">Motif</span>
+                  <p id="summary-motif" style="font-weight:700;">Bilan &amp; contrôle visuel</p>
+                </div>
+                <div>
+                  <span class="field__hint">Date &amp; Heure</span>
+                  <p id="summary-slot" style="font-weight:700; color:var(--blue);">—</p>
+                </div>
+              </div>
+            </div>
+
+            <form class="card" id="rdv-form" onsubmit="return false;">
+              <h3 style="font-size:1rem;">Vos coordonnées</h3>
+              <div class="form-grid">
+                <div class="field">
+                  <label class="field__label" for="fullname">Nom &amp; prénom *</label>
+                  <input class="input" id="fullname" type="text" placeholder="Ex : Aminata Kaboré" required />
+                </div>
+                <div class="field">
+                  <label class="field__label" for="phone">Numéro WhatsApp (+226) *</label>
+                  <div class="input-group">
+                    <span class="input-prefix">+226</span>
+                    <input class="input" id="phone" type="tel" placeholder="65 16 43 94" required />
+                  </div>
+                </div>
+                <div class="field span-all">
+                  <label class="field__label" for="notes">Précision (facultatif)</label>
+                  <input class="input" id="notes" type="text" placeholder="Ex : verres progressifs, fatigue écran…" />
+                </div>
+              </div>
+              <button class="btn btn--primary btn--lg btn--block" id="confirm-btn" type="button">
+                <span class="icon material-symbols-outlined">check_circle</span> Confirmer le rendez-vous
+              </button>
+              <p class="field__hint" style="text-align:center;">Confirmation directe sur WhatsApp avec l'opticienne.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Devis Express ================= -->
+    <section class="section" id="devis">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow"><span class="icon material-symbols-outlined">bolt</span> Gratuit &amp; Sans engagement</span>
+          <h2 class="section-title">Demander un devis express</h2>
+          <p class="section-lead">Recevez une estimation chiffrée par nos opticiens directement sur WhatsApp.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <form class="card" id="quote-form" onsubmit="event.preventDefault();">
+            <!-- Ordonnance -->
+            <div class="step">
+              <div class="step__head">
+                <span class="step__num">1</span>
+                <h3 class="step__title">Votre ordonnance (facultatif)</h3>
+              </div>
+              <div class="drop-zone" id="drop-zone">
+                <input id="prescription-file" type="file" accept="image/*,application/pdf" />
+                <div id="upload-idle">
+                  <span class="icon material-symbols-outlined" style="font-size:2rem; color:var(--blue);">add_a_photo</span>
+                  <p style="font-weight:700; margin-top:0.25rem;">Prendre une photo ou importer</p>
+                  <span class="field__hint">Formats : JPEG, PNG, PDF</span>
+                </div>
+                <div class="hidden" id="upload-preview">
+                  <span class="icon material-symbols-outlined" style="font-size:2rem; color:var(--ok);">check_circle</span>
+                  <p id="file-name" style="font-weight:700; margin-top:0.25rem;">ordonnance.jpg</p>
+                  <button class="btn btn--outline btn__small" id="reset-file" type="button" style="margin-top:0.4rem;">Changer</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Traitements -->
+            <div class="step">
+              <div class="step__head">
+                <span class="step__num">2</span>
+                <h3 class="step__title">Verres souhaités</h3>
+              </div>
+              <div class="check-grid">
+                <label class="check-card">
+                  <input type="checkbox" name="treatments" value="Anti-lumière bleue" checked />
+                  <div><b>Anti-lumière bleue</b><span>Protection écrans et travail</span></div>
+                </label>
+                <label class="check-card">
+                  <input type="checkbox" name="treatments" value="Photochromique" />
+                  <div><b>Photochromique</b><span>Foncent au soleil automatiquement</span></div>
+                </label>
+                <label class="check-card">
+                  <input type="checkbox" name="treatments" value="Progressifs HD" />
+                  <div><b>Progressifs HD</b><span>Vision nette près et loin</span></div>
+                </label>
+                <label class="check-card">
+                  <input type="checkbox" name="treatments" value="Amincis" />
+                  <div><b>Amincissement</b><span>Légèreté pour fortes corrections</span></div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Gamme -->
+            <div class="step">
+              <div class="step__head">
+                <span class="step__num">3</span>
+                <h3 class="step__title">Gamme monture</h3>
+              </div>
+              <div class="tier-grid">
+                <label class="tier-card">
+                  <input type="radio" name="frame_tier" value="J'ai ma monture" />
+                  <b>Montage seul</b><span>Mes propres lunettes</span>
+                </label>
+                <label class="tier-card">
+                  <input type="radio" name="frame_tier" value="Économique" />
+                  <b>Économique</b><span>Simple &amp; robuste</span>
+                </label>
+                <label class="tier-card">
+                  <input type="radio" name="frame_tier" value="Créateur tendance" checked />
+                  <b>Créateur</b><span>Titane, acétate, or</span>
+                </label>
+                <label class="tier-card">
+                  <input type="radio" name="frame_tier" value="Conseil opticienne" />
+                  <b>Conseil</b><span>Guidé en boutique</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="step">
+              <div class="step__head">
+                <span class="step__num">4</span>
+                <h3 class="step__title">Vos coordonnées</h3>
+              </div>
+              <div class="form-grid">
+                <div class="field">
+                  <label class="field__label" for="full-name">Nom *</label>
+                  <input class="input" id="full-name" type="text" placeholder="Votre nom" required />
+                </div>
+                <div class="field">
+                  <label class="field__label" for="whatsapp-number">Numéro WhatsApp *</label>
+                  <div class="input-group">
+                    <span class="input-prefix">+226</span>
+                    <input class="input" id="whatsapp-number" type="tel" placeholder="65 16 43 94" required />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn--primary btn--lg btn--block" type="submit">
+              <span class="icon material-symbols-outlined">send</span> Recevoir mon devis sur WhatsApp
+            </button>
+          </form>
+
+          <div style="display:flex; flex-direction:column; gap:1rem;">
+            <div class="card">
+              <div style="display:flex; align-items:center; gap:0.5rem; font-weight:800;">
+                <span class="icon material-symbols-outlined" style="color:var(--blue);">verified</span>
+                Prise en charge mutuelles &amp; tiers-payant
+              </div>
+              <p class="field__hint">Factures normalisées conformes aux mutuelles et entreprises :</p>
+              <div style="display:flex; gap:0.4rem; flex-wrap:wrap; margin-top:0.25rem;">
+                <span class="badge badge--soft">SONAR</span>
+                <span class="badge badge--soft">UAB</span>
+                <span class="badge badge--soft">SUNU</span>
+                <span class="badge badge--soft">ASCOMA</span>
+                <span class="badge badge--soft">Raynal</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3 style="font-size:1rem;">Engagements Finagnon Vision</h3>
+              <ul style="list-style:none; display:grid; gap:0.5rem; margin-top:0.5rem; font-size:0.88rem; color:var(--muted);">
+                <li>✓ Devis clair et transparent sans surprise</li>
+                <li>✓ Montage de haute précision en 48h chrono</li>
+                <li>✓ Retrait à Gounghin ou livraison Ouagadougou</li>
+              </ul>
+              <a class="btn btn--ghost btn--block" style="margin-top:0.5rem;" data-link="whatsapp" href="https://wa.me/22665164394" target="_blank" rel="noopener">
+                <span class="icon material-symbols-outlined">chat</span> Discuter avec l'opticienne
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Contact ================= -->
+    <section class="section section--dark" id="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow eyebrow--light">Nous trouver</span>
+          <h2 class="section-title">Finagnon Vision — Gounghin</h2>
+          <p class="section-lead">Boutique et atelier de montage face à la pharmacie de Gounghin.</p>
+        </div>
+
+        <div class="grid grid--2" style="grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));">
+          <div class="card" style="background:var(--carbon-soft); border-color:var(--carbon-line); color:#fff;">
+            <span class="icon material-symbols-outlined" style="color:var(--blue); font-size:1.8rem;">location_on</span>
+            <b style="font-size:1rem;">Adresse</b>
+            <p style="color:#cbd5e1; font-size:0.88rem;">Gounghin, face à la pharmacie — Rue 9.15<br />Ouagadougou, Burkina Faso</p>
+          </div>
+          <div class="card" style="background:var(--carbon-soft); border-color:var(--carbon-line); color:#fff;">
+            <span class="icon material-symbols-outlined" style="color:var(--blue); font-size:1.8rem;">schedule</span>
+            <b style="font-size:1rem;">Horaires d'ouverture</b>
+            <p style="color:#cbd5e1; font-size:0.88rem;" data-set="HOURS">Lun - Sam : 08h30 - 19h00</p>
+          </div>
+          <div class="card" style="background:var(--carbon-soft); border-color:var(--carbon-line); color:#fff;">
+            <span class="icon material-symbols-outlined" style="color:var(--blue); font-size:1.8rem;">contact_phone</span>
+            <b style="font-size:1rem;">Contact direct</b>
+            <p style="color:#cbd5e1; font-size:0.88rem;">
+              <a data-link="tel" href="tel:+22665164394">+226 65 16 43 94</a><br />
+              <a data-link="whatsapp" href="https://wa.me/22665164394" target="_blank" rel="noopener">Ouvrir WhatsApp</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Pied de page ================= -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="#accueil">
+            <img class="brand__logo" src="images/logo.png" alt="Logo" />
+            <span class="brand__text">
+              <span class="brand__name" style="color:#fff;">FINAGNON <span>VISION</span></span>
+              <span class="brand__meta" style="color:#94a3b8;" data-set="QUARTIER">Ouagadougou • Gounghin</span>
+            </span>
+          </a>
+          <p style="margin-top:0.75rem; font-size:0.84rem; color:#94a3b8;" data-set="SLOGAN">Cabinet d'Optique &amp; Lunetterie</p>
+          <div style="display:flex; gap:0.5rem; margin-top:0.75rem;">
+            <a class="badge badge--soft" data-link="facebook" href="https://www.facebook.com/share/1Bs8J24fV6/" target="_blank" rel="noopener">Facebook</a>
+            <a class="badge badge--soft" data-link="tiktok" href="https://www.tiktok.com/@finagnonvision" target="_blank" rel="noopener">TikTok</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Navigation</h3>
+          <p><a href="#accueil">Accueil</a></p>
+          <p><a href="#catalogue">Catalogue</a></p>
+          <p><a href="#verres">Verres &amp; Traitements</a></p>
+          <p><a href="#rendez-vous">Rendez-vous</a></p>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <p><a data-link="tel" href="tel:+22665164394">+226 65 16 43 94</a></p>
+          <p><a data-link="whatsapp" href="https://wa.me/22665164394" target="_blank" rel="noopener">WhatsApp Direct</a></p>
+          <p>Gounghin, Ouagadougou</p>
+        </div>
+
+        <div>
+          <h3>Gestion</h3>
+          <p>Espace réservé à l'équipe Finagnon Vision :</p>
+          <a class="btn btn--light btn__small" style="margin-top:0.5rem;" href="admin.html">Administration</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Finagnon Vision — Tous droits réservés.</span>
+        <span>Optique &amp; Lunetterie à Gounghin, Ouagadougou.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= Barre Mobile Fixe (Flottante en bas) ================= -->
+  <aside class="mobile-cta" aria-label="Actions rapides">
+    <a class="btn btn--outline" data-link="tel" href="tel:+22665164394">
+      <span class="icon material-symbols-outlined">call</span> Appeler
+    </a>
+    <a class="btn btn--ghost" data-link="whatsapp" href="https://wa.me/22665164394" target="_blank" rel="noopener">
+      <span class="icon material-symbols-outlined">chat</span> WhatsApp
+    </a>
+    <a class="btn btn--primary" href="#rendez-vous">
+      <span class="icon material-symbols-outlined">event</span> Rdv
+    </a>
+  </aside>
+
+  <!-- ================= Modale Aperçu Monture ================= -->
+  <div class="modal hidden" id="quickview-modal" role="dialog" aria-modal="true" aria-labelledby="qv-title">
+    <div class="modal__panel">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <span class="eyebrow">Détails Monture</span>
+        <button class="modal__close" id="qv-close" type="button" aria-label="Fermer">
+          <span class="icon material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <div class="modal__media">
+        <img id="qv-img" src="images/logo.png" alt="" />
+      </div>
+      <div>
+        <h3 id="qv-title" style="font-size:1.25rem;">Modèle Finagnon</h3>
+        <p class="modal__price" id="qv-price">Prix sur demande</p>
+      </div>
+      <p style="color:var(--muted); font-size:0.9rem;" id="qv-desc"></p>
+      <div style="display:flex; flex-direction:column; gap:0.5rem;">
+        <a class="btn btn--primary btn--block" id="qv-whatsapp-link" href="#" target="_blank" rel="noopener">
+          <span class="icon material-symbols-outlined">chat</span> Commander sur WhatsApp
+        </a>
+        <button class="btn btn--outline btn--block" type="button" data-close-modal="quickview-modal">
+          Fermer
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Scripts Intégrés ================= -->
+  <script src="neon.bundle.js"></script>
+  <script src="store.js?v=20260925"></script>
+  <script>
+  (function () {
+    const $ = s => document.querySelector(s);
+    const $$ = s => Array.from(document.querySelectorAll(s));
+    const C = { ...Store.defaults };
+    window.FW = C;
+
+    const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+    /* 1. Synchronisation des Réglages */
+    function applySettings() {
+      $$('[data-set]').forEach(el => {
+        const v = C[el.dataset.set];
+        if (v !== undefined && v !== null && v !== '') el.textContent = v;
+      });
+
+      $$('a[data-link="whatsapp"]').forEach(a => {
+        try {
+          const u = new URL(a.getAttribute('href'), location.href);
+          a.setAttribute('href', 'https://wa.me/' + C.WHATSAPP + u.search);
+        } catch (e) {}
+      });
+      $$('a[data-link="tel"]').forEach(a => a.setAttribute('href', 'tel:+' + C.WHATSAPP));
+      $$('a[data-link="facebook"]').forEach(a => { if (C.FACEBOOK) a.setAttribute('href', C.FACEBOOK); });
+      $$('a[data-link="tiktok"]').forEach(a => { if (C.TIKTOK) a.setAttribute('href', C.TIKTOK); });
+
+      const y = $('#year');
+      if (y) y.textContent = new Date().getFullYear();
     }
-  };
 
-  const facePills = document.querySelectorAll('.face-pill');
-  const adviceTitle = document.getElementById('advice-title');
-  const adviceText = document.getElementById('advice-text');
+    /* 2. Navigation Mobile */
+    const nav = $('#site-nav');
+    const navToggle = $('#nav-toggle');
 
-  facePills.forEach(pill => {
-    pill.addEventListener('click', () => {
-      facePills.forEach(p => {
-        p.classList.remove('bg-black', 'text-white');
-        p.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+    function closeNav() {
+      if (!nav) return;
+      nav.classList.remove('is-open');
+      if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    if (nav && navToggle) {
+      navToggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('is-open');
+        navToggle.setAttribute('aria-expanded', String(open));
       });
-      pill.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
-      pill.classList.add('bg-black', 'text-white');
+      nav.addEventListener('click', e => { if (e.target.closest('a')) closeNav(); });
+      addEventListener('resize', () => { if (innerWidth >= 860) closeNav(); });
+    }
 
-      const faceKey = pill.getAttribute('data-face');
-      if (adviceData[faceKey]) {
-        adviceTitle.textContent = adviceData[faceKey].title;
-        adviceText.textContent = adviceData[faceKey].text;
+    /* 3. Catalogue */
+    const TLBL = { vue: 'Optique', bluelight: 'Anti-lumière bleue', solaire: 'Solaire' };
+    const priceTxt = p => (p > 0 ? Number(p).toLocaleString('fr-FR') + ' FCFA' : 'Prix sur demande');
+    const catOf = m => (m.type === 'solaire' ? 'solaire' : ((m.prix > 0 || m.badge) ? 'luxe' : 'vue'));
+
+    function cardHTML(m) {
+      const img = m.image_url || 'images/logo.png';
+      const badge = m.badge || (m.genre === 'femme' ? 'Femme' : m.genre === 'homme' ? 'Homme' : 'Mixte');
+      const waText = encodeURIComponent(
+        'Bonjour Finagnon Vision, je souhaite commander la monture : ' + m.nom +
+        (m.prix > 0 ? ' (' + Number(m.prix).toLocaleString('fr-FR') + ' FCFA)' : '')
+      );
+      return `<article class="frame-card" data-category="${catOf(m)}" data-genre="${esc(m.genre || 'mixte')}" data-type="${esc(m.type || 'vue')}" data-forme="${esc(m.forme || '')}" data-txt="${esc(((m.nom || '') + ' ' + (m.description || '')).toLowerCase())}" data-title="${esc(m.nom)}" data-price="${esc(priceTxt(m.prix))}" data-desc="${esc(m.description || '')}" data-img="${esc(img)}">
+          <div class="frame-card__media">
+            <span class="frame-card__badge">${esc(badge)}</span>
+            <img src="${esc(img)}" alt="${esc(m.nom)}" loading="lazy" />
+          </div>
+          <div class="frame-card__body">
+            <span class="frame-card__type">${esc(TLBL[m.type] || 'Optique')}</span>
+            <h3 class="frame-card__name">${esc(m.nom)}</h3>
+            <p class="frame-card__desc">${esc(m.description || '')}</p>
+            <div class="frame-card__price">
+              <b>${m.prix > 0 ? Number(m.prix).toLocaleString('fr-FR') : '—'}</b>
+              <span>${m.prix > 0 ? 'FCFA' : 'sur demande'}</span>
+            </div>
+            <div class="frame-card__btns">
+              <a class="btn btn--primary btn__small" href="https://wa.me/${C.WHATSAPP}?text=${waText}" target="_blank" rel="noopener">
+                <span class="icon material-symbols-outlined">chat</span> Acheter
+              </a>
+              <button class="btn btn--dark btn__small" type="button" data-open-quickview>
+                Détails
+              </button>
+            </div>
+          </div>
+        </article>`;
+    }
+
+    const available = items => (items || []).filter(m => m.disponible !== false);
+
+    function emptyMsg(grid, text) {
+      let e = grid.querySelector('.fv-empty');
+      if (!text) { if (e) e.remove(); return; }
+      if (!e) { e = document.createElement('p'); e.className = 'fv-empty'; grid.appendChild(e); }
+      e.textContent = text;
+    }
+
+    function renderHome(items) {
+      const grid = $('#frames-container');
+      if (!grid) return;
+      grid.innerHTML = available(items).slice(0, 4).map(cardHTML).join('');
+      const on = document.querySelector('.frame-filter-btn.is-on');
+      filterFrames(on ? (on.dataset.target || 'all') : 'all');
+    }
+
+    function filterFrames(category) {
+      $$('.frame-filter-btn').forEach(btn => btn.classList.toggle('is-on', btn.dataset.target === category));
+      const grid = $('#frames-container');
+      if (!grid) return;
+      let visible = 0;
+      grid.querySelectorAll('.frame-card').forEach(card => {
+        const show = category === 'all' || card.dataset.category === category;
+        card.classList.toggle('hidden', !show);
+        if (show) visible++;
+      });
+      emptyMsg(grid, visible ? '' : 'Aucun modèle dans cette catégorie.');
+    }
+
+    const F = { q: '', chip: 'all', forme: null };
+
+    function applyFilter() {
+      const cards = $$('#cat-grid .frame-card');
+      let n = 0;
+      cards.forEach(el => {
+        const okChip = F.chip === 'all'
+          || el.dataset.genre === F.chip
+          || el.dataset.type === F.chip
+          || (['homme', 'femme'].includes(F.chip) && el.dataset.genre === 'mixte')
+          || (F.chip === 'luxe' && el.dataset.category === 'luxe');
+        const ok = okChip && (!F.forme || el.dataset.forme === F.forme) && (!F.q || el.dataset.txt.includes(F.q));
+        el.classList.toggle('hidden', !ok);
+        if (ok) n++;
+      });
+      const cnt = $('#cat-count');
+      if (cnt) cnt.textContent = n + ' modèle' + (n > 1 ? 's' : '');
+      const grid = $('#cat-grid');
+      if (grid) emptyMsg(grid, n ? '' : 'Aucun modèle trouvé.');
+    }
+
+    function renderCat(items) {
+      const grid = $('#cat-grid');
+      if (!grid) return;
+      grid.innerHTML = available(items).map(cardHTML).join('');
+      applyFilter();
+    }
+
+    /* 4. Modale Aperçu */
+    const qvModal = $('#quickview-modal');
+    function openModal(el) { if (el) { el.classList.remove('hidden'); document.body.style.overflow = 'hidden'; } }
+    function closeModal(el) {
+      if (!el) return;
+      el.classList.add('hidden');
+      if ($$('.modal:not(.hidden)').length === 0) document.body.style.overflow = '';
+    }
+
+    function openQuickView(title, price, desc, img) {
+      if (!qvModal) return;
+      $('#qv-title').textContent = title || 'Modèle Finagnon';
+      $('#qv-price').textContent = price || 'Prix sur demande';
+      $('#qv-desc').textContent = desc || 'Essayable directement à notre boutique de Gounghin.';
+      const qvi = $('#qv-img');
+      if (qvi) { qvi.src = img || 'images/logo.png'; qvi.alt = title || ''; }
+      const link = $('#qv-whatsapp-link');
+      if (link) {
+        link.setAttribute('href', 'https://wa.me/' + C.WHATSAPP + '?text=' + encodeURIComponent(
+          'Bonjour Finagnon Vision, je souhaite essayer le modèle ' + title +
+          (price ? ' (' + price + ')' : '') + ' à Gounghin.'
+        ));
       }
-    });
-  });
+      openModal(qvModal);
+    }
 
-</script>
-</section>
-<section id="rendez-vous" class="view">
-<div class="flex flex-col w-full px-4">
-<!-- Titre & Badge -->
-<div class="pt-2 pb-5 flex flex-col gap-2">
-<div class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full bg-[#0052FF]/10 text-[#0052FF] border border-[#0052FF]/20">
-<span class="material-symbols-outlined text-[15px]">verified_user</span>
-<span class="text-[11px] font-bold uppercase tracking-wider">Centre Optique Certifié</span>
-</div>
-<h1 class="text-[26px] font-extrabold text-brand-dark leading-tight tracking-tight">Prendre Rendez-vous au Cabinet Gounghin</h1>
-<p class="text-[14px] text-on-surface-variant font-normal leading-relaxed">
-          Examen de la réfraction, essayage personnalisé de montures ou ajustage haute précision avec votre opticien expert.
-        </p>
-</div>
-<!-- Badge Horaires & Status -->
-<div class="mb-5 p-3.5 rounded-2xl bg-white border border-outline-light shadow-[0_2px_8px_rgba(0,0,0,0.03)] flex items-center justify-between">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-xl bg-[#0052FF]/10 flex items-center justify-center text-[#0052FF]">
-<span class="material-symbols-outlined text-[22px]">schedule</span>
-</div>
-<div>
-<p class="text-[14px] font-bold text-brand-dark">Horaires d'Ouverture</p>
-<p class="text-[12px] text-on-surface-variant">Lun - Sam : 08h00 - 18h30</p>
-</div>
-</div>
-<div class="flex flex-col items-end">
-<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-700 text-[11px] font-bold">
-<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-            Ouvert
-          </span>
-<span class="text-[11px] text-on-surface-variant mt-0.5 font-medium">Gounghin, Rue 9.15</span>
-</div>
-</div>
-<!-- Étape 1 : Motif de RDV -->
-<section class="mb-6 flex flex-col gap-3">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="w-6 h-6 rounded-full bg-brand-dark text-white flex items-center justify-center text-[12px] font-bold">1</span>
-<h2 class="text-[16px] font-bold text-brand-dark">Motif de consultation</h2>
-</div>
-<span class="text-[12px] font-bold text-[#0052FF] bg-[#0052FF]/10 px-2 py-0.5 rounded-full">Étape 1/3</span>
-</div>
-<div class="grid grid-cols-1 gap-2.5" id="motif-group">
-<!-- Item 1 (Selected default) -->
-<div class="motif-card cursor-pointer p-4 rounded-2xl bg-white border-2 border-[#0052FF] shadow-sm flex items-start gap-3.5 transition-all" data-motif="Bilan &amp; Contrôle Visuel">
-<div class="w-11 h-11 rounded-xl bg-[#0052FF] text-white flex items-center justify-center shrink-0 icon-box transition-colors">
-<span class="material-symbols-outlined text-[24px]">visibility</span>
-</div>
-<div class="flex flex-col flex-1 min-w-0">
-<div class="flex items-center justify-between">
-<span class="text-[15px] font-bold text-brand-dark">Bilan &amp; Contrôle Visuel</span>
-<div class="radio-indicator w-5 h-5 rounded-full border-2 border-[#0052FF] flex items-center justify-center">
-<span class="w-2.5 h-2.5 rounded-full bg-[#0052FF] dot-inner"></span>
-</div>
-</div>
-<p class="text-[12.5px] text-on-surface-variant mt-1 leading-snug">Réfraction complète, acuité visuelle et diagnostic de confort sur équipement de précision.</p>
-<div class="flex items-center gap-2 mt-2.5">
-<span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-surface-container-low text-brand-dark">30 min</span>
-
-</div>
-</div>
-</div>
-<!-- Item 2 -->
-<div class="motif-card cursor-pointer p-4 rounded-2xl bg-white border border-outline-light shadow-[0_2px_6px_rgba(0,0,0,0.02)] flex items-start gap-3.5 transition-all hover:border-[#0052FF]/50" data-motif="Conseil &amp; Essayage de Montures">
-<div class="w-11 h-11 rounded-xl bg-surface-container-low text-brand-dark flex items-center justify-center shrink-0 icon-box transition-colors">
-<span class="material-symbols-outlined text-[24px]">eyeglasses</span>
-</div>
-<div class="flex flex-col flex-1 min-w-0">
-<div class="flex items-center justify-between">
-<span class="text-[15px] font-bold text-brand-dark">Conseil &amp; Essayage de Montures</span>
-<div class="radio-indicator w-5 h-5 rounded-full border-2 border-outline flex items-center justify-center">
-<span class="w-2.5 h-2.5 rounded-full bg-transparent dot-inner"></span>
-</div>
-</div>
-<p class="text-[12.5px] text-on-surface-variant mt-1 leading-snug">Morpho-visage personnalisé et sélection parmi les montures de créateurs et grandes marques.</p>
-<div class="flex items-center gap-2 mt-2.5">
-<span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-surface-container-low text-brand-dark">45 min</span>
-<span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-brand-dark text-white">Stylisme Optique</span>
-</div>
-</div>
-</div>
-<!-- Item 3 -->
-<div class="motif-card cursor-pointer p-4 rounded-2xl bg-white border border-outline-light shadow-[0_2px_6px_rgba(0,0,0,0.02)] flex items-start gap-3.5 transition-all hover:border-[#0052FF]/50" data-motif="Renouvellement avec Ordonnance">
-<div class="w-11 h-11 rounded-xl bg-surface-container-low text-brand-dark flex items-center justify-center shrink-0 icon-box transition-colors">
-<span class="material-symbols-outlined text-[24px]">receipt_long</span>
-</div>
-<div class="flex flex-col flex-1 min-w-0">
-<div class="flex items-center justify-between">
-<span class="text-[15px] font-bold text-brand-dark">Renouvellement avec Ordonnance</span>
-<div class="radio-indicator w-5 h-5 rounded-full border-2 border-outline flex items-center justify-center">
-<span class="w-2.5 h-2.5 rounded-full bg-transparent dot-inner"></span>
-</div>
-</div>
-<p class="text-[12.5px] text-on-surface-variant mt-1 leading-snug">Prise de mesures optiques, choix de traitements (antireflet, lumière bleue, progressifs).</p>
-<div class="flex items-center gap-2 mt-2.5">
-<span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-surface-container-low text-brand-dark">25 min</span>
-<span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-[#0052FF]/10 text-[#0052FF]">Tiers payant mutuelles</span>
-</div>
-</div>
-</div>
-<!-- Item 4 -->
-<div class="motif-card cursor-pointer p-4 rounded-2xl bg-white border border-outline-light shadow-[0_2px_6px_rgba(0,0,0,0.02)] flex items-start gap-3.5 transition-all hover:border-[#0052FF]/50" data-motif="Ajustage &amp; Réparation Express">
-<div class="w-11 h-11 rounded-xl bg-surface-container-low text-brand-dark flex items-center justify-center shrink-0 icon-box transition-colors">
-<span class="material-symbols-outlined text-[24px]">build_circle</span>
-</div>
-<div class="flex flex-col flex-1 min-w-0">
-<div class="flex items-center justify-between">
-<span class="text-[15px] font-bold text-brand-dark">Ajustage &amp; Réparation Express</span>
-<div class="radio-indicator w-5 h-5 rounded-full border-2 border-outline flex items-center justify-center">
-<span class="w-2.5 h-2.5 rounded-full bg-transparent dot-inner"></span>
-</div>
-</div>
-<p class="text-[12.5px] text-on-surface-variant mt-1 leading-snug">Redressement des branches, remplacement plaquettes, serrage et nettoyage ultrasons.</p>
-<div class="flex items-center gap-2 mt-2.5">
-<span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-surface-container-low text-brand-dark">15 min</span>
-<span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-700">Service Immédiat</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Étape 2 : Date & Heure -->
-<section class="mb-6 flex flex-col gap-3">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="w-6 h-6 rounded-full bg-brand-dark text-white flex items-center justify-center text-[12px] font-bold">2</span>
-<h2 class="text-[16px] font-bold text-brand-dark">Date &amp; Heure</h2>
-</div>
-<span class="text-[12px] font-bold text-[#0052FF] bg-[#0052FF]/10 px-2 py-0.5 rounded-full">Étape 2/3</span>
-</div>
-<div class="bg-white rounded-2xl p-4 border border-outline-light shadow-[0_2px_8px_rgba(0,0,0,0.03)] flex flex-col gap-4">
-<div class="flex items-center justify-between border-b border-outline-light pb-3">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[#0052FF] text-[20px]">calendar_today</span>
-<span class="text-[14px] font-bold text-brand-dark">Semaine en cours</span>
-</div>
-<span class="text-[11px] font-medium text-on-surface-variant">Heure locale Ouagadougou</span>
-</div>
-<!-- Sélecteur de date défilable horizontalement -->
-<div class="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1" id="date-selector">
-</div>
-<!-- Matinée -->
-<div class="flex flex-col gap-2 pt-1">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[17px] text-[#0052FF]">wb_sunny</span>
-<span class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant">Matinée</span>
-</div>
-<div class="grid grid-cols-3 gap-2" id="slot-morning">
-<button class="time-slot py-2.5 px-2 rounded-xl border border-outline-light bg-surface-container-low text-brand-dark text-[13px] font-bold transition-all text-center" data-time="08h30" type="button">08h30</button>
-<button class="time-slot py-2.5 px-2 rounded-xl bg-[#0052FF] text-white text-[13px] font-bold shadow-md transition-all text-center" data-time="09h30" type="button">09h30</button>
-<button class="time-slot py-2.5 px-2 rounded-xl border border-outline-light bg-surface-container-low text-brand-dark text-[13px] font-bold transition-all text-center" data-time="11h00" type="button">11h00</button>
-</div>
-</div>
-<!-- Après-midi -->
-<div class="flex flex-col gap-2 pt-1">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[17px] text-brand-dark">bedtime</span>
-<span class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant">Après-midi</span>
-</div>
-<div class="grid grid-cols-3 gap-2" id="slot-afternoon">
-<button class="time-slot py-2.5 px-2 rounded-xl border border-outline-light bg-surface-container-low text-brand-dark text-[13px] font-bold transition-all text-center" data-time="15h30" type="button">15h30</button>
-<button class="time-slot py-2.5 px-2 rounded-xl border border-outline-light bg-surface-container-low text-brand-dark text-[13px] font-bold transition-all text-center" data-time="16h30" type="button">16h30</button>
-<button class="time-slot py-2.5 px-2 rounded-xl border border-outline-light bg-surface-container-low text-brand-dark text-[13px] font-bold transition-all text-center" data-time="18h00" type="button">18h00</button>
-</div>
-</div>
-</div>
-</section>
-<!-- Étape 3 : Coordonnées -->
-<section class="mb-6 flex flex-col gap-3">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="w-6 h-6 rounded-full bg-brand-dark text-white flex items-center justify-center text-[12px] font-bold">3</span>
-<h2 class="text-[16px] font-bold text-brand-dark">Vos Coordonnées</h2>
-</div>
-<span class="text-[12px] font-bold text-[#0052FF] bg-[#0052FF]/10 px-2 py-0.5 rounded-full">Étape 3/3</span>
-</div>
-<div class="bg-white rounded-2xl p-4 border border-outline-light shadow-[0_2px_8px_rgba(0,0,0,0.03)] flex flex-col gap-3.5">
-<div class="flex flex-col gap-1.5">
-<label class="text-[13px] font-bold text-brand-dark" for="fullname">Nom &amp; Prénom(s) *</label>
-<div class="flex items-center bg-surface-container-low border border-outline-light focus-within:border-[#0052FF] rounded-xl px-3.5 py-2.5 gap-2.5 transition-all">
-<span class="material-symbols-outlined text-[20px] text-on-surface-variant">person</span>
-<input class="bg-transparent w-full outline-none text-[14px] text-brand-dark font-medium placeholder:text-on-surface-variant/50" id="fullname" placeholder="Ex: Souleymane Ouedraogo" type="text"/>
-</div>
-</div>
-<div class="flex flex-col gap-1.5">
-<label class="text-[13px] font-bold text-brand-dark" for="phone">Téléphone / WhatsApp (+226) *</label>
-<div class="flex items-center bg-surface-container-low border border-outline-light focus-within:border-[#0052FF] rounded-xl px-3.5 py-2.5 gap-2.5 transition-all">
-<span class="text-[12px] font-extrabold text-[#0052FF] bg-[#0052FF]/10 px-2 py-0.5 rounded-md shrink-0">BF +226</span>
-<span class="w-px h-5 bg-outline-light"></span>
-<input class="bg-transparent w-full outline-none text-[14px] text-brand-dark font-medium placeholder:text-on-surface-variant/50" id="phone" placeholder="65 16 43 94" type="tel"/>
-</div>
-<span class="text-[11.5px] text-on-surface-variant font-medium">Vous recevrez un rappel instantané par SMS / WhatsApp.</span>
-</div>
-<div class="flex flex-col gap-1.5">
-<label class="text-[13px] font-bold text-brand-dark" for="notes">Besoin particulier ou note (optionnel)</label>
-<div class="flex bg-surface-container-low border border-outline-light focus-within:border-[#0052FF] rounded-xl px-3.5 py-2.5 gap-2.5 transition-all">
-<span class="material-symbols-outlined text-[20px] text-on-surface-variant shrink-0 mt-0.5">chat_bubble_outline</span>
-<textarea class="bg-transparent w-full outline-none text-[13.5px] text-brand-dark font-medium placeholder:text-on-surface-variant/50 resize-none" id="notes" placeholder="Ex: Porteur de verres progressifs, fatigue visuelle sur écran..." rows="2"></textarea>
-</div>
-</div>
-</div>
-</section>
-<!-- Récapitulatif avec liseré Bleu Électrique -->
-<div class="mb-5">
-<div class="rounded-2xl p-4 bg-white border border-[#0052FF]/30 shadow-sm relative overflow-hidden">
-<div class="absolute top-0 left-0 right-0 h-1 bg-[#0052FF]"></div>
-<div class="flex items-center gap-2 text-[#0052FF] mb-3">
-<span class="material-symbols-outlined text-[22px]">verified</span>
-<span class="text-[14px] font-bold text-brand-dark">Récapitulatif de votre rendez-vous</span>
-</div>
-<div class="grid grid-cols-2 gap-3 pt-1 border-t border-outline-light">
-<div class="flex flex-col">
-<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">Lieu du Cabinet</span>
-<span class="text-[13px] font-bold text-brand-dark">Finagnon Gounghin</span>
-</div>
-<div class="flex flex-col">
-<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">Motif</span>
-<span class="text-[13px] font-bold text-brand-dark truncate" id="summary-motif">Bilan &amp; Contrôle Visuel</span>
-</div>
-<div class="flex flex-col">
-<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">Créneau choisi</span>
-<span class="text-[13px] font-extrabold text-[#0052FF]" id="summary-slot">Lun 14 Oct à 09h30</span>
-</div>
-<div class="flex flex-col">
-<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">Tarif &amp; Engagement</span>
-<span class="text-[13px] font-bold text-emerald-700">Conseil personnalisé</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Action CTA Principal & Assistance -->
-<div class="flex flex-col gap-3 mb-6">
-<button class="w-full py-4 px-4 rounded-xl bg-brand-dark text-white text-[15px] font-bold flex items-center justify-center gap-2 shadow-lg shadow-black/10 hover:bg-black active:scale-[0.98] transition-all" id="confirm-btn" type="button">
-<span class="material-symbols-outlined text-[22px] text-[#0052FF]">check_circle</span>
-<span>Confirmer le Rendez-vous</span>
-</button>
-<div class="p-3.5 rounded-2xl bg-white border border-outline-light shadow-sm flex items-center justify-between">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-brand-dark">
-<span class="material-symbols-outlined text-[20px]">support_agent</span>
-</div>
-<div class="flex flex-col">
-<span class="text-[13.5px] font-bold text-brand-dark">Assistance Gounghin</span>
-<span class="text-[12px] text-on-surface-variant">+226 65 16 43 94</span>
-</div>
-</div>
-<a class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-[#0052FF] text-white text-[12px] font-bold shadow-sm transition-transform active:scale-95" href="https://wa.me/22665164394?text=Bonjour%20Cabinet%20Finagnon%20Vision,%20je%20souhaite%20un%20renseignement%20sur%20mon%20rendez-vous" rel="noopener" target="_blank">
-<span class="material-symbols-outlined text-[17px]">chat</span>
-<span>WhatsApp</span>
-</a>
-</div>
-<!-- Toast Confirmation -->
-<div class="hidden p-4 rounded-2xl bg-brand-dark text-white shadow-xl flex items-start gap-3 transition-all" id="confirmation-toast">
-<span class="material-symbols-outlined text-[24px] text-[#0052FF] shrink-0">task_alt</span>
-<div class="flex flex-col">
-<span class="text-[14px] font-bold text-white">Rendez-vous confirmé chez Finagnon Vision !</span>
-<span class="text-[12px] text-gray-300 mt-0.5">Notification instantanée préparée pour le (+226) 65 16 43 94. Nous serons ravis de vous accueillir à Gounghin.</span>
-</div>
-</div>
-</div>
-</div>
-<script>
-    (function() {
-      let selectedMotif = 'Bilan & Contrôle Visuel';
-      let selectedDay = 'Lun 14 Oct';
-      let selectedTime = '09h30';
-
-      const updateSummary = () => {
-        const summarySlot = document.getElementById('summary-slot');
-        const summaryMotif = document.getElementById('summary-motif');
-        if (summarySlot) {
-          summarySlot.textContent = `${selectedDay} à ${selectedTime}`;
-        }
-        if (summaryMotif) {
-          summaryMotif.textContent = selectedMotif;
-        }
-      };
-
-      // Motif Selection
-      const motifCards = document.querySelectorAll('.motif-card');
-      motifCards.forEach(card => {
-        card.addEventListener('click', () => {
-          motifCards.forEach(c => {
-            c.classList.remove('border-[#0052FF]', 'border-2');
-            c.classList.add('border', 'border-outline-light');
-            const iconBox = c.querySelector('.icon-box');
-            if (iconBox) {
-              iconBox.classList.remove('bg-[#0052FF]', 'text-white');
-              iconBox.classList.add('bg-surface-container-low', 'text-brand-dark');
-            }
-            const radioInd = c.querySelector('.radio-indicator');
-            if (radioInd) {
-              radioInd.classList.remove('border-[#0052FF]');
-              radioInd.classList.add('border-outline');
-            }
-            const dot = c.querySelector('.dot-inner');
-            if (dot) {
-              dot.classList.remove('bg-[#0052FF]');
-              dot.classList.add('bg-transparent');
-            }
-          });
-
-          card.classList.remove('border', 'border-outline-light');
-          card.classList.add('border-[#0052FF]', 'border-2');
-
-          const iconBox = card.querySelector('.icon-box');
-          if (iconBox) {
-            iconBox.classList.remove('bg-surface-container-low', 'text-brand-dark');
-            iconBox.classList.add('bg-[#0052FF]', 'text-white');
-          }
-
-          const radioInd = card.querySelector('.radio-indicator');
-          if (radioInd) {
-            radioInd.classList.remove('border-outline');
-            radioInd.classList.add('border-[#0052FF]');
-          }
-
-          const dot = card.querySelector('.dot-inner');
-          if (dot) {
-            dot.classList.remove('bg-transparent');
-            dot.classList.add('bg-[#0052FF]');
-          }
-
-          selectedMotif = card.getAttribute('data-motif');
-          updateSummary();
-        });
+    $$('#frames-container, #cat-grid').forEach(root => {
+      root.addEventListener('click', e => {
+        if (e.target.closest('a')) return;
+        const card = e.target.closest('.frame-card');
+        if (!card) return;
+        openQuickView(card.dataset.title, card.dataset.price, card.dataset.desc, card.dataset.img);
       });
+    });
 
-      // Date Selection (délégation : les dates sont générées dynamiquement)
-      document.getElementById('date-selector').addEventListener('click', e => {
-        const btn = e.target.closest('.date-btn');
-        if (!btn) return;
-        document.querySelectorAll('.date-btn').forEach(b => {
-          b.classList.remove('bg-[#0052FF]', 'text-white', 'shadow-md');
-          b.classList.add('bg-surface-container-low', 'text-brand-dark');
-        });
-        btn.classList.remove('bg-surface-container-low', 'text-brand-dark');
-        btn.classList.add('bg-[#0052FF]', 'text-white', 'shadow-md');
-        selectedDay = btn.getAttribute('data-day');
+    $$('[data-close-modal]').forEach(b => b.addEventListener('click', () => closeModal(document.getElementById(b.dataset.closeModal))));
+    $$('.modal').forEach(m => m.addEventListener('click', e => { if (e.target === m) closeModal(m); }));
+    addEventListener('keydown', e => { if (e.key === 'Escape') $$('.modal').forEach(closeModal); });
+    const qvClose = $('#qv-close');
+    if (qvClose) qvClose.addEventListener('click', () => closeModal(qvModal));
+
+    const search = $('#cat-search');
+    if (search) search.addEventListener('input', () => { F.q = search.value.trim().toLowerCase(); applyFilter(); });
+
+    $$('.filter-chip').forEach(b => b.addEventListener('click', () => {
+      $$('.filter-chip').forEach(x => x.classList.toggle('is-on', x === b));
+      F.chip = b.dataset.filter || 'all';
+      applyFilter();
+    }));
+
+    $$('.shape-btn').forEach(b => b.addEventListener('click', () => {
+      const f = b.dataset.forme;
+      F.forme = (F.forme === f) ? null : f;
+      $$('.shape-btn').forEach(x => x.classList.toggle('is-on', x.dataset.forme === F.forme));
+      applyFilter();
+    }));
+
+    $$('.frame-filter-btn').forEach(b => b.addEventListener('click', () => filterFrames(b.dataset.target || 'all')));
+
+    /* 5. Conseils Morphologie */
+    const ADVICE = {
+      rond: { title: 'Visage rond', text: "Privilégiez les formes angulaires ou rectangulaires pour affiner et structurer vos traits." },
+      ovale: { title: 'Visage ovale', text: "La forme universelle ! Presque toutes les montures vous conviennent (rondes, pantos, carrées)." },
+      carre: { title: 'Visage carré', text: "Adoucissez les lignes de votre mâchoire avec des montures rondes, ovales ou pantos légères." },
+      coeur: { title: 'Visage en cœur', text: "Équilibrez un front plus large avec des montures fines, papillon doux ou trapèze." }
+    };
+
+    $$('.face-pill').forEach(p => p.addEventListener('click', () => {
+      $$('.face-pill').forEach(x => x.classList.toggle('is-on', x === p));
+      const a = ADVICE[p.dataset.face];
+      if (!a) return;
+      $('#advice-title').textContent = a.title;
+      $('#advice-text').textContent = a.text;
+    }));
+
+    /* 6. Prise de Rendez-vous */
+    const DAYS = ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];
+    const MONTHS = ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sep', 'Oct', 'Nov', 'Déc'];
+    let selectedMotif = 'Bilan & contrôle visuel';
+    let selectedDay = '';
+    let selectedTime = '';
+
+    function updateSummary() {
+      const m = $('#summary-motif');
+      if (m) m.textContent = selectedMotif;
+      const s = $('#summary-slot');
+      if (s) s.textContent = selectedDay ? selectedDay + ' à ' + selectedTime : '—';
+    }
+
+    $$('.motif-card').forEach(c => c.addEventListener('click', () => {
+      $$('.motif-card').forEach(x => x.classList.toggle('is-on', x === c));
+      selectedMotif = c.dataset.motif || selectedMotif;
+      updateSummary();
+    }));
+
+    function genDates() {
+      const box = $('#date-selector');
+      if (!box) return;
+      const start = new Date();
+      box.innerHTML = Array.from({ length: 7 }, (_, i) => {
+        const d = new Date(start.getTime() + i * 864e5);
+        const label = DAYS[d.getDay()] + ' ' + d.getDate() + ' ' + MONTHS[d.getMonth()];
+        return `<button class="date-btn${i === 0 ? ' is-on' : ''}" type="button" data-day="${esc(label)}">
+            <small>${DAYS[d.getDay()]}</small><b>${d.getDate()}</b><small>${MONTHS[d.getMonth()]}</small>
+          </button>`;
+      }).join('');
+      const first = box.querySelector('.date-btn');
+      if (first) { selectedDay = first.dataset.day; updateSummary(); }
+    }
+
+    function genSlots() {
+      const split = s => (s || '').split(',').map(x => x.trim()).filter(Boolean);
+      const morning = split(C.SLOTS_MORNING);
+      const afternoon = split(C.SLOTS_AFTERNOON);
+      const slot = (t, on) => `<button class="slot${on ? ' is-on' : ''}" type="button" data-time="${esc(t)}">${esc(t)}</button>`;
+      const gm = $('#slot-morning');
+      const ga = $('#slot-afternoon');
+      if (gm) gm.innerHTML = morning.map((t, i) => slot(t, i === 0)).join('');
+      if (ga) ga.innerHTML = afternoon.map(t => slot(t, false)).join('');
+      const first = gm && gm.querySelector('.slot');
+      if (first) { selectedTime = first.dataset.time; updateSummary(); }
+    }
+
+    const dateBox = $('#date-selector');
+    if (dateBox) {
+      dateBox.addEventListener('click', e => {
+        const b = e.target.closest('.date-btn');
+        if (!b) return;
+        dateBox.querySelectorAll('.date-btn').forEach(x => x.classList.toggle('is-on', x === b));
+        selectedDay = b.dataset.day;
         updateSummary();
       });
+    }
 
-      // Time Slot Selection (délégation : les créneaux viennent des réglages admin)
-      ['slot-morning', 'slot-afternoon'].forEach(id => {
-        const c = document.getElementById(id);
-        if (!c) return;
-        c.addEventListener('click', e => {
-          const slot = e.target.closest('.time-slot');
-          if (!slot) return;
-          document.querySelectorAll('.time-slot').forEach(s => {
-            s.classList.remove('bg-[#0052FF]', 'text-white', 'shadow-md');
-            s.classList.add('border', 'border-outline-light', 'bg-surface-container-low', 'text-brand-dark');
-          });
-          slot.classList.remove('border', 'border-outline-light', 'bg-surface-container-low', 'text-brand-dark');
-          slot.classList.add('bg-[#0052FF]', 'text-white', 'shadow-md');
-          selectedTime = slot.getAttribute('data-time');
-          updateSummary();
-        });
+    ['#slot-morning', '#slot-afternoon'].forEach(sel => {
+      const box = $(sel);
+      if (!box) return;
+      box.addEventListener('click', e => {
+        const b = e.target.closest('.slot');
+        if (!b) return;
+        $$('.slot').forEach(x => x.classList.toggle('is-on', x === b));
+        selectedTime = b.dataset.time;
+        updateSummary();
       });
+    });
 
-      // Confirmation
-      const confirmBtn = document.getElementById('confirm-btn');
-      const toast = document.getElementById('confirmation-toast');
-      if (confirmBtn && toast) {
-        confirmBtn.addEventListener('click', () => {
-          toast.classList.remove('hidden');
-          confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[22px] text-white">done_all</span><span>Rendez-vous Enregistré</span>';
-          confirmBtn.classList.remove('bg-brand-dark');
-          confirmBtn.classList.add('bg-[#0052FF]');
-          toast.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        });
-      }
+    const confirmBtn = $('#confirm-btn');
+    if (confirmBtn) {
+      confirmBtn.addEventListener('click', () => {
+        const name = ($('#fullname') || {}).value ? $('#fullname').value.trim() : '';
+        const phone = ($('#phone') || {}).value ? $('#phone').value.trim() : '';
+        const notes = ($('#notes') || {}).value ? $('#notes').value.trim() : '';
+        if (!name || !phone) {
+          alert('Veuillez indiquer votre nom et numéro de téléphone.');
+          return;
+        }
+        const msg = 'Bonjour Finagnon Vision, je souhaite confirmer mon rendez-vous :\n' +
+          '• Motif : ' + selectedMotif + '\n' +
+          '• Créneau : ' + selectedDay + ' à ' + selectedTime + '\n' +
+          '• Nom : ' + name + '\n' +
+          '• Contact : +226 ' + phone +
+          (notes ? '\n• Précision : ' + notes : '');
+        window.open('https://wa.me/' + C.WHATSAPP + '?text=' + encodeURIComponent(msg), '_blank');
+      });
+    }
+
+    /* 7. Devis Express */
+    const fileInput = $('#prescription-file');
+    const uploadIdle = $('#upload-idle');
+    const uploadPreview = $('#upload-preview');
+    const fileLabel = $('#file-name');
+
+    function resetFile() {
+      if (fileInput) fileInput.value = '';
+      if (uploadIdle) uploadIdle.classList.remove('hidden');
+      if (uploadPreview) uploadPreview.classList.add('hidden');
+    }
+
+    if (fileInput) {
+      fileInput.addEventListener('change', () => {
+        const f = fileInput.files && fileInput.files[0];
+        if (!f) return resetFile();
+        if (fileLabel) fileLabel.textContent = f.name;
+        if (uploadIdle) uploadIdle.classList.add('hidden');
+        if (uploadPreview) uploadPreview.classList.remove('hidden');
+      });
+    }
+
+    const resetBtn = $('#reset-file');
+    if (resetBtn) resetBtn.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); resetFile(); });
+
+    const quoteForm = $('#quote-form');
+    if (quoteForm) {
+      quoteForm.addEventListener('submit', e => {
+        e.preventDefault();
+        const name = ($('#full-name') || {}).value ? $('#full-name').value.trim() : '';
+        const phone = ($('#whatsapp-number') || {}).value ? $('#whatsapp-number').value.trim() : '';
+        if (!name || !phone) {
+          alert('Veuillez indiquer votre nom et votre numéro WhatsApp.');
+          return;
+        }
+        const treatments = $$('input[name="treatments"]:checked').map(x => x.value).join(', ') || 'Standard';
+        const tierEl = document.querySelector('input[name="frame_tier"]:checked');
+        const tier = tierEl ? tierEl.value : 'Non précisé';
+        const file = fileInput && fileInput.files[0] ? fileInput.files[0].name : '';
+        const msg = 'Bonjour Finagnon Vision, demande de devis express :\n' +
+          '• Nom : ' + name + '\n' +
+          '• Numéro : +226 ' + phone + '\n' +
+          '• Gamme : ' + tier + '\n' +
+          '• Verres : ' + treatments +
+          (file ? '\n• Ordonnance : ' + file + ' (je vous envoie la photo ci-après)' : '');
+        window.open('https://wa.me/' + C.WHATSAPP + '?text=' + encodeURIComponent(msg), '_blank');
+      });
+    }
+
+    /* 8. Initialisation */
+    applySettings();
+    genDates();
+    genSlots();
+
+    (async () => {
+      let settings = {};
+      try { settings = (await Store.settings()) || {}; } catch (e) {}
+      Object.assign(C, settings);
+      window.FW = C;
+      applySettings();
+      genSlots();
+
+      let items = [];
+      try { items = await Store.list('lunettes'); } catch (e) { items = []; }
+      if (!items || !items.length) items = window.FV_SEED || [];
+      renderHome(items);
+      renderCat(items);
     })();
+  })();
   </script>
-</section>
-<section id="devis" class="view">
-<div class="px-gutter-sm pt-space-md flex flex-col gap-space-sm">
-<div class="flex items-center gap-space-xs">
-<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-brand-blue text-white shadow-sm">
-<span class="material-symbols-outlined text-[15px]">bolt</span>
-</span>
-<span class="font-label-caps text-[11px] text-brand-blue font-bold uppercase tracking-widest">Service Express • Ouagadougou</span>
-</div>
-<div class="flex flex-col gap-1.5">
-<h1 class="font-headline-lg-mobile text-[26px] leading-[34px] font-extrabold text-brand-black tracking-tight">
-        Devis personnalisé sur <span class="text-brand-blue underline decoration-brand-blue/30 underline-offset-4">WhatsApp</span>
-</h1>
-<p class="font-body-md text-body-md text-slate-600">
-        Déposez votre ordonnance ophtalmologique ou configurez vos verres sur-mesure avec nos opticiens diplômés à Gounghin.
-      </p>
-</div>
-<div class="flex items-center gap-space-sm p-3.5 bg-white border border-blue-100 rounded-2xl shadow-sm">
-<div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-brand-blue shrink-0">
-<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
-</div>
-<div class="flex flex-col">
-<span class="font-title-md text-[13px] text-brand-black font-bold">Prise en charge Tiers-payant &amp; Mutuelles</span>
-<span class="font-body-sm text-xs text-slate-500 leading-tight">Factures normalisées conformes UAB, SONAR, SUNU, Raynal et corbeilles d'entreprises.</span>
-</div>
-</div>
-</div>
-<form class="flex flex-col gap- space-lg px-gutter-sm mt-space-md" id="quote-form" onsubmit="event.preventDefault();">
-<div class="flex flex-col gap-space-xs">
-<div class="flex items-center justify-between">
-<label class="font-title-md text-title-md text-brand-black font-bold flex items-center gap-1.5">
-<span class="material-symbols-outlined text-brand-blue text-[20px]">document_scanner</span>
-          1. Votre ordonnance
-        </label>
-<span class="font-label-caps text-[11px] px-2 py-0.5 rounded-full bg-blue-50 text-brand-blue font-extrabold uppercase">Recommandé</span>
-</div>
-<div class="relative bg-white rounded-2xl p-space-md border-2 border-dashed border-blue-200 hover:border-brand-blue shadow-sm flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-200 active:scale-[0.99] group" id="drop-zone">
-<input accept="image/*,.pdf" class="absolute inset-0 opacity-0 cursor-pointer z-10" id="prescription-file" onchange="handleFileSelect(event)" type="file"/>
-<div class="flex flex-col items-center gap-space-xs py-space-sm" id="upload-idle">
-<div class="w-14 h-14 rounded-2xl bg-blue-50 group-hover:bg-blue-100 flex items-center justify-center text-brand-blue mb-1 transition-colors">
-<span class="material-symbols-outlined text-[32px]">add_a_photo</span>
-</div>
-<span class="font-title-md text-title-md text-brand-black font-bold">Prendre une photo ou importer</span>
-<span class="font-body-sm text-xs text-slate-500">Formats acceptés : JPEG, PNG, PDF (max. 10 Mo)</span>
-<div class="inline-flex items-center gap-1.5 px-3 py-1 bg-slate-50 border border-slate-200/80 rounded-full mt-1">
-<span class="material-symbols-outlined text-[15px] text-brand-blue">document_scanner</span>
-<span class="font-label-caps text-[11px] font-semibold text-slate-700">Scan haute lisibilité Finagnon</span>
-</div>
-</div>
-<div class="hidden flex-col items-center gap-space-xs py-space-xs w-full" id="upload-preview">
-<div class="w-12 h-12 rounded-full bg-brand-blue text-white flex items-center justify-center shadow-md">
-<span class="material-symbols-outlined text-[24px]">task_alt</span>
-</div>
-<span class="font-title-md text-title-md text-brand-black font-bold truncate max-w-[260px]" id="file-name">ordonnance_analyse.pdf</span>
-<span class="font-body-sm text-xs text-brand-blue font-semibold">Document prêt pour analyse optométrique</span>
-<button class="z-20 mt-1 text-red-600 font-label-md text-xs hover:underline flex items-center gap-1" onclick="resetFile(event)" type="button">
-<span class="material-symbols-outlined text-[15px]">delete</span> Remplacer le fichier
-          </button>
-</div>
-</div>
-<p class="font-body-sm text-xs text-slate-500 flex items-center gap-1.5 px-1">
-<span class="material-symbols-outlined text-[15px] text-brand-blue shrink-0">lock</span>
-        Données médicales strictement confidentielles protégées par le secret médical.
-      </p>
-</div>
-<div class="flex flex-col gap-space-xs mt-4">
-<label class="font-title-md text-title-md text-brand-black font-bold flex items-center gap-1.5">
-<span class="material-symbols-outlined text-brand-blue text-[20px]">tune</span>
-        2. Options de traitement des verres
-      </label>
-<span class="font-body-sm text-xs text-slate-500">Sélectionnez les technologies recommandées pour votre confort visuel quotidien :</span>
-<div class="grid grid-cols-1 gap-2.5 mt-1">
-<label class="flex items-start gap-space-sm p-3.5 bg-white border border-slate-200/80 rounded-2xl shadow-sm cursor-pointer select-none transition-all has-[:checked]:border-brand-blue has-[:checked]:bg-blue-50/50">
-<input checked="" class="mt-0.5 w-5 h-5 rounded text-brand-blue focus:ring-brand-blue accent-[#0052ff] cursor-pointer shrink-0" name="treatments" type="checkbox" value="blue-light"/>
-<div class="flex flex-col min-w-0">
-<div class="flex items-center justify-between gap-1">
-<span class="font-title-md text-sm text-brand-black font-bold">Filtre Lumière Bleue</span>
-<span class="font-label-caps text-[10px] bg-brand-blue text-white px-2 py-0.5 rounded-full uppercase font-bold tracking-wide">Essentiel</span>
-</div>
-<span class="font-body-sm text-xs text-slate-500 mt-0.5">Soulage la fatigue oculaire face aux écrans, smartphones, ordinateurs et LEDs.</span>
-</div>
-</label>
-<label class="flex items-start gap-space-sm p-3.5 bg-white border border-slate-200/80 rounded-2xl shadow-sm cursor-pointer select-none transition-all has-[:checked]:border-brand-blue has-[:checked]:bg-blue-50/50">
-<input class="mt-0.5 w-5 h-5 rounded text-brand-blue focus:ring-brand-blue accent-[#0052ff] cursor-pointer shrink-0" name="treatments" type="checkbox" value="photochromic"/>
-<div class="flex flex-col min-w-0">
-<div class="flex items-center justify-between gap-1">
-<span class="font-title-md text-sm text-brand-black font-bold">Verres Photochromiques</span>
-<span class="font-label-caps text-[10px] bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase font-bold tracking-wide">Soleil &amp; Moto</span>
-</div>
-<span class="font-body-sm text-xs text-slate-500 mt-0.5">Teinte adaptative automatique sous l'intensité solaire de Ouaga, clairs en intérieur.</span>
-</div>
-</label>
-<label class="flex items-start gap-space-sm p-3.5 bg-white border border-slate-200/80 rounded-2xl shadow-sm cursor-pointer select-none transition-all has-[:checked]:border-brand-blue has-[:checked]:bg-blue-50/50">
-<input checked="" class="mt-0.5 w-5 h-5 rounded text-brand-blue focus:ring-brand-blue accent-[#0052ff] cursor-pointer shrink-0" name="treatments" type="checkbox" value="antireflet-premium"/>
-<div class="flex flex-col min-w-0">
-<div class="flex items-center justify-between gap-1">
-<span class="font-title-md text-sm text-brand-black font-bold">Antireflet &amp; Antirayures Premium</span>
-<span class="font-label-caps text-[10px] bg-blue-100 text-brand-blue px-2 py-0.5 rounded-full uppercase font-bold tracking-wide">Clarté Max</span>
-</div>
-<span class="font-body-sm text-xs text-slate-500 mt-0.5">Clarté cristalline nocturne, traitement hydrophobe repoussant la poussière de l'Harmattan.</span>
-</div>
-</label>
-<label class="flex items-start gap-space-sm p-3.5 bg-white border border-slate-200/80 rounded-2xl shadow-sm cursor-pointer select-none transition-all has-[:checked]:border-brand-blue has-[:checked]:bg-blue-50/50">
-<input class="mt-0.5 w-5 h-5 rounded text-brand-blue focus:ring-brand-blue accent-[#0052ff] cursor-pointer shrink-0" name="treatments" type="checkbox" value="amincis"/>
-<div class="flex flex-col min-w-0">
-<div class="flex items-center justify-between gap-1">
-<span class="font-title-md text-sm text-brand-black font-bold">Amincissement Haute Indice</span>
-<span class="font-label-caps text-[10px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded-full uppercase font-bold tracking-wide">Ultra-fin</span>
-</div>
-<span class="font-body-sm text-xs text-slate-500 mt-0.5">Profil ultra-léger et discret, fortement conseillé pour corrections fortes.</span>
-</div>
-</label>
-</div>
-</div>
-<div class="flex flex-col gap-space-xs mt-4">
-<label class="font-title-md text-title-md text-brand-black font-bold flex items-center gap-1.5">
-<span class="material-symbols-outlined text-brand-blue text-[20px]">eyeglasses</span>
-        3. Gamme de monture
-      </label>
-<span class="font-body-sm text-xs text-slate-500">Avez-vous déjà une monture ou cherchez-vous un nouveau modèle ?</span>
-<div class="grid grid-cols-2 gap-2 mt-1">
-<label class="relative flex flex-col p-3 bg-white border border-slate-200 rounded-2xl shadow-sm cursor-pointer select-none has-[:checked]:border-brand-blue has-[:checked]:bg-brand-black has-[:checked]:text-white transition-all">
-<input class="sr-only" name="frame_tier" type="radio" value="existing"/>
-<div class="flex items-center justify-between mb-1.5">
-<span class="material-symbols-outlined text-[20px] text-brand-blue">swap_horiz</span>
-<span class="w-2 h-2 rounded-full bg-blue-200"></span>
-</div>
-<span class="font-title-md text-[13px] font-bold leading-snug">J'ai ma monture</span>
-<span class="font-body-sm text-[11px] opacity-75 mt-0.5 leading-tight">Montage seul de nouveaux verres</span>
-</label>
-<label class="relative flex flex-col p-3 bg-white border border-slate-200 rounded-2xl shadow-sm cursor-pointer select-none has-[:checked]:border-brand-blue has-[:checked]:bg-brand-black has-[:checked]:text-white transition-all">
-<input class="sr-only" name="frame_tier" type="radio" value="economic"/>
-<div class="flex items-center justify-between mb-1.5">
-<span class="material-symbols-outlined text-[20px] text-brand-blue">savings</span>
-<span class="w-2 h-2 rounded-full bg-blue-200"></span>
-</div>
-<span class="font-title-md text-[13px] font-bold leading-snug">Économique</span>
-<span class="font-body-sm text-[11px] opacity-75 mt-0.5 leading-tight">Robuste, durable et accessible</span>
-</label>
-<label class="relative flex flex-col p-3 bg-white border border-slate-200 rounded-2xl shadow-sm cursor-pointer select-none has-[:checked]:border-brand-blue has-[:checked]:bg-brand-black has-[:checked]:text-white transition-all">
-<input checked="" class="sr-only" name="frame_tier" type="radio" value="designer"/>
-<div class="flex items-center justify-between mb-1.5">
-<span class="material-symbols-outlined text-[20px] text-brand-blue">auto_awesome</span>
-<span class="w-2 h-2 rounded-full bg-blue-400"></span>
-</div>
-<span class="font-title-md text-[13px] font-bold leading-snug">Créateur Tendance</span>
-<span class="font-body-sm text-[11px] opacity-75 mt-0.5 leading-tight">Titane, acétates et finitions or</span>
-</label>
-<label class="relative flex flex-col p-3 bg-white border border-slate-200 rounded-2xl shadow-sm cursor-pointer select-none has-[:checked]:border-brand-blue has-[:checked]:bg-brand-black has-[:checked]:text-white transition-all">
-<input class="sr-only" name="frame_tier" type="radio" value="counsel"/>
-<div class="flex items-center justify-between mb-1.5">
-<span class="material-symbols-outlined text-[20px] text-brand-blue">support_agent</span>
-<span class="w-2 h-2 rounded-full bg-blue-200"></span>
-</div>
-<span class="font-title-md text-[13px] font-bold leading-snug">Conseil Opticienne</span>
-<span class="font-body-sm text-[11px] opacity-75 mt-0.5 leading-tight">Morphologie de visage guidée</span>
-</label>
-</div>
-</div>
-<div class="flex flex-col gap-space-sm bg-white p-space-md rounded-2xl shadow-sm border border-slate-200/80 mt-4">
-<div class="flex items-center justify-between">
-<label class="font-title-md text-title-md text-brand-black font-bold flex items-center gap-1.5">
-<span class="material-symbols-outlined text-brand-blue text-[20px]">contacts</span>
-          4. Vos coordonnées
-        </label>
-<span class="font-label-caps text-[10px] text-slate-500 uppercase font-bold tracking-wider">Devis WhatsApp</span>
-</div>
-<div class="flex flex-col gap-1">
-<span class="font-label-md text-xs text-slate-700 font-bold">Nom &amp; Prénom</span>
-<div class="relative">
-<input class="w-full h-12 bg-slate-50 border border-slate-200 text-brand-black px-space-md rounded-xl font-body-md text-sm placeholder:text-slate-400 focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-all" id="full-name" placeholder="Ex: Aminata Kaboré" required="" type="text"/>
-<span class="material-symbols-outlined absolute right-space-md top-3 text-slate-400 text-[20px]">person</span>
-</div>
-</div>
-<div class="flex flex-col gap-1">
-<span class="font-label-md text-xs text-slate-700 font-bold">Numéro WhatsApp (Burkina Faso)</span>
-<div class="flex items-center gap-2">
-<div class="h-12 px-3 bg-slate-100 border border-slate-200 text-brand-black rounded-xl flex items-center gap-1.5 shrink-0 font-bold text-sm">
-<span class="text-base">🇧🇫</span>
-<span>+226</span>
-</div>
-<div class="relative flex-1">
-<input class="w-full h-12 bg-slate-50 border border-slate-200 text-brand-black px-space-md rounded-xl font-body-md text-sm placeholder:text-slate-400 focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue tracking-wider font-semibold" id="whatsapp-number" pattern="[0-9]{8}" placeholder="65 16 43 94" required="" type="tel"/>
-<span class="material-symbols-outlined absolute right-space-md top-3 text-brand-blue text-[20px]">chat</span>
-</div>
-</div>
-<span class="font-body-sm text-xs text-slate-500 mt-0.5">Votre devis normalisé PDF chiffré sera directement transmis sur ce compte.</span>
-</div>
-</div>
-<div class="flex flex-col gap-space-sm mt-4">
-<button class="w-full h-14 bg-brand-blue hover:bg-blue-700 text-white rounded-2xl font-title-md text-base font-bold flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25 active:scale-[0.98] transition-all" onclick="submitQuote()" type="submit">
-<span class="material-symbols-outlined text-[22px]">send</span>
-<span>Recevoir mon devis gratuit sur WhatsApp</span>
-</button>
-<div class="flex items-center justify-center gap-2 text-center text-slate-600">
-<span class="w-2 h-2 rounded-full bg-brand-blue animate-pulse"></span>
-<span class="font-label-md text-xs">Réponse directement sur <strong class="text-brand-black font-bold">WhatsApp</strong></span>
-</div>
-</div>
-</form>
-<div class="px-gutter-sm mt-6 flex flex-col gap-space-md">
-<div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex flex-col gap-2">
-<span class="font-title-md text-sm text-brand-black font-bold flex items-center gap-1.5">
-<span class="material-symbols-outlined text-brand-blue text-[20px]">verified</span>
-        Engagements Finagnon Vision
-      </span>
-<div class="grid grid-cols-1 gap-2 pt-1 font-body-sm text-xs text-slate-600">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[17px] text-brand-blue shrink-0">check_circle</span>
-<span>Devis 100% transparent et conforme SONAR, UAB, SUNU &amp; Raynal</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[17px] text-brand-blue shrink-0">medical_services</span>
-<span>Montage de précision en atelier par nos opticiens d'État</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[17px] text-brand-blue shrink-0">local_shipping</span>
-<span>Retrait en boutique à Gounghin ou livraison express Ouagadougou</span>
-</div>
-</div>
-</div>
-<div class="p-4 rounded-2xl bg-brand-black text-white flex items-center justify-between shadow-md">
-<div class="flex items-center gap-3">
-<div class="w-11 h-11 rounded-xl bg-brand-blue text-white flex items-center justify-center shrink-0 shadow-sm">
-<span class="material-symbols-outlined text-[22px]">call</span>
-</div>
-<div class="flex flex-col">
-<span class="font-label-caps text-[10px] text-blue-200 uppercase tracking-wider font-bold">Assistance Directe</span>
-<span class="font-title-md text-sm font-extrabold text-white">+226 65 16 43 94</span>
-<span class="font-body-sm text-[11px] text-slate-400">Optique Gounghin • Lun au Sam 8h - 19h</span>
-</div>
-</div>
-<a class="px-3.5 py-2 rounded-xl bg-white text-brand-black font-bold text-xs shadow hover:bg-slate-100 shrink-0 active:scale-95 transition-transform" href="tel:+22665164394">
-        Appeler
-      </a>
-</div>
-<div class="flex flex-col items-center justify-center text-center pt-1 text-slate-500">
-<div class="flex items-center gap-1 font-label-caps text-[11px] uppercase tracking-wider text-brand-blue font-bold">
-<span class="material-symbols-outlined text-[15px]">location_on</span> Finagnon Vision Ouaga
-      </div>
-<span class="font-body-sm text-xs text-slate-500 mt-0.5">Gounghin, face à la pharmacie • Ouagadougou, Burkina Faso</span>
-</div>
-</div>
-<div class="fixed inset-0 bg-brand-black/70 backdrop-blur-sm z-50 hidden flex-col justify-end" id="success-sheet">
-<div class="bg-white rounded-t-3xl p-6 flex flex-col items-center text-center gap-4 shadow-2xl">
-<div class="w-16 h-16 rounded-2xl bg-blue-50 text-brand-blue flex items-center justify-center">
-<span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">send</span>
-</div>
-<div class="flex flex-col gap-1">
-<h3 class="font-headline-sm text-xl text-brand-black font-extrabold">Demande envoyée avec succès !</h3>
-<p class="font-body-md text-sm text-slate-600">
-          Nos opticiens examinent votre ordonnance. Vous recevrez une estimation détaillée et chiffrée sur votre WhatsApp dans un instant.
-        </p>
-</div>
-<div class="w-full flex flex-col gap-2 pt-1">
-<a class="w-full h-12 bg-brand-blue hover:bg-blue-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-md" href="#" id="whatsapp-direct-link" target="_blank">
-<span class="material-symbols-outlined text-[20px]">chat</span>
-          Ouvrir la conversation WhatsApp
-        </a>
-<button class="w-full h-12 bg-slate-100 text-brand-black rounded-xl font-bold text-sm hover:bg-slate-200 transition-colors" onclick="closeSuccessSheet()" type="button">
-          Fermer
-        </button>
-</div>
-</div>
-</div>
-</div>
-<script>
-  function handleFileSelect(event) {
-    const file = event.target.files[0];
-    if (file) {
-      document.getElementById('upload-idle').classList.add('hidden');
-      const preview = document.getElementById('upload-preview');
-      preview.classList.remove('hidden');
-      preview.classList.add('flex');
-      document.getElementById('file-name').textContent = file.name;
-    }
-  }
-
-  function resetFile(event) {
-    event.stopPropagation();
-    event.preventDefault();
-    const input = document.getElementById('prescription-file');
-    input.value = '';
-    document.getElementById('upload-preview').classList.add('hidden');
-    document.getElementById('upload-preview').classList.remove('flex');
-    document.getElementById('upload-idle').classList.remove('hidden');
-  }
-
-  function submitQuote() {
-    const nameInput = document.getElementById('full-name');
-    const phoneInput = document.getElementById('whatsapp-number');
-    
-    if (!nameInput.value.trim() || !phoneInput.value.trim()) {
-      alert("Veuillez renseigner votre Nom et votre Numéro WhatsApp pour recevoir votre devis.");
-      return;
-    }
-
-    const treatments = Array.from(document.querySelectorAll('input[name="treatments"]:checked')).map(el => el.value).join(', ');
-    const frameTier = document.querySelector('input[name="frame_tier"]:checked')?.value || 'Non spécifié';
-    const textMsg = encodeURIComponent("Bonjour Finagnon Vision, je souhaite recevoir un devis personnalisé. Nom: " + nameInput.value + " | Monture: " + frameTier + " | Traitements: " + treatments);
-    
-    const whatsappUrl = "https://wa.me/"+FW.WHATSAPP+"?text=" + textMsg;
-    document.getElementById('whatsapp-direct-link').setAttribute('href', whatsappUrl);
-
-    const sheet = document.getElementById('success-sheet');
-    sheet.classList.remove('hidden');
-    sheet.classList.add('flex');
-  }
-
-  function closeSuccessSheet() {
-    const sheet = document.getElementById('success-sheet');
-    sheet.classList.add('hidden');
-    sheet.classList.remove('flex');
-  }
-</script>
-</section>
-</main>
-<nav id="fv-nav" class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl border-t border-surface-container-high/60 shadow-[0_-2px_12px_rgba(11,15,25,0.05)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-14 transition-colors text-primary font-bold" data-path="accueil" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="text-[12px] font-bold">Accueil</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-14 text-on-surface-variant transition-colors hover:text-carbon" data-path="catalogue" href="#"><span class="material-symbols-outlined text-[24px]">eyeglasses</span><span class="text-[12px] font-semibold">Catalogue</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-14 text-on-surface-variant transition-colors hover:text-carbon" data-path="rendez-vous" href="#"><span class="material-symbols-outlined text-[24px]">event_available</span><span class="text-[12px] font-semibold">Rendez-vous</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-14 text-on-surface-variant transition-colors hover:text-carbon" data-path="devis-&amp;-ordonnance" href="#"><span class="material-symbols-outlined text-[24px]">receipt_long</span><span class="text-[12px] font-semibold">Devis</span></a></div></nav>
-<!-- Interactive Quick View / Frame Try-on Modal Sheet -->
-<div class="fixed inset-0 z-50 bg-carbon/70 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-margin-sm" id="quickview-modal">
-<div class="bg-surface-container-lowest rounded-t-2xl sm:rounded-2xl w-full max-w-md p-space-lg flex flex-col gap-space-md shadow-2xl animate-fade-in border border-outline-variant/50">
-<div class="flex items-center justify-between">
-<span class="text-[11px] font-black text-primary uppercase tracking-widest">Fiche Lunette Finagnon</span>
-<button class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-carbon" onclick="closeQuickView()">
-<span class="material-symbols-outlined text-[18px]">close</span>
-</button>
-</div>
-<div class="w-full aspect-[4/3] rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant/50">
-<img id="qv-img" class="w-full h-full object-cover" src="images/logo.png" alt=""/>
-</div>
-<div class="flex flex-col gap-1">
-<h3 class="text-[20px] text-carbon font-extrabold" id="qv-title">Modèle Finagnon</h3>
-<span class="text-[24px] text-primary font-black" id="qv-price">0 FCFA</span>
-</div>
-<p class="text-[14px] text-on-surface-variant leading-relaxed" id="qv-desc">Description de la monture.</p>
-<div class="flex flex-col gap-2 pt-space-xs">
-<a class="flex items-center justify-center gap-2 py-3.5 rounded-xl bg-primary text-white font-bold text-[14px] shadow-lg shadow-primary/30 hover:bg-primary-dark transition-all" href="#" id="qv-whatsapp-link" target="_blank">
-<span class="material-symbols-outlined text-[20px]">chat</span>
-<span>Essayer cette monture à Gounghin</span>
-</a>
-<button class="py-2.5 rounded-xl bg-surface-container text-carbon font-bold text-[13px] hover:bg-surface-container-high transition-colors" onclick="closeQuickView()">
-          Fermer
-        </button>
-</div>
-</div>
-</div>
-<script src="neon.bundle.js"></script><script src="config.js"></script>
-<script>
-(function(){
-const N=window.FV_NEON||{},R=!!(N.dataApi&&N.authUrl&&window.NeonJS),K=t=>"fv_"+t;
-const jget=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}};
-let SB=null;
-// Client Neon : Data API (requêtes) + Auth (compte de la gérante, jeton anonyme pour le public).
-const sb=()=>SB||(SB=NeonJS.createClient({auth:{adapter:NeonJS.SupabaseAuthAdapter(),url:N.authUrl,allowAnonymous:true},dataApi:{url:N.dataApi}}));
-const ok=r=>{if(r&&r.error)throw new Error(r.error.message||"Erreur avec la base de données");return r?r.data:[]};
-const shrink=(f,max=1000)=>new Promise((res,rej)=>{const im=new Image();im.onload=()=>{const k=Math.min(1,max/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=im.width*k;c.height=im.height*k;c.getContext("2d").drawImage(im,0,0,c.width,c.height);c.toBlob(res,"image/jpeg",.84)};im.onerror=()=>rej(new Error("Image illisible"));im.src=URL.createObjectURL(f)});
-const dataURL=b=>new Promise(r=>{const f=new FileReader();f.onload=()=>r(f.result);f.readAsDataURL(b)});
-window.Store={remote:R,
- defaults:{QUARTIER:"Ouagadougou • Gounghin",PHONE_DISPLAY:"+226 65 16 43 94",WHATSAPP:"22665164394",HOURS:"Lun - Sam : 08h30 - 19h00",FACEBOOK:"https://www.facebook.com/share/1Bs8J24fV6/",TIKTOK:"https://www.tiktok.com/@finagnonvision",SLOGAN:"Votre partenaire optique de confiance",HERO_TITLE:"Votre vue mérite l'excellence à Ouagadougou",HERO_TEXT:"Optique de haute précision & montures de créateurs à Gounghin. L'alliance d'un examen médical pointu et du style contemporain.",SLOTS_MORNING:"08h30, 09h30, 11h00",SLOTS_AFTERNOON:"15h30, 16h30, 18h00"},
- async authed(){if(!R)return true;try{const{data}=await sb().auth.getSession();return!!(data&&data.session)}catch{return false}},
- async login(email,password){if(!R)return;const{error}=await sb().auth.signInWithPassword({email,password});if(error)throw new Error(/invalid|password/i.test(error.message||"")?"Email ou mot de passe incorrect.":error.message||"Connexion impossible.")},
- async signup(email,password){const{error}=await sb().auth.signUp({email,password});if(error)throw new Error(error.message||"Création du compte impossible.")},
- async user(){const{data}=await sb().auth.getUser();return data&&data.user?data.user:null},
- async isAdmin(){if(!R)return true;try{const u=await this.user();if(!u)return false;const r=await sb().from("admins").select("user_id").eq("user_id",u.id);return!r.error&&!!(r.data&&r.data.length)}catch{return false}},
- logout(){localStorage.removeItem("fv_session");if(R)sb().auth.signOut().catch(()=>{})},
- async list(t,pub){
-  if(R){let q=sb().from(t).select("*").order("created_at",{ascending:false});if(pub)q=q.eq("publie",true);return ok(await q)}
-  const l=jget(K(t),null)??(t==="lunettes"?window.FV_SEED:[]);return pub?l.filter(x=>x.publie!==false):l},
- async save(t,item){
-  if(R){const b={...item};delete b.id;ok(item.id?await sb().from(t).update(b).eq("id",item.id):await sb().from(t).insert(b));return}
-  const l=await this.list(t);if(item.id){const i=l.findIndex(x=>x.id==item.id);l[i]={...l[i],...item}}else l.unshift({...item,id:"l"+Date.now(),created_at:new Date().toISOString()});
-  localStorage.setItem(K(t),JSON.stringify(l))},
- async remove(t,id){
-  if(R)return void ok(await sb().from(t).delete().eq("id",id));
-  localStorage.setItem(K(t),JSON.stringify((await this.list(t)).filter(x=>x.id!=id)))},
- async settings(){if(R){const r=await sb().from("reglages").select("data").eq("id",1);ok(r);return r.data&&r.data[0]&&r.data[0].data||{}}return jget("fv_reglages",{})},
- async saveSettings(d){if(R)return void ok(await sb().from("reglages").upsert({id:1,data:d}));localStorage.setItem("fv_reglages",JSON.stringify(d))},
- async upload(file){return dataURL(await shrink(file))}
-};
-})();
-(function(){
-  const L=[
-   ["Demi-cerclée Or & Rouge","Monture métal dorée, demi-cerclée, verres anti-lumière bleue","femme","papillon"],
-   ["Rectangulaire Gris Mat","Monture légère gris mat, branches métal","homme","rect"],
-   ["Écaille Noir & Ambre","Acétate noir et écaille ambrée, détails dorés","mixte","carree"],
-   ["Métal Bleu Nuit","Fine monture métal bleu nuit, plaquettes confort","homme","rect"],
-   ["Sans cadre Argent","Monture sans cadre, branches argentées","homme","rect"],
-   ["Demi-cerclée Argent & Noir","Style browline argent et noir","mixte","rect"],
-   ["Acétate Écaille Dorée","Acétate écaille, finitions dorées sur les branches","mixte","rect"],
-   ["Browline Noir & Or","Arcade noire, cerclage or","mixte","carree"],
-   ["Ronde Noire & Orange","Ronde noire, embouts orange","mixte","ronde"],
-   ["Rectangulaire Noir & Bleu","Noir texturé, branches bleu marine","homme","rect"],
-   ["Sans cadre Argent Bianco","Monture sans cadre, argent et noir","homme","rect"],
-   ["Carrée Noire Cloutée","Acétate noir brillant, clous décoratifs","mixte","carree"],
-   ["Fine Noire & Argent","Monture fine noire, branches argentées","mixte","rect"],
-   ["Noir & Cristal","Bicolore noir et cristal transparent","homme","carree"],
-   ["Carrée Gris Transparent","Acétate gris transparent, style oversize","mixte","carree"]
-  ];
-  window.FV_SEED=L.map((x,i)=>({id:"s"+(i+1),nom:x[0],description:x[1],prix:0,genre:x[2],type:"bluelight",forme:x[3],badge:"",disponible:true,image_url:"images/lunette-"+String(i+1).padStart(2,"0")+".jpg"}));
-})();
-</script>
-<script>
-// C\u00e2blage Finagnon Vision : r\u00e9glages admin, routeur, catalogue dynamique, RDV, devis
-(function(){
-const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-const C={...Store.defaults};window.FW=C;
-const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'\u0026amp;','<':'\u0026lt;','>':'\u0026gt;','"':'\u0026quot;',"'":'\u0026#39;'}[c]));
-
-/* ===== Textes et contacts pilot\u00e9s par l'admin (remplacement dans les n\u0153uds texte) ===== */
-const MAP=[
- ["Clinique & Lunetterie d'Art",'SLOGAN'],
- ["Votre vue m\u00e9rite l'excellence \u00e0 Ouagadougou",'HERO_TITLE'],
- ["Optique de haute pr\u00e9cision & montures de cr\u00e9ateurs \u00e0 Gounghin. L'alliance d'un examen m\u00e9dical pointu et du style contemporain.",'HERO_TEXT'],
- ['Ouagadougou \u2022 Gounghin','QUARTIER'],
- ['+226 65 16 43 94','PHONE_DISPLAY'],
- ['(+226) 65 16 43 94','P2'],
- ['Lun - Sam : 08h00 - 18h30','HOURS'],
- ['Lun - Sam : 08h30 - 19h00','HOURS'],
- ['Optique Gounghin \u2022 Lun au Sam 8h - 19h','H2']
-];
-const orig=new WeakMap();
-function texts(){
- const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;
- while(n=w.nextNode()){
-  const p=n.parentElement;if(p&&/^(SCRIPT|STYLE)$/.test(p.tagName))continue;
-  if(!orig.has(n))orig.set(n,n.nodeValue);
-  const o=orig.get(n),t=o.trim();
-  const hit=MAP.find(m=>m[0]===t);
-  if(hit)n.nodeValue=o.replace(t,hit[1]==='H2'?'Optique Gounghin \u2022 '+C.HOURS:hit[1]==='P2'?'(+226) '+C.PHONE_DISPLAY.replace('+226 ',''):(C[hit[1]]||t));
- }
- $$('a[href*="wa.me/"]').forEach(a=>{try{const u=new URL(a.getAttribute('href'),location.href);a.href='https://wa.me/'+C.WHATSAPP+u.search}catch(e){}});
- $$('a[href^="tel:"]').forEach(a=>a.href='tel:+'+C.WHATSAPP);
- $$('a[href*="facebook.com"]').forEach(a=>a.href=C.FACEBOOK||a.getAttribute('href'));
- $$('a[href*="tiktok.com"]').forEach(a=>a.href=C.TIKTOK||a.getAttribute('href'));
-}
-
-/* ===== Routeur (4 vues) ===== */
-const VIEWS=['accueil','catalogue','rendez-vous','devis'];
-function navSync(v){$$('#fv-nav [data-path]').forEach(a=>{
- const on=a.dataset.path===v;
- a.classList.toggle('text-primary',on);a.classList.toggle('font-bold',on);
- a.classList.toggle('text-on-surface-variant',!on);a.classList.toggle('hover:text-carbon',!on);
- if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
- const s=[...a.children].find(x=>x.tagName==='SPAN'&&x.textContent.trim());
- if(s){s.classList.toggle('font-bold',on);s.classList.toggle('font-semibold',!on);}
- const ic=a.querySelector('.material-symbols-outlined');
- if(ic)ic.style.fontVariationSettings=on?"'FILL' 1":"'FILL' 0";
-});}
-function show(v){if(!VIEWS.includes(v))v='accueil';
- $$('.view').forEach(sec=>sec.classList.toggle('on',sec.id===v));
- navSync(v);scrollTo(0,0);}
-function route(){let h=decodeURIComponent(location.hash.slice(1));
- if(!h)return show('accueil');
- if(h==='devis-&-ordonnance')h='devis';
- if(VIEWS.includes(h))return show(h);
- const el=document.getElementById(h);
- if(el){const sec=el.closest('.view');if(sec)show(sec.id);el.scrollIntoView({behavior:'smooth'});}
- else show('accueil');}
-$$('#fv-nav [data-path]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();location.hash=a.dataset.path;}));
-addEventListener('hashchange',route);
-
-/* ===== Catalogue dynamique (donn\u00e9es de la base Neon / mod\u00e8les de d\u00e9part) ===== */
-const TLBL={vue:'Optique',bluelight:'Blue Filter',solaire:'UV400'};
-const priceTxt=p=>p>0?Number(p).toLocaleString('fr-FR')+' FCFA':'Prix sur demande';
-const catOf=m=>m.type==='solaire'?'solaire':((m.prix>0||m.badge)?'luxe':'vue');
-function frameCard(m){
- return `<div class="frame-card flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-outline-variant/50 transition-all cursor-pointer" data-category="${catOf(m)}" data-title="${esc(m.nom)}" data-price="${esc(priceTxt(m.prix))}" data-desc="${esc(m.description||'')}" data-img="${esc(m.image_url||'images/logo.png')}">
- <div class="relative bg-surface-container-low p-space-sm flex items-center justify-center">
-  <span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-primary text-white text-[10px] font-bold uppercase tracking-wider">${esc(m.badge||(m.genre==='femme'?'Femme':m.genre==='homme'?'Homme':'Mixte'))}</span>
-  <img class="w-full h-32 object-contain mix-blend-multiply" src="${esc(m.image_url||'images/logo.png')}" alt="${esc(m.nom)}" loading="lazy"/>
- </div>
- <div class="p-space-sm flex flex-col flex-1 justify-between gap-1">
-  <div><div class="flex items-center justify-between">
-   <span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">${esc(TLBL[m.type]||(m.type==='solaire'?'Solaire':'Optique'))}</span>
-   <span class="text-[10px] font-mono text-primary font-bold">${esc((m.forme||'').toUpperCase())}</span></div>
-   <h3 class="text-[15px] text-carbon font-bold truncate">${esc(m.nom)}</h3></div>
-  <div class="pt-2 flex items-center justify-between">
-   <span class="text-[15px] font-black text-carbon">${esc(priceTxt(m.prix))}</span>
-   <button class="qv-btn w-8 h-8 rounded-full bg-blue-badge border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors" data-title="${esc(m.nom)}" data-price="${esc(priceTxt(m.prix))}" data-desc="${esc(m.description||'')}"><span class="material-symbols-outlined text-[18px]">add</span></button>
-  </div></div></div>`;}
-function catCard(m){
- return `<div class="cat-card bg-white border border-surface-container-high rounded-2xl p-space-sm flex flex-col justify-between shadow-xs relative group overflow-hidden hover:border-[#0052ff] transition-all cursor-pointer" data-genre="${esc(m.genre||'')}" data-type="${esc(m.type||'')}" data-forme="${esc(m.forme||'')}" data-txt="${esc((m.nom+' '+(m.description||'')).toLowerCase())}" data-title="${esc(m.nom)}" data-price="${esc(priceTxt(m.prix))}" data-desc="${esc(m.description||'')}" data-img="${esc(m.image_url||'images/logo.png')}">
- <div class="absolute top-2.5 left-2.5 z-10"><span class="bg-black text-white font-label-caps text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">${esc(m.badge||TLBL[m.type]||'Nouveau')}</span></div>
- <div class="relative w-full h-32 rounded-xl bg-surface-container-low overflow-hidden flex items-center justify-center">
-  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="${esc(m.image_url||'images/logo.png')}" alt="${esc(m.nom)}" loading="lazy"/>
- </div>
- <div class="flex flex-col mt-2.5">
-  <div class="flex items-center gap-1.5 mb-1"><span class="w-3 h-3 rounded-full bg-[#0052ff] inline-block"></span><span class="w-3 h-3 rounded-full bg-black inline-block"></span><span class="w-3 h-3 rounded-full bg-outline-variant inline-block"></span></div>
-  <h3 class="font-label-lg text-label-lg text-black font-bold line-clamp-1 leading-tight">${esc(m.nom)}</h3>
-  <p class="font-body-sm text-body-sm text-secondary line-clamp-1">${esc(m.description||'')}</p>
-  <div class="flex items-baseline justify-between mt-2 pt-1.5 bg-surface-container-low px-2 py-1 rounded-lg">
-   <span class="font-title-md text-title-md text-black font-extrabold">${m.prix>0?Number(m.prix).toLocaleString('fr-FR'):'\u2014'}</span>
-   <span class="font-label-caps text-label-caps text-[#0052ff] font-bold">${m.prix>0?'FCFA':'sur demande'}</span>
-  </div>
-  <div class="grid grid-cols-2 gap-1.5 mt-2">
-   <a class="flex items-center justify-center py-2 rounded-lg bg-[#0052ff] text-white font-label-md text-label-md hover:bg-[#003ec7] transition-colors shadow-xs" href="https://wa.me/${C.WHATSAPP}?text=${encodeURIComponent('Bonjour Finagnon Vision, je souhaite commander : '+m.nom+(m.prix>0?' ('+Number(m.prix).toLocaleString('fr-FR')+' FCFA)':''))}" rel="noopener" target="_blank" title="WhatsApp Direct">
-    <span class="material-symbols-outlined text-[16px] mr-1">chat</span>Acheter</a>
-   <button class="try-on-btn flex items-center justify-center py-2 rounded-lg bg-black text-white font-label-md text-label-md hover:bg-neutral-800 transition-colors shadow-xs" data-title="${esc(m.nom)}" data-price="${esc(priceTxt(m.prix))}" data-desc="${esc(m.description||'')}">
-    <span class="material-symbols-outlined text-[16px] mr-1">storefront</span>Essai</button>
-  </div>
- </div></div>`;}
-const F={q:'',chip:'all',forme:null};
-function applyFilter(){
- const cards=$$('#cat-grid .cat-card');let n=0;
- cards.forEach(el=>{
-  const ok=(F.chip==='all'||el.dataset.genre===F.chip||el.dataset.type===F.chip||(['homme','femme'].includes(F.chip)&&el.dataset.genre==='mixte'))
-   &&(!F.forme||el.dataset.forme===F.forme)&&(!F.q||el.dataset.txt.includes(F.q));
-  el.style.display=ok?'':'none';if(ok)n++;});
- const cnt=$('#cat-count');if(cnt)cnt.textContent=n+' mod\u00e8le'+(n>1?'s':'');
- const g=$('#cat-grid');if(!g)return;let e=g.querySelector('.fv-empty');
- if(!n){if(!e){e=document.createElement('p');e.className='fv-empty';e.textContent='Aucun mod\u00e8le ne correspond. \u00c9crivez-nous sur WhatsApp.';g.appendChild(e)}}
- else if(e)e.remove();}
-function renderHome(items){const g=$('#frames-container');if(!g)return;
- g.innerHTML=items.filter(m=>m.disponible!==false).slice(0,4).map(frameCard).join('');
- const on=document.querySelector('.frame-filter-btn.bg-carbon');
- if(window.filterFrames)filterFrames(on?(on.dataset.target||'all'):'all');}
-function renderCat(items){const g=$('#cat-grid');if(!g)return;
- g.innerHTML=items.filter(m=>m.disponible!==false).map(catCard).join('');applyFilter();}
-function onCards(root){if(!root)return;root.addEventListener('click',e=>{
- if(e.target.closest('a'))return;
- if(e.target.closest('button[aria-label="Favori"]'))return;
- const c=e.target.closest('.cat-card,.frame-card');
- if(c&&window.openQuickView)openQuickView(c.dataset.title||'Mod\u00e8le',c.dataset.price||'',c.dataset.desc||'',c.dataset.img||'');});}
-if(window.filterFrames){const _ff=window.filterFrames;
- window.filterFrames=function(c){_ff(c);const g=$('#frames-container');if(!g)return;
-  const vis=[...g.querySelectorAll('.frame-card')].some(x=>x.style.display!=='none');
-  let e=g.querySelector('.fv-empty');
-  if(!vis){if(!e){e=document.createElement('p');e.className='fv-empty';e.textContent='Aucun mod\u00e8le dans cette cat\u00e9gorie pour le moment.';g.appendChild(e)}}
-  else if(e)e.remove();};}
-
-/* ===== Rendez-vous : vraies dates + cr\u00e9neaux des r\u00e9glages admin ===== */
-const J=['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'],MO=['Jan','F\u00e9v','Mar','Avr','Mai','Juin','Juil','Ao\u00fb','Sep','Oct','Nov','D\u00e9c'];
-function genDates(){const c=$('#date-selector');if(!c)return;const d=new Date();let h='';
- for(let i=0;i<6;i++){const x=new Date(d.getTime()+i*864e5);const lbl=J[x.getDay()]+' '+x.getDate()+' '+MO[x.getMonth()];const sel=i===0;
-  h+=`<button class="date-btn flex flex-col items-center justify-center min-w-[58px] py-2.5 px-2 rounded-xl ${sel?'bg-[#0052FF] text-white shadow-md':'bg-surface-container-low text-brand-dark hover:bg-surface-container'} transition-all" data-day="${lbl}" type="button"><span class="text-[11px] ${sel?'font-bold uppercase tracking-wider opacity-80':'font-semibold uppercase tracking-wider text-on-surface-variant'}">${J[x.getDay()]}</span><span class="text-[18px] font-extrabold leading-tight">${x.getDate()}</span><span class="text-[10px] ${sel?'font-bold opacity-80':'text-on-surface-variant'}">${MO[x.getMonth()]}</span></button>`;}
- c.innerHTML=h;const f=c.querySelector('.date-btn');if(f)f.click();}
-function slotBtn(t,sel){return `<button class="time-slot py-2.5 px-2 rounded-xl ${sel?'bg-[#0052FF] text-white shadow-md':'border border-outline-light bg-surface-container-low text-brand-dark'} text-[13px] font-bold transition-all text-center" data-time="${esc(t)}" type="button">${esc(t)}</button>`;}
-function genSlots(){const split=s=>(s||'').split(',').map(x=>x.trim()).filter(Boolean);
- const m=split(C.SLOTS_MORNING),a=split(C.SLOTS_AFTERNOON);
- const gm=$('#slot-morning'),ga=$('#slot-afternoon');
- if(gm)gm.innerHTML=m.map(t=>slotBtn(t,t==='09h30')).join('');
- if(ga)ga.innerHTML=a.map(t=>slotBtn(t,false)).join('');
- const s=gm&&gm.querySelector('.time-slot');if(s)s.click();}
-const cb=$('#confirm-btn');
-if(cb)cb.addEventListener('click',()=>{setTimeout(()=>{
- const v=id=>{const e=$(id);return e?e.value.trim():''};
- const msg='Bonjour Finagnon Vision, je confirme mon rendez-vous.\n\u2022 Motif : '+($('#summary-motif')?$('#summary-motif').textContent:'')+'\n\u2022 Cr\u00e9neau : '+($('#summary-slot')?$('#summary-slot').textContent:'')+'\n\u2022 Nom : '+v('#fullname')+'\n\u2022 T\u00e9l : +226 '+v('#phone')+(v('#notes')?'\n\u2022 Note : '+v('#notes'):'');
- open('https://wa.me/'+C.WHATSAPP+'?text='+encodeURIComponent(msg),'_blank');},300);});
-
-/* ===== Initialisation ===== */
-texts();route();genDates();
-onCards($('#frames-container'));onCards($('#cat-grid'));
-const si=$('#cat-search');if(si)si.addEventListener('input',e=>{F.q=e.target.value.trim().toLowerCase();applyFilter()});
-$$('.filter-chip').forEach(b=>b.addEventListener('click',()=>{F.chip=b.dataset.filter||'all';F.q=b.dataset.q||'';const s=$('#cat-search');if(s)s.value=F.q;applyFilter()}));
-$$('.shape-btn').forEach(b=>b.addEventListener('click',()=>{const f=b.dataset.forme;
- $$('.shape-btn').forEach(x=>{x.style.color='';x.style.borderColor='';});
- if(F.forme===f){F.forme=null}else{F.forme=f;b.style.color='#0052ff';b.style.borderColor='#0052ff';}
- applyFilter();}));
-(async()=>{
- let s={};try{s=(await Store.settings())||{}}catch(e){}
- Object.assign(C,s);window.FW=C;
- texts();genSlots();
- let items=[];try{items=await Store.list('lunettes')}catch(e){items=window.FV_SEED||[]}
- renderHome(items);renderCat(items);
-})();
-})();
-
-</script>
-</body></html>
+</body>
+</html>
