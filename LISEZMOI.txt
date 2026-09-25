@@ -21,7 +21,7 @@ Le slogan « Votre partenaire optique de confiance » s'affiche en haut de la pa
        Neon > Data API > Settings > CORS : ajouter la même adresse.
 
 3. MISE EN LIGNE
-   3.1 GitHub : dépôt aminepare931-source/finagnon-vision (tout le dossier y est).
+   3.1 GitHub : dépôt aminepare47-creator/finagnon-vision (tout le dossier y est).
    3.2 Vercel : New Project > importer ce dépôt GitHub (site statique, aucun réglage)
        > Deploy. Administration : https://votre-site/admin.html
 
