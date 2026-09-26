@@ -52,12 +52,6 @@
       HOURS: 'Lun - Sam : 08h30 - 19h00',
       FACEBOOK: 'https://www.facebook.com/share/1Bs8J24fV6/',
       TIKTOK: 'https://www.tiktok.com/@finagnonvision',
-      SLOGAN: '🔥 OFFRE SPÉCIALE SUR TOUTES NOS MONTURES',
-      // NB : la section Hero du site n'est PLUS pilotée par les réglages promo.
-      // Elle conserve son texte d'origine — la promo s'affiche uniquement via
-      // le bandeau et le popup dédiées (interfaces indépendantes).
-      PROMO_BANNER: '🔥 PROMO EXCEPTIONNELLE : Toutes nos montures à 16 000 FCFA • Expédition partout !',
-      PROMO_ACTIVE: 'true',
       EXPEDITION_NOTE: 'Expédition rapide partout au Burkina Faso (Ouagadougou & province)',
       SLOTS_MORNING: '08h30, 09h30, 11h00',
       SLOTS_AFTERNOON: '15h30, 16h30, 18h00'
@@ -122,18 +116,8 @@
       if (R) {
         const b = { ...item };
         delete b.id;
-        try {
-          ok(item.id ? await sb().from(t).update(b).eq('id', item.id) : await sb().from(t).insert(b));
-          return;
-        } catch (err) {
-          // Si les colonnes promotionnelles optionnelles ne sont pas encore créées dans Neon
-          if (/column.*does not exist/i.test(err.message || '')) {
-            delete b.en_promo;
-            ok(item.id ? await sb().from(t).update(b).eq('id', item.id) : await sb().from(t).insert(b));
-            return;
-          }
-          throw err;
-        }
+        ok(item.id ? await sb().from(t).update(b).eq('id', item.id) : await sb().from(t).insert(b));
+        return;
       }
       const l = await this.list(t);
       if (item.id) { const i = l.findIndex(x => x.id == item.id); l[i] = { ...l[i], ...item }; }
@@ -167,7 +151,7 @@
     async upload(file) { return dataURL(await shrink(file)); }
   };
 
-  // 15 montures initiales configurées à 16 000 FCFA PROMO
+  // 15 montures initiales de départ
   (function () {
     const L = [
       ['Demi-cerclée Or & Rouge', 'Monture métal dorée, verres anti-lumière bleue', 'femme', 'papillon'],
@@ -191,11 +175,9 @@
       nom: x[0],
       description: x[1],
       prix: 16000,
-      en_promo: true,
       genre: x[2],
       type: 'bluelight',
       forme: x[3],
-      badge: 'PROMO',
       disponible: true,
       image_url: 'images/lunette-' + String(i + 1).padStart(2, '0') + '.jpg'
     }));

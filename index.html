@@ -33,7 +33,7 @@
 
   <style>
     /* =====================================================================
-       Finagnon Vision — Styles intégrés, Mobile-first & Promo
+       Finagnon Vision — Styles intégrés, Mobile-first
        ===================================================================== */
     :root {
       --blue: #0052ff;
@@ -51,12 +51,6 @@
       --muted: #475569;
       --muted-soft: #64748b;
       --ok: #059669;
-
-      /* Promo Colors */
-      --promo: #dc2626;
-      --promo-dark: #b91c1c;
-      --promo-soft: #fef2f2;
-      --promo-line: #fca5a5;
 
       --r-sm: 8px;
       --r: 14px;
@@ -126,63 +120,6 @@
       flex-shrink: 0;
     }
 
-    /* Bandeau Promo Tout en Haut avec Bouton Fermer */
-    .promo-bar {
-      background: var(--promo);
-      color: #fff;
-      padding: 0.5rem var(--pad-x);
-      font-size: 0.84rem;
-      font-weight: 700;
-      position: relative;
-      z-index: 65;
-      box-shadow: 0 2px 10px rgba(220, 38, 38, 0.25);
-    }
-    .promo-bar__inner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.6rem;
-      flex-wrap: wrap;
-      position: relative;
-      padding-right: 2.2rem; /* Espace pour le bouton fermer */
-    }
-    .promo-badge-top {
-      background: #fff;
-      color: var(--promo);
-      font-size: 0.72rem;
-      font-weight: 800;
-      padding: 0.15rem 0.55rem;
-      border-radius: var(--r-pill);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    .promo-link {
-      color: #fff;
-      text-decoration: underline;
-      font-weight: 800;
-      margin-left: 0.35rem;
-      white-space: nowrap;
-    }
-    .promo-close {
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 1.85rem;
-      height: 1.85rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.22);
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      transition: background 0.16s ease;
-    }
-    .promo-close:hover { background: rgba(255, 255, 255, 0.4); }
-    .promo-close .icon { font-size: 1.15rem; }
-
     /* Sections */
     .section { padding-block: var(--section-y); width: 100%; overflow: hidden; }
     .section--alt { background: var(--white); }
@@ -215,7 +152,6 @@
       text-transform: uppercase;
       color: var(--blue);
     }
-    .eyebrow--promo { color: var(--promo); }
     .eyebrow--light { color: #fca5a5; }
 
     .section-title { font-size: clamp(1.4rem, 3.6vw, 2.2rem); }
@@ -247,12 +183,6 @@
       box-shadow: 0 4px 16px rgba(0, 82, 255, 0.28);
     }
     .btn--primary:hover { background: var(--blue-dark); }
-    .btn--promo {
-      background: var(--promo);
-      color: #fff;
-      box-shadow: 0 4px 16px rgba(220, 38, 38, 0.32);
-    }
-    .btn--promo:hover { background: var(--promo-dark); }
     .btn--dark { background: var(--carbon); color: #fff; }
     .btn--dark:hover { background: #000; }
     .btn--outline {
@@ -289,7 +219,6 @@
       text-transform: uppercase;
       white-space: nowrap;
     }
-    .badge--promo { background: var(--promo); color: #fff; }
     .badge--blue { background: var(--blue-soft); color: var(--blue); border: 1px solid var(--blue-line); }
     .badge--dark { background: var(--carbon); color: #fff; }
     .badge--soft { background: var(--surface); color: var(--muted); border: 1px solid var(--line); }
@@ -506,8 +435,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--promo-soft);
-      color: var(--promo);
+      background: var(--blue-soft);
+      color: var(--blue);
       flex-shrink: 0;
     }
     .info-card__label {
@@ -566,7 +495,7 @@
     .frame-card:hover {
       transform: translateY(-3px);
       box-shadow: var(--shadow);
-      border-color: var(--promo-line);
+      border-color: var(--blue-line);
     }
 
     /* Zone Photo — monture ENTIÈRE visible, jamais rognée */
@@ -592,15 +521,15 @@
       transform: scale(1.05);
     }
 
-    /* Badge Promo en haut à gauche */
-    .frame-card__badge-promo {
+    /* Badge modèle en haut à gauche */
+    .frame-card__badge {
       position: absolute;
       top: 0.65rem;
       left: 0.65rem;
       z-index: 4;
       padding: 0.3rem 0.65rem;
       border-radius: var(--r-pill);
-      background: var(--promo);
+      background: var(--carbon);
       color: #fff;
       font-size: 0.72rem;
       font-weight: 800;
@@ -640,7 +569,7 @@
     .frame-card__name { font-size: 1.05rem; font-weight: 800; line-height: 1.25; }
     .frame-card__desc { font-size: 0.85rem; color: var(--muted); }
 
-    /* Prix Promo */
+    /* Prix */
     .frame-card__price-row {
       display: flex;
       align-items: baseline;
@@ -679,10 +608,10 @@
     @media (max-width: 599px) {
       .frame-card__share { width: 1.65rem; height: 1.65rem; bottom: 0.45rem; right: 0.45rem; }
     }
-    .price-promo {
+    .price-main {
       font-size: 1.18rem;
       font-weight: 800;
-      color: var(--promo);
+      color: var(--ink);
     }
 
     .card__shipping {
@@ -720,7 +649,7 @@
       .frame-card__desc { display: none; }
       .card__shipping { display: none; }
       .frame-card__price-row { padding-top: 0.1rem; margin-top: 0.2rem; }
-      .price-promo { font-size: 1rem; }
+      .price-main { font-size: 1rem; }
       .frame-card__btns {
         grid-template-columns: 1fr;
         gap: 0.35rem;
@@ -728,7 +657,7 @@
       }
       .frame-card__btns .btn[data-open-quickview] { display: none; } /* la carte entière est cliquable → ouvre la fiche */
       .frame-card__btns .btn { padding: 0.5rem 0.5rem; font-size: 0.78rem; }
-      .frame-card__badge-promo { top: 0.4rem; left: 0.4rem; font-size: 0.56rem; padding: 0.18rem 0.4rem; }
+      .frame-card__badge { top: 0.4rem; left: 0.4rem; font-size: 0.56rem; padding: 0.18rem 0.4rem; }
       .frame-card__badge-type { top: 0.4rem; right: 0.4rem; font-size: 0.58rem; padding: 0.24rem 0.45rem; }
     }
 
@@ -764,7 +693,7 @@
       padding: 0.75rem 1.15rem;
       box-shadow: var(--shadow-sm);
     }
-    .search:focus-within { border-color: var(--promo); box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12); }
+    .search:focus-within { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(0, 82, 255, 0.12); }
     .search input {
       flex: 1;
       border: none;
@@ -800,11 +729,11 @@
     }
     .shape-btn .icon { font-size: 1.3rem; color: var(--ink); }
     .shape-btn.is-on {
-      border-color: var(--promo);
-      background: var(--promo-soft);
-      color: var(--promo);
+      border-color: var(--blue);
+      background: var(--blue-soft);
+      color: var(--blue);
     }
-    .shape-btn.is-on .icon { color: var(--promo); }
+    .shape-btn.is-on .icon { color: var(--blue); }
 
     .chip {
       flex: 0 0 auto;
@@ -1006,19 +935,13 @@
     .motif-card__name { font-size: 0.9rem; font-weight: 800; }
     .motif-card__text { font-size: 0.78rem; color: var(--muted); }
 
+    /* Jours : grille qui s'adapte — aucun débordement horizontal sur mobile */
     .date-row {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 0.5rem;
-      overflow-x: auto;
-      padding-bottom: 0.4rem;
-      scrollbar-width: none;
-      -webkit-overflow-scrolling: touch;
-      scroll-snap-type: x mandatory;
     }
-    .date-row::-webkit-scrollbar { display: none; }
     .date-btn {
-      flex: 0 0 4.4rem;
-      scroll-snap-align: start;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1057,6 +980,7 @@
     .field__hint { font-size: 0.76rem; color: var(--muted); }
     .input {
       width: 100%;
+      min-width: 0;
       padding: 0.8rem 0.95rem;
       border: 1px solid var(--line-strong);
       border-radius: var(--r-sm);
@@ -1204,7 +1128,7 @@
       padding: 1.25rem;
       padding-top: 3.75rem;
       cursor: zoom-out;
-      animation: promoFadeIn 0.2s ease;
+      animation: fadeIn 0.2s ease;
     }
     .img-viewer img {
       max-width: 100%;
@@ -1246,12 +1170,12 @@
       align-items: center;
       justify-content: center;
     }
-    .modal__price { font-size: 1.4rem; font-weight: 800; color: var(--promo); }
+    .modal__price { font-size: 1.4rem; font-weight: 800; color: var(--ink); }
 
     /* Fiche Produit détaillée (modale) */
     .product-sheet__head { display: flex; flex-direction: column; gap: 0.3rem; }
     #qv-title { font-size: 1.3rem; }
-    .product-sheet__price { font-size: 1.45rem; font-weight: 800; color: var(--promo); line-height: 1.1; }
+    .product-sheet__price { font-size: 1.45rem; font-weight: 800; color: var(--ink); line-height: 1.1; }
     .product-sheet__chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.4rem; }
     .product-sheet__chip {
       font-size: 0.7rem;
@@ -1289,10 +1213,10 @@
       text-align: left;
       transition: border-color 0.16s ease, transform 0.16s ease;
     }
-    .product-sheet__similar:hover { border-color: var(--promo); transform: translateY(-2px); }
+    .product-sheet__similar:hover { border-color: var(--blue); transform: translateY(-2px); }
     .product-sheet__similar img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; background: var(--white); padding: 0.35rem; }
     .product-sheet__similar b { font-size: 0.72rem; line-height: 1.2; padding: 0 0.5rem; color: var(--ink); }
-    .product-sheet__similar span { font-size: 0.74rem; font-weight: 800; color: var(--promo); padding: 0 0.5rem 0.5rem; }
+    .product-sheet__similar span { font-size: 0.74rem; font-weight: 800; color: var(--ink); padding: 0 0.5rem 0.5rem; }
 
     /* Pied de page */
     .site-footer {
@@ -1365,21 +1289,21 @@
       color: var(--blue);
     }
 
-    /* Onglet Promo WhatsApp central mis en valeur */
+    /* Onglet WhatsApp central mis en valeur */
     .mobile-nav-link--highlight {
-      color: var(--promo);
+      color: var(--blue);
     }
     .mobile-nav-link--highlight .icon {
-      background: var(--promo);
+      background: var(--blue);
       color: #fff;
       width: 2.2rem;
       height: 2.2rem;
       border-radius: 50%;
-      box-shadow: 0 3px 10px rgba(220, 38, 38, 0.35);
+      box-shadow: 0 3px 10px rgba(0, 82, 255, 0.3);
       margin-top: -0.5rem;
     }
     .mobile-nav-link--highlight.is-on {
-      color: var(--promo);
+      color: var(--blue);
     }
 
     /* =====================================================================
@@ -1393,6 +1317,7 @@
     @media (min-width: 600px) {
       .info-strip { grid-template-columns: repeat(3, 1fr); }
       .grid--2 { grid-template-columns: repeat(2, 1fr); }
+      .date-row { grid-template-columns: repeat(7, 1fr); }
       .frames-grid, .cat-grid { grid-template-columns: repeat(2, 1fr); }
       .shape-row { grid-template-columns: repeat(6, 1fr); }
       .face-row { grid-template-columns: repeat(4, 1fr); }
@@ -1419,144 +1344,15 @@
       .site-footer { padding-bottom: 2.5rem; }
     }
     /* =====================================================================
-       Popup Promo — Interface plein écran avec fermeture
+       Popup générique (héritage : animation de la visionneuse photo)
        ===================================================================== */
-    .promo-popup {
-      position: fixed;
-      inset: 0;
-      z-index: 200;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(11, 15, 25, 0.78);
-      backdrop-filter: blur(10px);
-      padding: 1.25rem;
-      animation: promoFadeIn 0.35s ease;
-    }
-    @keyframes promoFadeIn {
+    @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
-    .promo-popup__card {
-      position: relative;
-      width: 100%;
-      max-width: 24rem;
-      background: var(--white);
-      border-radius: var(--r-lg);
-      overflow: hidden;
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
-      animation: promoSlideUp 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    @keyframes promoSlideUp {
-      from { opacity: 0; transform: translateY(40px) scale(0.95); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
-    }
-    .promo-popup__top {
-      background: linear-gradient(135deg, var(--promo) 0%, #ef4444 100%);
-      color: #fff;
-      padding: 2rem 1.5rem;
-      text-align: center;
-      position: relative;
-    }
-    .promo-popup__label {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      font-size: 0.72rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      opacity: 0.92;
-      margin-bottom: 0.6rem;
-    }
-    .promo-popup__title {
-      font-size: 1.05rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-    .promo-popup__price {
-      font-size: 2.8rem;
-      font-weight: 800;
-      line-height: 1.1;
-    }
-    .promo-popup__old {
-      font-size: 0.88rem;
-      text-decoration: line-through;
-      opacity: 0.7;
-      margin-top: 0.2rem;
-    }
-    .promo-popup__close {
-      position: absolute;
-      top: 0.75rem;
-      right: 0.75rem;
-      width: 2.4rem;
-      height: 2.4rem;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.22);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: none;
-      cursor: pointer;
-      transition: background 0.16s ease;
-      z-index: 2;
-    }
-    .promo-popup__close:hover { background: rgba(255, 255, 255, 0.4); }
-    .promo-popup__body {
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .promo-popup__list {
-      list-style: none;
-      display: grid;
-      gap: 0.55rem;
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-    .promo-popup__list li {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .promo-popup__list .icon {
-      color: var(--promo);
-      font-size: 1.15rem;
-    }
-    .promo-popup__btns {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    .promo-popup__skip {
-      text-align: center;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--muted);
-      cursor: pointer;
-      padding: 0.5rem;
-      border: none;
-      background: none;
-      transition: color 0.16s ease;
-    }
-    .promo-popup__skip:hover { color: var(--ink); text-decoration: underline; }
   </style>
 </head>
 <body>
-  <!-- ================= Bandeau Promo Expédition avec Fermeture ================= -->
-  <aside class="promo-bar" id="promo-bar">
-    <div class="wrap promo-bar__inner">
-      <span class="promo-badge-top">PROMO</span>
-      <span data-set="PROMO_BANNER">🔥 TOUTES NOS MONTURES À 16 000 FCFA • EXPÉDITION PARTOUT !</span>
-      <a class="promo-link" data-link="whatsapp" href="https://wa.me/22665164394" target="_blank" rel="noopener">Commander &rarr;</a>
-      <button class="promo-close" id="promo-close" type="button" aria-label="Fermer ce bandeau" title="Fermer">
-        <span class="icon material-symbols-outlined">close</span>
-      </button>
-    </div>
-  </aside>
-
   <!-- ================= En-tête Desktop ================= -->
   <header class="site-header">
     <div class="wrap header__inner">
@@ -1578,7 +1374,7 @@
       </nav>
 
       <div class="header__actions">
-        <a class="btn btn--promo btn__small hide-mobile" data-link="whatsapp" href="https://wa.me/22665164394" target="_blank" rel="noopener">
+        <a class="btn btn--dark btn__small hide-mobile" data-link="whatsapp" href="https://wa.me/22665164394" target="_blank" rel="noopener">
           <span class="icon material-symbols-outlined">chat</span> WhatsApp
         </a>
         <a class="btn btn--primary btn__small hide-mobile" href="#rendez-vous">Rendez-vous</a>
@@ -1647,9 +1443,9 @@
       <div class="wrap">
         <div class="section-head section-head--split">
           <div>
-            <span class="eyebrow eyebrow--promo">🔥 Offre du moment</span>
-            <h2 class="section-title">Nouveautés en promotion</h2>
-            <p class="section-lead">Toutes ces montures sont en promotion avec expédition partout.</p>
+            <span class="eyebrow">✨ Nouveautés</span>
+            <h2 class="section-title">Nouveautés</h2>
+            <p class="section-lead">Nos dernières montures arrivées en boutique, avec expédition partout.</p>
           </div>
           <a class="btn btn--outline btn__small" href="#catalogue">
             Voir tout le catalogue <span class="icon material-symbols-outlined">chevron_right</span>
@@ -1813,7 +1609,7 @@
             <p style="margin-top:0.35rem;">Envoyez-la en photo sur WhatsApp : nos opticiens vous transmettent un devis chiffré sous 1h.</p>
           </div>
           <div class="banner__actions">
-            <a class="btn btn--promo btn--lg" data-link="whatsapp" href="https://wa.me/22665164394" target="_blank" rel="noopener">
+            <a class="btn btn--primary btn--lg" data-link="whatsapp" href="https://wa.me/22665164394" target="_blank" rel="noopener">
               <span class="icon material-symbols-outlined">photo_camera</span> Envoyer mon ordonnance
             </a>
             <a class="btn btn--light btn--lg" href="#devis">Devis en ligne</a>
@@ -1827,11 +1623,11 @@
       <div class="wrap">
         <div class="section-head section-head--split">
           <div>
-            <span class="eyebrow eyebrow--promo">🔥 Toutes en promotion</span>
+            <span class="eyebrow">✨ Collection en ligne</span>
             <h2 class="section-title">Catalogue des montures</h2>
             <p class="section-lead">Commandez directement sur WhatsApp avec expédition partout au Burkina Faso.</p>
           </div>
-          <span class="badge badge--promo" id="cat-count">Chargement…</span>
+          <span class="badge badge--blue" id="cat-count">Chargement…</span>
         </div>
 
         <div class="tools">
@@ -1906,7 +1702,7 @@
                   <span class="motif-card__icon icon material-symbols-outlined">eyeglasses</span>
                   <span class="motif-card__body">
                     <span class="motif-card__name">Essayage de montures</span>
-                    <span class="motif-card__text">Choix selon votre visage parmi les modèles en promo.</span>
+                    <span class="motif-card__text">Choix selon votre visage parmi nos modèles disponibles.</span>
                   </span>
                 </button>
                 <button class="motif-card" type="button" data-motif="Renouvellement ordonnance">
@@ -1940,8 +1736,8 @@
           </div>
 
           <div style="display:flex; flex-direction:column; gap:1rem;">
-            <div class="card" style="background:#fef2f2; border-color:var(--promo-line);">
-              <div style="display:flex; align-items:center; gap:0.5rem; font-weight:800; color:var(--promo);">
+            <div class="card">
+              <div style="display:flex; align-items:center; gap:0.5rem; font-weight:800; color:var(--blue);">
                 <span class="icon material-symbols-outlined">event_available</span> Votre sélection
               </div>
               <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; font-size:0.88rem;">
@@ -1951,7 +1747,7 @@
                 </div>
                 <div>
                   <span class="field__hint">Date &amp; Heure</span>
-                  <p id="summary-slot" style="font-weight:700; color:var(--promo);">—</p>
+                  <p id="summary-slot" style="font-weight:700;">—</p>
                 </div>
               </div>
             </div>
@@ -1975,7 +1771,7 @@
                   <input class="input" id="notes" type="text" placeholder="Ex : Expédition à Bobo-Dioulasso, Koudougou…" />
                 </div>
               </div>
-              <button class="btn btn--promo btn--lg btn--block" id="confirm-btn" type="button">
+              <button class="btn btn--primary btn--lg btn--block" id="confirm-btn" type="button">
                 <span class="icon material-symbols-outlined">check_circle</span> Confirmer le rendez-vous
               </button>
               <p class="field__hint" style="text-align:center;">Confirmation directe sur WhatsApp avec l'opticienne.</p>
@@ -2048,15 +1844,15 @@
               </div>
               <div class="tier-grid">
                 <label class="tier-card">
-                  <input type="radio" name="frame_tier" value="Monture en promotion" checked />
-                  <b>Monture en promo</b><span>Monture au choix</span>
+                  <input type="radio" name="frame_tier" value="Monture au choix" checked />
+                  <b>Monture</b><span>Monture au choix</span>
                 </label>
                 <label class="tier-card">
                   <input type="radio" name="frame_tier" value="J'ai ma monture" />
                   <b>Montage seul</b><span>Mes propres lunettes</span>
                 </label>
                 <label class="tier-card">
-                  <input type="radio" name="frame_tier" value="Solaires en promotion" />
+                  <input type="radio" name="frame_tier" value="Solaires" />
                   <b>Solaires</b><span>Polarisées UV400</span>
                 </label>
                 <label class="tier-card">
@@ -2086,7 +1882,7 @@
               </div>
             </div>
 
-            <button class="btn btn--promo btn--lg btn--block" type="submit">
+            <button class="btn btn--primary btn--lg btn--block" type="submit">
               <span class="icon material-symbols-outlined">send</span> Recevoir mon devis sur WhatsApp
             </button>
           </form>
@@ -2176,7 +1972,7 @@
               <span class="brand__meta" style="color:#94a3b8;" data-set="QUARTIER">Ouagadougou • Gounghin</span>
             </span>
           </a>
-          <p style="margin-top:0.75rem; font-size:0.84rem; color:#94a3b8;" data-set="SLOGAN">🔥 Offre spéciale en cours sur les montures</p>
+          <p style="margin-top:0.75rem; font-size:0.84rem; color:#94a3b8;">Optique & lunetterie de confiance à Ouagadougou — Gounghin.</p>
           <div style="display:flex; gap:0.5rem; margin-top:0.75rem;">
             <a class="badge badge--on-dark" data-link="facebook" href="https://www.facebook.com/share/1Bs8J24fV6/" target="_blank" rel="noopener">Facebook</a>
             <a class="badge badge--on-dark" data-link="tiktok" href="https://www.tiktok.com/@finagnonvision" target="_blank" rel="noopener">TikTok</a>
@@ -2237,7 +2033,7 @@
       </div>
       <div class="modal__media">
         <img id="qv-img" src="images/logo.png" alt="Photo du modèle" />
-        <span class="frame-card__badge-promo" id="qv-badge" style="top:0.75rem; left:0.75rem;">🔥 PROMO</span>
+        <span class="frame-card__badge" id="qv-badge" style="top:0.75rem; left:0.75rem;">✨ Modèle</span>
         <button class="qv-zoom" type="button" id="qv-zoom" aria-label="Voir la photo en grand">
           <span class="icon material-symbols-outlined">zoom_in</span>
         </button>
@@ -2255,7 +2051,7 @@
         <li><span class="icon material-symbols-outlined">storefront</span> Essai possible en boutique à Gounghin</li>
       </ul>
       <div style="display:flex; flex-direction:column; gap:0.5rem;">
-        <a class="btn btn--promo btn--block" id="qv-whatsapp-link" href="#" target="_blank" rel="noopener">
+        <a class="btn btn--primary btn--block" id="qv-whatsapp-link" href="#" target="_blank" rel="noopener">
           <span class="icon material-symbols-outlined">chat</span> Commander sur WhatsApp
         </a>
         <button class="btn btn--outline btn--block" id="qv-share" type="button">
@@ -2280,40 +2076,9 @@
     <img id="img-viewer-src" src="" alt="Photo du modèle en grand" />
   </div>
 
-  <!-- ================= Popup Promo Overlay ================= -->
-  <div class="promo-popup hidden" id="promo-popup" role="dialog" aria-modal="true" aria-label="Promotion en cours">
-    <div class="promo-popup__card">
-      <div class="promo-popup__top">
-        <button class="promo-popup__close" id="promo-popup-close" type="button" aria-label="Fermer la promotion">
-          <span class="icon material-symbols-outlined">close</span>
-        </button>
-        <p class="promo-popup__label">🔥 Offre Exceptionnelle</p>
-        <p class="promo-popup__title">Toutes nos montures à</p>
-        <p class="promo-popup__price">16 000 FCFA</p>
-        <p class="promo-popup__old">au lieu de 25 000 FCFA</p>
-      </div>
-      <div class="promo-popup__body">
-        <ul class="promo-popup__list">
-          <li><span class="icon material-symbols-outlined">local_fire_department</span> Prix unique sur toutes les montures</li>
-          <li><span class="icon material-symbols-outlined">local_shipping</span> Expédition partout au Burkina Faso</li>
-          <li><span class="icon material-symbols-outlined">verified</span> Montures ajustées par l'opticienne</li>
-        </ul>
-        <div class="promo-popup__btns">
-          <a class="btn btn--promo btn--lg btn--block" href="#catalogue" id="promo-popup-catalogue">
-            <span class="icon material-symbols-outlined">shopping_bag</span> Voir les montures en promo
-          </a>
-          <a class="btn btn--dark btn--block" data-link="whatsapp" href="https://wa.me/22665164394" target="_blank" rel="noopener">
-            <span class="icon material-symbols-outlined">chat</span> Commander sur WhatsApp
-          </a>
-          <button class="promo-popup__skip" id="promo-popup-skip" type="button">Continuer sans la promo →</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- ================= Scripts Intégrés ================= -->
   <script src="neon.bundle.js"></script>
-  <script src="store.js?v=20260926a"></script>
+  <script src="store.js?v=20260926b"></script>
   <script>
   (function () {
     const $ = s => document.querySelector(s);
@@ -2330,20 +2095,6 @@
         if (v !== undefined && v !== null && v !== '') el.textContent = v;
       });
 
-      // Gestion du bandeau promo
-      const pBar = $('#promo-bar');
-      if (pBar) {
-        if (C.PROMO_ACTIVE === 'false' || sessionStorage.getItem('fv_promo_dismissed') === '1') {
-          pBar.classList.add('hidden');
-        }
-      }
-      // Gestion du popup promo (cacher si promo inactive)
-      const pPopup = $('#promo-popup');
-      if (pPopup && C.PROMO_ACTIVE === 'false') {
-        pPopup.classList.add('hidden');
-        document.body.style.overflow = '';
-      }
-
       $$('a[data-link="whatsapp"]').forEach(a => {
         try {
           const u = new URL(a.getAttribute('href'), location.href);
@@ -2357,39 +2108,6 @@
       const y = $('#year');
       if (y) y.textContent = new Date().getFullYear();
     }
-
-    // Fermeture du bandeau promo
-    const promoClose = $('#promo-close');
-    if (promoClose) {
-      promoClose.addEventListener('click', () => {
-        const pBar = $('#promo-bar');
-        if (pBar) pBar.classList.add('hidden');
-        sessionStorage.setItem('fv_promo_dismissed', '1');
-      });
-    }
-
-    // Popup Promo — affichage initial et fermeture
-    const promoPopup = $('#promo-popup');
-    function dismissPromoPopup() {
-      if (promoPopup) {
-        promoPopup.classList.add('hidden');
-        sessionStorage.setItem('fv_promo_popup_seen', '1');
-        document.body.style.overflow = '';
-      }
-    }
-    if (promoPopup) {
-      if (sessionStorage.getItem('fv_promo_popup_seen') !== '1') {
-        promoPopup.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-      }
-      promoPopup.addEventListener('click', e => { if (e.target === promoPopup) dismissPromoPopup(); });
-    }
-    const ppClose = $('#promo-popup-close');
-    if (ppClose) ppClose.addEventListener('click', dismissPromoPopup);
-    const ppSkip = $('#promo-popup-skip');
-    if (ppSkip) ppSkip.addEventListener('click', dismissPromoPopup);
-    const ppCatalogue = $('#promo-popup-catalogue');
-    if (ppCatalogue) ppCatalogue.addEventListener('click', () => dismissPromoPopup());
 
     /* 2. Navigation par PAGES : accueil court, catalogue & devis sur leurs propres pages */
     const PAGES = {
@@ -2429,7 +2147,7 @@
 
     /* 3. Catalogue avec affichage Plein Cadre et Badges Lisibles */
     const TLBL = { vue: 'Optique', bluelight: 'Lumière bleue', solaire: 'Solaire' };
-    const catOf = m => (m.type === 'solaire' ? 'solaire' : ((m.prix > 0 || m.badge) ? 'luxe' : 'vue'));
+    const catOf = m => (m.type === 'solaire' ? 'solaire' : (m.prix > 0 ? 'luxe' : 'vue'));
     let ALL_ITEMS = [];
 
     function cardHTML(m) {
@@ -2457,11 +2175,11 @@
             </div>
             <div class="frame-card__price-row">
               <div class="price-wrap">
-                <b class="price-promo">${Number(prix).toLocaleString('fr-FR')} FCFA</b>
+                <b class="price-main">${Number(prix).toLocaleString('fr-FR')} FCFA</b>
               </div>
             </div>
             <div class="frame-card__btns">
-              <a class="btn btn--promo btn__small" href="https://wa.me/${C.WHATSAPP}?text=${waText}" target="_blank" rel="noopener">
+              <a class="btn btn--primary btn__small" href="https://wa.me/${C.WHATSAPP}?text=${waText}" target="_blank" rel="noopener">
                 <span class="icon material-symbols-outlined">chat</span> Acheter
               </a>
               <button class="btn btn--dark btn__small" type="button" data-open-quickview>
@@ -2596,7 +2314,7 @@
         media.style.backgroundImage = "url('" + img.replace(/'/g, "%27") + "')";
         media.innerHTML =
           '<img id="qv-img" src="' + esc(img) + '" alt="' + esc(title) + '" style="position:absolute; inset:0; width:100%; height:100%; object-fit:contain; padding:0.5rem; cursor:zoom-in;" />' +
-          '<span class="frame-card__badge-promo" id="qv-badge" style="top:0.75rem; left:0.75rem;">' + ((m.en_promo !== false) ? '🔥 PROMO' : '✨ Modèle') + '</span>' +
+          '<span class="frame-card__badge" id="qv-badge" style="top:0.75rem; left:0.75rem;">✨ Modèle</span>' +
           '<button class="qv-zoom" type="button" id="qv-zoom" aria-label="Voir la photo en grand"><span class="icon material-symbols-outlined">zoom_in</span></button>';
         const im = media.querySelector('#qv-img');
         if (im) im.addEventListener('error', () => {
@@ -2861,7 +2579,7 @@
         }
         const treatments = $$('input[name="treatments"]:checked').map(x => x.value).join(', ') || 'Standard';
         const tierEl = document.querySelector('input[name="frame_tier"]:checked');
-        const tier = tierEl ? tierEl.value : 'Monture en promotion';
+        const tier = tierEl ? tierEl.value : 'Monture au choix';
         const file = fileInput && fileInput.files[0] ? fileInput.files[0].name : '';
         const msg = 'Bonjour Finagnon Vision, demande de devis :\n' +
           '• Nom : ' + name + '\n' +

@@ -28,8 +28,6 @@
       --muted: #5b6478;
       --red: #b91c1c;
       --amber: #b45309;
-      --promo-red: #dc2626;
-      --promo-bg: #fef2f2;
       --r-sm: 8px;
       --r: 14px;
       --r-lg: 20px;
@@ -159,8 +157,6 @@
     .btn--light:hover { background: #e2eaff; }
     .btn--danger { background: #fee2e2; color: var(--red); }
     .btn--danger:hover { background: #fecaca; }
-    .btn--promo { background: #dc2626; color: #fff; }
-    .btn--promo:hover { background: #b91c1c; }
     .btn--sm { padding: .45rem .75rem; font-size: .8rem; }
     .btn--block { width: 100%; }
     .count { font-size: .85rem; font-weight: 400; color: var(--muted); }
@@ -192,32 +188,6 @@
     .hint { font-size: .78rem; color: var(--muted); font-weight: 400; }
     .group-title { font-weight: 800; font-size: .95rem; padding-top: .75rem; border-top: 1px solid var(--line); }
     
-    /* Bloc Promo spécial */
-    .promo-panel {
-      background: var(--promo-bg);
-      border: 1px dashed var(--promo-red);
-      border-radius: var(--r);
-      padding: 0.85rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.65rem;
-    }
-    .promo-panel__head {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: 800;
-      color: var(--promo-red);
-      font-size: 0.88rem;
-    }
-    .badge-promo {
-      background: var(--promo-red);
-      color: #fff;
-      padding: 0.2rem 0.5rem;
-      border-radius: 999px;
-      font-size: 0.72rem;
-      font-weight: 800;
-    }
     .foot { padding-block: 1.5rem 2.5rem; text-align: center; font-size: .78rem; color: var(--muted); }
   </style>
 </head>
@@ -270,19 +240,14 @@
     <div class="hidden" id="panel" style="display: flex; flex-direction: column; gap: var(--gap);">
       <nav class="tabs" aria-label="Sections">
         <button class="tab is-on" type="button" data-t="lun">Montures</button>
-        <button class="tab" type="button" data-t="site">Réglages &amp; Promos</button>
+        <button class="tab" type="button" data-t="site">Réglages du site</button>
       </nav>
       <p class="msg" id="msg"></p>
 
       <!-- Montures -->
       <section id="t-lun" style="display: flex; flex-direction: column; gap: var(--gap);">
         <form class="card" id="f-lun">
-          <div class="spread">
-            <h2 class="section-title" id="lt">Ajouter une monture</h2>
-            <button class="btn btn--promo btn--sm" id="btn-quick-16k" type="button">
-              ⚡ Appliquer Promo 16 000 FCFA
-            </button>
-          </div>
+          <h2 class="section-title" id="lt">Ajouter une monture</h2>
 
           <input type="hidden" id="l-id" />
           <div class="form-grid">
@@ -293,24 +258,8 @@
               <input class="input" id="l-desc" placeholder="Ex : Acétate écaille, verres anti-reflets" />
             </label>
 
-            <!-- Cadre Promotionnel -->
-            <div class="field--full promo-panel">
-              <div class="promo-panel__head">
-                <span>🔥 Configuration Promotionnelle</span>
-                <label class="check" style="color:var(--ink);">
-                  <input id="l-promo" type="checkbox" checked /> En promotion
-                </label>
-              </div>
-              <div class="form-grid">
-                <label class="field" for="l-prix">Prix de vente PROMO (FCFA) *
-                  <input class="input" id="l-prix" type="number" min="0" step="500" value="16000" required />
-                </label>
-              </div>
-              <p class="hint">Si "En promotion" est coché, le prix sera mis en avant en rouge sur le site (aucun prix barré n'est affiché).</p>
-            </div>
-
-            <label class="field" for="l-badge">Badge personnalisé
-              <input class="input" id="l-badge" value="PROMO" placeholder="Ex : PROMO, NOUVEAU…" />
+            <label class="field" for="l-prix">Prix de vente (FCFA) *
+              <input class="input" id="l-prix" type="number" min="0" step="500" value="16000" required />
             </label>
             <label class="field" for="l-genre">Public
               <select class="input" id="l-genre">
@@ -353,9 +302,6 @@
           <div class="spread">
             <h2 class="section-title">Catalogue <span class="count" id="l-n"></span></h2>
             <div class="row">
-              <button class="btn btn--promo btn--sm" id="btn-all-16k" type="button">
-                🔥 Passer TOUTES les montures à 16 000 FCFA
-              </button>
               <button class="btn btn--light btn--sm hidden" id="seed" type="button">Importer les 15 modèles de départ</button>
             </div>
           </div>
@@ -366,7 +312,7 @@
       <!-- Réglages du site -->
       <section class="hidden" id="t-site">
         <form class="card" id="f-site">
-          <h2 class="section-title">Textes, contacts, promotions &amp; expédition</h2>
+          <h2 class="section-title">Textes, contacts, &amp; expédition</h2>
           <div class="form-grid" id="s-fields"></div>
           <div class="row">
             <button class="btn" type="submit">Enregistrer les réglages</button>
@@ -379,7 +325,7 @@
   <p class="foot">Finagnon Vision — Espace de gestion</p>
 
   <script src="neon.bundle.js"></script>
-  <script src="store.js?v=20260925d"></script>
+  <script src="store.js?v=20260926"></script>
   <script>
   (function () {
     const $ = s => document.querySelector(s);
@@ -453,30 +399,6 @@
       });
     }));
 
-    // Raccourci Promo 16 000 FCFA dans le formulaire
-    $('#btn-quick-16k').addEventListener('click', () => {
-      $('#l-prix').value = 16000;
-      $('#l-promo').checked = true;
-      $('#l-badge').value = 'PROMO';
-      say('Valeurs Promo 16 000 FCFA appliquées au formulaire !', true);
-    });
-
-    // Passer toutes les montures existantes à 16 000 FCFA
-    $('#btn-all-16k').addEventListener('click', () => {
-      if (!confirm('Appliquer la promo 16 000 FCFA à TOUTES les montures de la liste ?')) return;
-      run(async () => {
-        for (const m of L) {
-          await Store.save('lunettes', {
-            id: m.id,
-            prix: 16000,
-            en_promo: true,
-            badge: 'PROMO'
-          });
-        }
-        await refreshL();
-      }, 'Toutes les montures sont passées en promo à 16 000 FCFA ✓');
-    });
-
     async function refreshL() {
       try { L = await Store.list('lunettes'); }
       catch (e) {
@@ -488,13 +410,12 @@
       $('#l-n').textContent = '(' + L.length + ')';
       $('#seed').classList.toggle('hidden', !(Store.remote && L.length === 0));
       $('#l-list').innerHTML = L.map(m => {
-        const isPromo = m.en_promo !== false && (m.prix === 16000 || (m.badge && m.badge.includes('PROMO')));
         return `<div class="item ${m.disponible === false ? 'item--off' : ''}">
           <img class="item__thumb" src="${esc(m.image_url)}" alt="" />
           <div class="item__body">
-            <b>${esc(m.nom)} ${isPromo ? '<span class="badge-promo">🔥 PROMO</span>' : ''}</b>
+            <b>${esc(m.nom)}</b>
             <span class="item__meta">
-              <strong style="color:var(--promo-red);">${m.prix > 0 ? Number(m.prix).toLocaleString('fr-FR') + ' FCFA' : 'Prix sur demande'}</strong>
+              <strong>${m.prix > 0 ? Number(m.prix).toLocaleString('fr-FR') + ' FCFA' : 'Prix sur demande'}</strong>
               · ${esc(m.genre)} · ${esc(m.forme)}${m.disponible === false ? ' · masquée' : ''}
             </span>
           </div>
@@ -511,8 +432,6 @@
       $('#f-lun').reset();
       $('#l-id').value = '';
       $('#l-prix').value = 16000;
-      $('#l-promo').checked = true;
-      $('#l-badge').value = 'PROMO';
       $('#lt').textContent = 'Ajouter une monture';
       $('#l-cancel').classList.add('hidden');
     };
@@ -535,8 +454,6 @@
         $('#l-nom').value = m.nom || '';
         $('#l-desc').value = m.description || '';
         $('#l-prix').value = m.prix || 16000;
-        $('#l-promo').checked = m.en_promo !== false;
-        $('#l-badge').value = m.badge || 'PROMO';
         $('#l-genre').value = m.genre || 'mixte';
         $('#l-type').value = m.type || 'vue';
         $('#l-forme').value = m.forme || 'rect';
@@ -561,8 +478,6 @@
           nom: $('#l-nom').value.trim(),
           description: $('#l-desc').value.trim(),
           prix: +$('#l-prix').value || 16000,
-          en_promo: $('#l-promo').checked,
-          badge: $('#l-badge').value.trim(),
           genre: $('#l-genre').value,
           type: $('#l-type').value,
           forme: $('#l-forme').value,
@@ -577,9 +492,7 @@
     });
 
     const FIELDS = [
-      ['h', '🔥 Promotion & Expédition'],
-      ['PROMO_ACTIVE', 'Activer le bandeau Promo en haut du site (true / false)'],
-      ['PROMO_BANNER', 'Texte du bandeau promo'],
+      ['h', 'Expédition'],
       ['EXPEDITION_NOTE', 'Détails sur l\'expédition (partout au Burkina Faso)'],
       ['h', 'Contact'],
       ['QUARTIER', 'Quartier / ville affichés'],
@@ -588,8 +501,6 @@
       ['HOURS', "Horaires d'ouverture"],
       ['FACEBOOK', 'Lien Facebook'],
       ['TIKTOK', 'Lien TikTok'],
-      ['h', 'Pied de page'],
-      ['SLOGAN', 'Slogan affiché dans le pied de page'],
       ['h', 'Créneaux Rendez-vous'],
       ['SLOTS_MORNING', 'Créneaux matin (séparés par virgules)'],
       ['SLOTS_AFTERNOON', "Créneaux après-midi"]
