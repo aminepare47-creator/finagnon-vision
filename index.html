@@ -107,6 +107,7 @@
 
     h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -0.02em; font-weight: 800; }
     .hidden { display: none !important; }
+    .page-off { display: none !important; } /* Navigation par pages : section masquée */
 
     .wrap {
       width: 100%;
@@ -1791,7 +1792,7 @@
     </section>
 
     <!-- ================= Bandeau ordonnance ================= -->
-    <section class="section" style="padding-top:0;">
+    <section class="section" style="padding-top:0;" id="ordonnance">
       <div class="wrap">
         <div class="banner">
           <div>
@@ -2387,31 +2388,41 @@
     const ppCatalogue = $('#promo-popup-catalogue');
     if (ppCatalogue) ppCatalogue.addEventListener('click', () => dismissPromoPopup());
 
-    /* 2. Navigation Mobile en Bas & Desktop */
+    /* 2. Navigation par PAGES : accueil court, catalogue & devis sur leurs propres pages */
+    const PAGES = {
+      'accueil': ['accueil', 'nouveautes', 'ordonnance'],
+      'catalogue': ['catalogue'],
+      'verres': ['verres', 'expertise', 'guide'],
+      'rendez-vous': ['rendez-vous'],
+      'devis': ['devis'],
+      'contact': ['contact']
+    };
+    const PAGE_IDS = ['accueil', 'nouveautes', 'ordonnance', 'catalogue', 'verres', 'expertise', 'guide', 'rendez-vous', 'devis', 'contact'];
     const desktopNavLinks = $$('#site-nav a');
     const mobileNavLinks = $$('.mobile-nav-link');
 
-    function markActiveNav() {
-      const sectionIds = ['accueil', 'catalogue', 'verres', 'rendez-vous', 'devis', 'contact'];
-      const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
-      let current = sections[0];
-      const scrollPos = window.scrollY + 220;
-
-      sections.forEach(sec => {
-        if (sec.offsetTop <= scrollPos) current = sec;
-      });
-
-      if (current) {
-        desktopNavLinks.forEach(a => a.classList.toggle('is-on', a.getAttribute('href') === '#' + current.id));
-        mobileNavLinks.forEach(a => {
-          const href = a.getAttribute('href');
-          if (href && href.startsWith('#')) {
-            a.classList.toggle('is-on', href === '#' + current.id);
-          }
-        });
-      }
+    function currentPage() {
+      const h = (location.hash || '').replace('#', '');
+      return PAGES[h] ? h : 'accueil';
     }
-    addEventListener('scroll', markActiveNav, { passive: true });
+
+    function showPage(name) {
+      if (!PAGES[name]) name = 'accueil';
+      PAGE_IDS.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.toggle('page-off', PAGES[name].indexOf(id) === -1);
+      });
+      desktopNavLinks.forEach(a => a.classList.toggle('is-on', a.getAttribute('href') === '#' + name));
+      mobileNavLinks.forEach(a => {
+        const href = a.getAttribute('href') || '';
+        a.classList.toggle('is-on', href === '#' + name);
+      });
+      try { scrollTo({ top: 0, behavior: 'instant' }); }
+      catch (err) { scrollTo(0, 0); }
+    }
+
+    addEventListener('hashchange', () => showPage(currentPage()));
+    showPage(currentPage());
 
     /* 3. Catalogue avec affichage Plein Cadre et Badges Lisibles */
     const TLBL = { vue: 'Optique', bluelight: 'Lumière bleue', solaire: 'Solaire' };
@@ -2586,6 +2597,7 @@
           '<img id="qv-img" src="' + esc(img) + '" alt="' + esc(title) + '" style="width:100%; height:100%; object-fit:contain; padding:0.5rem; cursor:zoom-in;" />' +
           '<span class="frame-card__badge-promo" id="qv-badge" style="top:0.75rem; left:0.75rem;">' + ((m.en_promo !== false) ? '🔥 PROMO' : '✨ Modèle') + '</span>' +
           '<button class="qv-zoom" type="button" id="qv-zoom" aria-label="Voir la photo en grand"><span class="icon material-symbols-outlined">zoom_in</span></button>';
+        media.style.height = '300px'; /* hauteur simple en pixels, comprise par TOUS les navigateurs */
         const im = media.querySelector('#qv-img');
         if (im) im.addEventListener('error', () => { im.src = 'images/logo.png'; }, { once: true });
       }
