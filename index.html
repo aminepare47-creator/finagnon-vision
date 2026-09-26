@@ -548,27 +548,6 @@
       grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 colonnes, même sur mobile */
       margin-top: 0.85rem;
     }
-    /* Cartes MINIMALISTES sur mobile & tablette : photo + nom + prix + bouton Acheter */
-    @media (max-width: 860px) {
-      .frame-card__body { padding: 0.6rem 0.55rem 0.7rem; gap: 0.18rem; }
-      .frame-card__name {
-        font-size: 0.82rem;
-        line-height: 1.2;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
-      .frame-card__desc { display: none; }
-      .card__shipping { display: none; }
-      .frame-card__price-row { padding-top: 0.15rem; }
-      .price-promo { font-size: 1rem; }
-      .frame-card__btns { grid-template-columns: 1fr; gap: 0.35rem; margin-top: 0.4rem; }
-      .frame-card__btns .btn[data-open-quickview] { display: none; } /* la carte entière est cliquable → ouvre la fiche */
-      .frame-card__btns .btn { padding: 0.5rem 0.5rem; font-size: 0.78rem; }
-      .frame-card__badge-promo { top: 0.4rem; left: 0.4rem; font-size: 0.56rem; padding: 0.18rem 0.4rem; }
-      .frame-card__badge-type { top: 0.4rem; right: 0.4rem; font-size: 0.58rem; padding: 0.24rem 0.45rem; }
-    }
 
     /* Carte Monture — Résolution du problème "double cadre" */
     .frame-card {
@@ -721,6 +700,34 @@
       gap: 0.45rem;
       margin-top: 0.65rem;
       width: 100%;
+    }
+
+    /* Cartes MINIMALISTES sur mobile & tablette : photo + nom + prix + bouton Acheter
+       (placé APRÈS les règles générales .frame-card__* ci-dessus pour que ces
+       surcharges mobiles gagnent réellement la priorité CSS) */
+    @media (max-width: 860px) {
+      .frame-card__body { padding: 0.55rem 0.5rem 0.6rem; gap: 0.15rem; }
+      .frame-card__name {
+        font-size: 0.82rem;
+        line-height: 1.2;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .frame-card__desc { display: none; }
+      .card__shipping { display: none; }
+      .frame-card__price-row { padding-top: 0.1rem; margin-top: 0.2rem; }
+      .price-promo { font-size: 1rem; }
+      .frame-card__btns {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+        margin-top: 0.35rem;
+      }
+      .frame-card__btns .btn[data-open-quickview] { display: none; } /* la carte entière est cliquable → ouvre la fiche */
+      .frame-card__btns .btn { padding: 0.5rem 0.5rem; font-size: 0.78rem; }
+      .frame-card__badge-promo { top: 0.4rem; left: 0.4rem; font-size: 0.56rem; padding: 0.18rem 0.4rem; }
+      .frame-card__badge-type { top: 0.4rem; right: 0.4rem; font-size: 0.58rem; padding: 0.24rem 0.45rem; }
     }
 
     .fv-empty {
@@ -2205,10 +2212,6 @@
       <span class="icon material-symbols-outlined">eyeglasses</span>
       <span>Catalogue</span>
     </a>
-    <a class="mobile-nav-link mobile-nav-link--highlight" data-link="whatsapp" href="https://wa.me/22665164394" target="_blank" rel="noopener">
-      <span class="icon material-symbols-outlined">chat</span>
-      <span>WhatsApp</span>
-    </a>
     <a class="mobile-nav-link" href="#rendez-vous">
       <span class="icon material-symbols-outlined">calendar_month</span>
       <span>Rdv</span>
@@ -2305,7 +2308,7 @@
 
   <!-- ================= Scripts Intégrés ================= -->
   <script src="neon.bundle.js"></script>
-  <script src="store.js?v=20260925d"></script>
+  <script src="store.js?v=20260926a"></script>
   <script>
   (function () {
     const $ = s => document.querySelector(s);
