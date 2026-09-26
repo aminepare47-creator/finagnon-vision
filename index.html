@@ -293,6 +293,8 @@
     .badge--blue { background: var(--blue-soft); color: var(--blue); border: 1px solid var(--blue-line); }
     .badge--dark { background: var(--carbon); color: #fff; }
     .badge--soft { background: var(--surface); color: var(--muted); border: 1px solid var(--line); }
+    .badge--on-dark { background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.22); }
+    .badge--on-dark:hover { background: rgba(255,255,255,0.16); }
 
     .dot-live {
       width: 0.5rem;
@@ -1157,10 +1159,13 @@
     .modal__media {
       position: relative;
       width: 100%;
-      height: clamp(250px, 44vh, 360px); /* hauteur garantie : la photo est TOUJOURS visible, quel que soit le navigateur */
+      height: 300px; /* hauteur fixe en dur : jamais 0, jamais dépendante d'un calcul JS ou d'un clamp() */
       border-radius: var(--r);
       overflow: hidden;
-      background: #ffffff;
+      background-color: #ffffff;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
       border: 1px solid var(--line);
     }
     .modal__media img { width: 100%; height: 100%; object-fit: contain; padding: 0.5rem; cursor: zoom-in; }
@@ -2173,8 +2178,8 @@
           </a>
           <p style="margin-top:0.75rem; font-size:0.84rem; color:#94a3b8;" data-set="SLOGAN">🔥 Offre spéciale en cours sur les montures</p>
           <div style="display:flex; gap:0.5rem; margin-top:0.75rem;">
-            <a class="badge badge--soft" data-link="facebook" href="https://www.facebook.com/share/1Bs8J24fV6/" target="_blank" rel="noopener">Facebook</a>
-            <a class="badge badge--soft" data-link="tiktok" href="https://www.tiktok.com/@finagnonvision" target="_blank" rel="noopener">TikTok</a>
+            <a class="badge badge--on-dark" data-link="facebook" href="https://www.facebook.com/share/1Bs8J24fV6/" target="_blank" rel="noopener">Facebook</a>
+            <a class="badge badge--on-dark" data-link="tiktok" href="https://www.tiktok.com/@finagnonvision" target="_blank" rel="noopener">TikTok</a>
           </div>
         </div>
 
@@ -2588,16 +2593,24 @@
       const prix = m.prix > 0 ? m.prix : 16000;
       const img = m.image_url || 'images/logo.png';
       qvCurrent = m;
-      // Photo : la zone est RECONSTRUITE à chaque ouverture → l'image s'affiche à coup sûr
+      // Photo : la zone est RECONSTRUITE à chaque ouverture → l'image s'affiche à coup sûr.
+      // Double sécurité : la photo est posée en fond (background-image, ne dépend d'aucun
+      // calcul de taille naturelle) ET en <img> par-dessus pour le zoom plein écran.
       const media = qvModal.querySelector('.modal__media');
       if (media) {
+        media.style.backgroundImage = "url('" + img.replace(/'/g, "%27") + "')";
         media.innerHTML =
-          '<img id="qv-img" src="' + esc(img) + '" alt="' + esc(title) + '" style="width:100%; height:100%; object-fit:contain; padding:0.5rem; cursor:zoom-in;" />' +
+          '<img id="qv-img" src="' + esc(img) + '" alt="' + esc(title) + '" style="position:absolute; inset:0; width:100%; height:100%; object-fit:contain; padding:0.5rem; cursor:zoom-in;" />' +
           '<span class="frame-card__badge-promo" id="qv-badge" style="top:0.75rem; left:0.75rem;">' + ((m.en_promo !== false) ? '🔥 PROMO' : '✨ Modèle') + '</span>' +
           '<button class="qv-zoom" type="button" id="qv-zoom" aria-label="Voir la photo en grand"><span class="icon material-symbols-outlined">zoom_in</span></button>';
-        media.style.height = '300px'; /* hauteur simple en pixels, comprise par TOUS les navigateurs */
         const im = media.querySelector('#qv-img');
-        if (im) im.addEventListener('error', () => { im.src = 'images/logo.png'; }, { once: true });
+        if (im) im.addEventListener('error', () => {
+          // La photo de fond reste affichée ; on cache juste l'<img> cassé.
+          im.style.display = 'none';
+          if (media.style.backgroundImage.indexOf('logo.png') === -1) {
+            media.style.backgroundImage = "url('images/logo.png')";
+          }
+        }, { once: true });
       }
       $('#qv-title').textContent = title;
       $('#qv-price').textContent = Number(prix).toLocaleString('fr-FR') + ' FCFA';
