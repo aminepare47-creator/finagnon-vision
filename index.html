@@ -2435,10 +2435,6 @@
     function cardHTML(m) {
       const img = m.image_url || 'images/logo.png';
       const prix = m.prix > 0 ? m.prix : 16000;
-      const isPromo = m.en_promo !== false;
-      // Le montant n'apparaît plus dans le badge : c'est le rôle du bandeau et du popup promo
-      const rawBadge = String(m.badge || '').replace(/16[\s.,]*000(\s*(FCFA|F))?/gi, '').replace(/\s{2,}/g, ' ').trim();
-      const badgePromo = rawBadge || (isPromo ? 'PROMO' : '');
       const typeLabel = TLBL[m.type] || (m.genre === 'femme' ? 'Femme' : m.genre === 'homme' ? 'Homme' : 'Mixte');
 
       const waText = encodeURIComponent(
@@ -2447,7 +2443,6 @@
 
       return `<article class="frame-card" data-id="${esc(m.id || '')}" data-category="${catOf(m)}" data-genre="${esc(m.genre || 'mixte')}" data-type="${esc(m.type || 'vue')}" data-forme="${esc(m.forme || '')}" data-txt="${esc(((m.nom || '') + ' ' + (m.description || '')).toLowerCase())}" data-title="${esc(m.nom)}" data-price="${esc(Number(prix).toLocaleString('fr-FR') + ' FCFA')}" data-desc="${esc(m.description || '')}" data-img="${esc(img)}">
           <div class="frame-card__media">
-            ${badgePromo ? `<span class="frame-card__badge-promo">🔥 ${esc(badgePromo)}</span>` : ''}
             <span class="frame-card__badge-type">${esc(typeLabel)}</span>
             <button class="frame-card__share" type="button" data-share aria-label="Partager ce modèle">
               <span class="icon material-symbols-outlined">share</span>
