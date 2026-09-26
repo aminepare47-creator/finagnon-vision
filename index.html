@@ -547,23 +547,26 @@
       grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 colonnes, même sur mobile */
       margin-top: 0.85rem;
     }
-    /* Cartes compactes sur petits écrans */
-    @media (max-width: 599px) {
-      .frame-card__body { padding: 0.7rem 0.6rem; gap: 0.28rem; }
-      .frame-card__name { font-size: 0.86rem; }
-      .frame-card__desc {
-        font-size: 0.72rem;
+    /* Cartes MINIMALISTES sur mobile & tablette : photo + nom + prix + bouton Acheter */
+    @media (max-width: 860px) {
+      .frame-card__body { padding: 0.6rem 0.55rem 0.7rem; gap: 0.18rem; }
+      .frame-card__name {
+        font-size: 0.82rem;
+        line-height: 1.2;
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
       }
-      .card__shipping { font-size: 0.64rem; }
-      .price-promo { font-size: 0.95rem; }
-      .frame-card__btns { gap: 0.35rem; margin-top: 0.45rem; }
-      .frame-card__btns .btn { padding: 0.45rem 0.3rem; font-size: 0.72rem; }
-      .frame-card__badge-promo { top: 0.45rem; left: 0.45rem; font-size: 0.58rem; padding: 0.2rem 0.42rem; }
-      .frame-card__badge-type { top: 0.45rem; right: 0.45rem; font-size: 0.6rem; padding: 0.26rem 0.5rem; }
+      .frame-card__desc { display: none; }
+      .card__shipping { display: none; }
+      .frame-card__price-row { padding-top: 0.15rem; }
+      .price-promo { font-size: 1rem; }
+      .frame-card__btns { grid-template-columns: 1fr; gap: 0.35rem; margin-top: 0.4rem; }
+      .frame-card__btns .btn[data-open-quickview] { display: none; } /* la carte entière est cliquable → ouvre la fiche */
+      .frame-card__btns .btn { padding: 0.5rem 0.5rem; font-size: 0.78rem; }
+      .frame-card__badge-promo { top: 0.4rem; left: 0.4rem; font-size: 0.56rem; padding: 0.18rem 0.4rem; }
+      .frame-card__badge-type { top: 0.4rem; right: 0.4rem; font-size: 0.58rem; padding: 0.24rem 0.45rem; }
     }
 
     /* Carte Monture — Résolution du problème "double cadre" */
@@ -2576,13 +2579,19 @@
       const prix = m.prix > 0 ? m.prix : 16000;
       const img = m.image_url || 'images/logo.png';
       qvCurrent = m;
+      // Photo : la zone est RECONSTRUITE à chaque ouverture → l'image s'affiche à coup sûr
+      const media = qvModal.querySelector('.modal__media');
+      if (media) {
+        media.innerHTML =
+          '<img id="qv-img" src="' + esc(img) + '" alt="' + esc(title) + '" style="width:100%; height:100%; object-fit:contain; padding:0.5rem; cursor:zoom-in;" />' +
+          '<span class="frame-card__badge-promo" id="qv-badge" style="top:0.75rem; left:0.75rem;">' + ((m.en_promo !== false) ? '🔥 PROMO' : '✨ Modèle') + '</span>' +
+          '<button class="qv-zoom" type="button" id="qv-zoom" aria-label="Voir la photo en grand"><span class="icon material-symbols-outlined">zoom_in</span></button>';
+        const im = media.querySelector('#qv-img');
+        if (im) im.addEventListener('error', () => { im.src = 'images/logo.png'; }, { once: true });
+      }
       $('#qv-title').textContent = title;
       $('#qv-price').textContent = Number(prix).toLocaleString('fr-FR') + ' FCFA';
       $('#qv-desc').textContent = m.description || 'Monture disponible à la boutique de Gounghin ou en expédition rapide partout au Burkina Faso.';
-      const qvi = $('#qv-img');
-      if (qvi) { qvi.src = img; qvi.alt = title; }
-      const qvBadge = $('#qv-badge');
-      if (qvBadge) qvBadge.textContent = (m.en_promo !== false) ? '🔥 PROMO' : '✨ Modèle';
       const chips = [];
       if (m.type && TLBL[m.type]) chips.push(TLBL[m.type]);
       if (m.genre) chips.push(m.genre === 'femme' ? 'Femme' : m.genre === 'homme' ? 'Homme' : 'Mixte');
@@ -2652,10 +2661,14 @@
       if (imgViewer) imgViewer.classList.add('hidden');
       document.body.style.overflow = $$('.modal:not(.hidden)').length ? 'hidden' : '';
     }
-    const qvImgEl = $('#qv-img');
-    if (qvImgEl) qvImgEl.addEventListener('click', () => openImgViewer(qvImgEl.src, qvImgEl.alt));
-    const qvZoomBtn = $('#qv-zoom');
-    if (qvZoomBtn) qvZoomBtn.addEventListener('click', () => { if (qvImgEl) openImgViewer(qvImgEl.src, qvImgEl.alt); });
+    const qvMediaBox = document.querySelector('#quickview-modal .modal__media');
+    if (qvMediaBox) {
+      qvMediaBox.addEventListener('click', e => {
+        const im = qvMediaBox.querySelector('img');
+        if (!im || !im.src) return;
+        if (e.target === im || e.target.closest('#qv-zoom')) openImgViewer(im.src, im.alt);
+      });
+    }
     if (imgViewer) {
       imgViewer.addEventListener('click', e => { if (e.target === imgViewer) closeImgViewer(); });
       const ivClose = $('#img-viewer-close');
